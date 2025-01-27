@@ -1,2 +1,0 @@
-Ne créez pas des répertoires spécifiques à chaque semaine. Nous utilisons un système de contrôle de version (Git) qui rend la pratique des numérotation de fichier/répertoire inutile.
-À chaque livraison, vous écrasez les fichiers précédents. Si on n'en a besoin, on les retrouvera grâce à Git.
