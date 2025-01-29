@@ -17,12 +17,12 @@ namespace ShadowScan_Server
         {
             var input = new HelloRequest { Name = "LeBogoss" };
 
-            var channel = GrpcChannel.ForAddress("http://localhost:55052");
+            var channel = GrpcChannel.ForAddress("http://localhost:5000");
             var client = new Greeter.GreeterClient(channel);
 
             var reply = await client.SayHelloAsync(input);
 
-            Console.WriteLine(reply);
+            Console.WriteLine(reply.Message);
 
             Console.ReadLine();
         }
