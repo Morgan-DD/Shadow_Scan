@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35707.178 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShadowScan_Server", "ShadowScan_Server\ShadowScan_Server.csproj", "{80C73C43-5DC5-4FB2-A938-633516C4B770}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShadowScan_Server", "ShadowScan_Server.csproj", "{BECF80C8-E7D8-4B8E-8C8D-20E129393CE6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{80C73C43-5DC5-4FB2-A938-633516C4B770}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{80C73C43-5DC5-4FB2-A938-633516C4B770}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{80C73C43-5DC5-4FB2-A938-633516C4B770}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{80C73C43-5DC5-4FB2-A938-633516C4B770}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BECF80C8-E7D8-4B8E-8C8D-20E129393CE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BECF80C8-E7D8-4B8E-8C8D-20E129393CE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BECF80C8-E7D8-4B8E-8C8D-20E129393CE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BECF80C8-E7D8-4B8E-8C8D-20E129393CE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
