@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Grpc.Net.Client;
 using System.Net.Http;
-using ShadowScan_Client;
+using ShadowScan_Server;
 
 namespace ShadowScan_Server
 {
