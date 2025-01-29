@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\ShadowScan_Server\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{80C73C43-5DC5-4FB2-A938-633516C4B770}|ShadowScan_Server\\ShadowScan_Server.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\server(prof)\\shadowscan_server\\shadowscan_server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80C73C43-5DC5-4FB2-A938-633516C4B770}|ShadowScan_Server\\ShadowScan_Server.csproj|solutionrelative:shadowscan_server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\ShadowScan_Server\\ShadowScan_Server\\Program.cs",
+              "RelativeDocumentMoniker": "ShadowScan_Server\\Program.cs",
+              "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\ShadowScan_Server\\ShadowScan_Server\\Program.cs",
+              "RelativeToolTip": "ShadowScan_Server\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T07:57:10.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
