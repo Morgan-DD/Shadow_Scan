@@ -15,8 +15,7 @@ namespace GUI_server
 {
     public partial class Form_main : Form
     {
-
-
+        // code to allow to move the window via the top bar
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HTCAPTION = 0x2;
         [DllImport("User32.dll")]
@@ -24,13 +23,15 @@ namespace GUI_server
         [DllImport("User32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
 
-
+        // users control for the pages, they go into the main panel (panel_main)
         UserControl_main _userControlMain = new UserControl_main();
         UserControl_List _userControlList = new UserControl_List();
         UserControl_Settings _userControlSettings = new UserControl_Settings();
 
+        // list of these control panels
         List<Control> _userContolList = new List<Control>();
 
+        // list of picture for the maximize button
         List<Bitmap> _maximizePictures = new List<Bitmap>();
 
 
@@ -38,6 +39,7 @@ namespace GUI_server
         {
             InitializeComponent();
 
+            // add the users control into the main panel
             _userControlMain.Dock = DockStyle.Fill;
             panel_main.Controls.Add(_userControlMain);
 
@@ -49,17 +51,18 @@ namespace GUI_server
             panel_main.Controls.Add(_userControlSettings);
             _userControlSettings.Visible = false;
 
-            FormBorderStyle = FormBorderStyle.None;
-
-
             _userContolList.Add(_userControlMain);
             _userContolList.Add(_userControlList);
             _userContolList.Add(_userControlSettings);
 
+            // add the pictures into picture array used for topbar icons
             _maximizePictures.Add(new Bitmap(Properties.Resources.expand_icon));
             _maximizePictures.Add(new Bitmap(Properties.Resources.minimize_icon));
         }
 
+        // methode to resize the window
+        // finded in stackoverflow:
+        // https://stackoverflow.com/questions/29024910/how-to-design-a-custom-close-minimize-and-maximize-button-in-windows-form-appli
         protected override void WndProc(ref Message m)
         {
             if (m.Msg == 0x84)
@@ -96,19 +99,25 @@ namespace GUI_server
             base.WndProc(ref m);
         }
 
+        // used to show the usercontrol that we want into the main panel
         private void hidePanelControls(Panel _panel, byte idToShow)
         {
             byte id = 0;
+            // check all userpanels
             foreach (Control control in _panel.Controls)
             {
+                // if its the one that we want to show
                 if(id == idToShow)
-                {
+                    // show the panel
                     control.Visible = true;
-                }else
+                else
+                    // hide the panel (all exept one)
                     control.Visible = false;
                 id += 1;
             }
         }
+
+        // action of the buttons to change page (userpanels)
 
         private void Button_Main_Click(object sender, EventArgs e)
         {
@@ -125,6 +134,9 @@ namespace GUI_server
             hidePanelControls(panel_main, Convert.ToByte((sender as Button).Tag.ToString()));
         }
 
+        // methode used to move the windows when holding click on the topbar
+        // find on stackoverflow:
+        // https://stackoverflow.com/questions/29024910/how-to-design-a-custom-close-minimize-and-maximize-button-in-windows-form-appli
         private void OnMouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -134,25 +146,32 @@ namespace GUI_server
             }
         }
 
+        // use to change topbar icon backgroud color when hover
         private void pictureBox_Enter(object sender, EventArgs e)
         {
             (sender as PictureBox).BackColor = Color.LightGray;
         }
 
+        // use to reset topbar icon backgroud color when leaved
         private void pictureBox_Leave(object sender, EventArgs e)
         {
             (sender as PictureBox).BackColor = Color.Transparent;
         }
 
+        // action to minimize the window (topbar button)
         private void pictureBox_Minimize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }
 
+        // action to maximize the window (topbar button)
         private void pictureBox_Maximize_Click(object sender, EventArgs e)
         {
+            // window state
             bool windowVisible = this.WindowState == FormWindowState.Maximized;
+            // set the icon based on the window state
             (sender as PictureBox).Image = _maximizePictures[Convert.ToInt16(!windowVisible)];
+            // maximize the window if not 
             if (windowVisible)
             {
                 WindowState = FormWindowState.Normal;
@@ -163,6 +182,7 @@ namespace GUI_server
             }
         }
 
+        // close the app (topbar button)
         private void pictureBox_Close_Click(object sender, EventArgs e)
         {
             Close();

@@ -38,7 +38,6 @@
             this.pictureBox_Minimize = new System.Windows.Forms.PictureBox();
             this.pictureBox_Maximize = new System.Windows.Forms.PictureBox();
             this.pictureBox_Close = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Minimize)).BeginInit();
@@ -162,22 +161,12 @@
             this.pictureBox_Close.MouseEnter += new System.EventHandler(this.pictureBox_Enter);
             this.pictureBox_Close.MouseLeave += new System.EventHandler(this.pictureBox_Leave);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(443, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "label1";
-            // 
             // Form_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1000, 689);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel_top);
             this.Controls.Add(this.panel_main);
             this.Controls.Add(this.pictureBox1);
@@ -193,7 +182,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Maximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Close)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -208,7 +196,6 @@
         private System.Windows.Forms.PictureBox pictureBox_Minimize;
         private System.Windows.Forms.PictureBox pictureBox_Maximize;
         private System.Windows.Forms.PictureBox pictureBox_Close;
-        private System.Windows.Forms.Label label1;
     }
 }
 
