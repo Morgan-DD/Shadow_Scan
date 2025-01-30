@@ -1,6 +1,6 @@
 ﻿namespace GUI_server
 {
-    partial class UserControl1
+    partial class UserControl_main
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,32 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // panel
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(157, 91);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(633, 342);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.panel.Location = new System.Drawing.Point(3, 50);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(814, 438);
+            this.panel.TabIndex = 0;
             // 
-            // UserControl1
+            // UserControl_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.pictureBox1);
-            this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(899, 578);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Controls.Add(this.panel);
+            this.Name = "UserControl_main";
+            this.Size = new System.Drawing.Size(820, 491);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel;
     }
 }

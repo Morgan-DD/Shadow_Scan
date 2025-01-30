@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GUI_server
 {
-    public partial class UserControl1 : UserControl
+    public partial class UserControl_List : UserControl
     {
-        public UserControl1()
+        public UserControl_List()
         {
             InitializeComponent();
         }

@@ -97,27 +97,60 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Main_Page.cs">
+    <Compile Include="UserControl_PC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Main_Page.Designer.cs">
-      <DependentUpon>Main_Page.cs</DependentUpon>
+    <Compile Include="UserControl_PC.Designer.cs">
+      <DependentUpon>UserControl_PC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_List.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_List.Designer.cs">
+      <DependentUpon>UserControl_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_Settings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_Settings.Designer.cs">
+      <DependentUpon>UserControl_Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_Scan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_Scan.Designer.cs">
+      <DependentUpon>UserControl_Scan.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main_Page.resx">
-      <DependentUpon>Main_Page.cs</DependentUpon>
+    <EmbeddedResource Include="UserControl_List.resx">
+      <DependentUpon>UserControl_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_PC.resx">
+      <DependentUpon>UserControl_PC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_Scan.resx">
+      <DependentUpon>UserControl_Scan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_Settings.resx">
+      <DependentUpon>UserControl_Settings.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -128,6 +161,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\close_icon.png" />
+    <None Include="Resources\dot_yellow_icon.png" />
+    <None Include="Resources\dot_green_icon.png" />
+    <None Include="Resources\dot_red_icon.png" />
+    <Content Include="Resources\expand_icon.png" />
+    <Content Include="Resources\hide_icon.png" />
+    <Content Include="Resources\minimize_icon.png" />
+    <None Include="Resources\pc_icon.png" />
     <Content Include="Resources\ShadowScan_logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
