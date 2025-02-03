@@ -44,14 +44,17 @@ namespace GUI_server
             // add the users control into the main panel
             _userControlMain.Dock = DockStyle.Fill;
             panel_main.Controls.Add(_userControlMain);
+            _userControlMain.Location = new Point(0, 0);
 
             _userControlList.Dock = DockStyle.Fill;
             panel_main.Controls.Add(_userControlList);
             _userControlList.Visible = false;
+            _userControlList.Location = new Point(0, 0);
 
             _userControlSettings.Dock = DockStyle.Fill;
             panel_main.Controls.Add(_userControlSettings);
             _userControlSettings.Visible = false;
+            _userControlSettings.Location = new Point(0, 0);
 
             _userContolList.Add(_userControlMain);
             _userContolList.Add(_userControlList);
@@ -187,80 +190,116 @@ namespace GUI_server
             {
                 var dictionary1 = new Dictionary<string, string>
                 {
-                    { "hostname", "1-------------" },
+                    { "hostname", "INF-A11-M201" },
                     { "ip", "8.8.8.8" },
                     { "user_name", "pg66hua" },
                     { "status", "2" },
                 };
                 var dictionary2 = new Dictionary<string, string>
                 {
-                    { "hostname", "2-------------" },
+                    { "hostname", "INF-A11-M202" },
                     { "ip", "8.8.8.8" },
                     { "user_name", "pg66hua" },
-                    { "status", "2" },
+                    { "status", "0" },
                 };
                 var dictionary3 = new Dictionary<string, string>
                 {
-                    { "hostname", "3-------------" },
+                    { "hostname", "INF-A11-M203" },
                     { "ip", "8.8.8.8" },
                     { "user_name", "pg66hua" },
                     { "status", "2" },
                 };
                 var dictionary4 = new Dictionary<string, string>
                 {
-                    { "hostname", "4-------------" },
+                    { "hostname", "INF-A11-M204" },
                     { "ip", "8.8.8.8" },
                     { "user_name", "pg66hua" },
                     { "status", "2" },
                 };
                 var dictionary5 = new Dictionary<string, string>
                 {
-                    { "hostname", "5-------------" },
+                    { "hostname", "INF-A11-M205" },
                     { "ip", "8.8.8.8" },
                     { "user_name", "pg66hua" },
-                    { "status", "2" },
+                    { "status", "1" },
                 };
                 var dictionary6 = new Dictionary<string, string>
                 {
-                    { "hostname", "6-------------" },
+                    { "hostname", "INF-A11-M206" },
                     { "ip", "8.8.8.8" },
                     { "user_name", "pg66hua" },
                     { "status", "2" },
                 };
                 var dictionary7 = new Dictionary<string, string>
                 {
-                    { "hostname", "7-------------" },
+                    { "hostname", "INF-A11-M207" },
                     { "ip", "8.8.8.8" },
                     { "user_name", "pg66hua" },
                     { "status", "2" },
                 };
                 var dictionary8 = new Dictionary<string, string>
                 {
-                    { "hostname", "8-------------" },
+                    { "hostname", "INF-A11-M208" },
                     { "ip", "8.8.8.8" },
                     { "user_name", "pg66hua" },
-                    { "status", "2" },
+                    { "status", "0" },
                 };
                 var dictionary9 = new Dictionary<string, string>
                 {
-                    { "hostname", "9-------------" },
+                    { "hostname", "INF-A11-M209" },
                     { "ip", "8.8.8.8" },
                     { "user_name", "pg66hua" },
-                    { "status", "2" },
+                    { "status", "0" },
                 };
                 var dictionary10 = new Dictionary<string, string>
                 {
-                    { "hostname", "10-------------" },
+                    { "hostname", "INF-A11-M210" },
                     { "ip", "8.8.8.8" },
                     { "user_name", "pg66hua" },
-                    { "status", "2" },
+                    { "status", "1" },
                 };
                 var dictionary11 = new Dictionary<string, string>
                 {
-                    { "hostname", "11-------------" },
+                    { "hostname", "INF-A11-M211" },
                     { "ip", "8.8.8.8" },
                     { "user_name", "pg66hua" },
-                    { "status", "2" },
+                    { "status", "1" },
+                };
+                var dictionary12 = new Dictionary<string, string>
+                {
+                    { "hostname", "INF-A11-M212" },
+                    { "ip", "8.8.8.8" },
+                    { "user_name", "pg66hua" },
+                    { "status", "1" },
+                };
+                var dictionary13 = new Dictionary<string, string>
+                {
+                    { "hostname", "INF-A11-M213" },
+                    { "ip", "8.8.8.8" },
+                    { "user_name", "pg66hua" }
+                    ,
+                    { "status", "1" },
+                };
+                var dictionary14 = new Dictionary<string, string>
+                {
+                    { "hostname", "INF-A11-M214" },
+                    { "ip", "8.8.8.8" },
+                    { "user_name", "pg66hua" },
+                    { "status", "1" },
+                };
+                var dictionary15 = new Dictionary<string, string>
+                {
+                    { "hostname", "INF-A11-M215" },
+                    { "ip", "8.8.8.8" },
+                    { "user_name", "pg66hua" },
+                    { "status", "1" },
+                };
+                var dictionary16 = new Dictionary<string, string>
+                {
+                    { "hostname", "INF-A11-M216" },
+                    { "ip", "8.8.8.8" },
+                    { "user_name", "pg66hua" },
+                    { "status", "1" },
                 };
                 List<Dictionary<string, string>> pcList = new List<Dictionary<string, string>>();
                 pcList.Add(dictionary1);
@@ -276,6 +315,11 @@ namespace GUI_server
                 _userControlList.DisplayPc(dictionary9);
                 _userControlList.DisplayPc(dictionary10);
                 _userControlList.DisplayPc(dictionary11);
+                _userControlList.DisplayPc(dictionary12);
+                _userControlList.DisplayPc(dictionary13);
+                _userControlList.DisplayPc(dictionary14);
+                _userControlList.DisplayPc(dictionary15);
+                _userControlList.DisplayPc(dictionary16);
             }
         }
 

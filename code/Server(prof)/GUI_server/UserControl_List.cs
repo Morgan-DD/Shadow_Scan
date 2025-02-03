@@ -6,6 +6,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -28,32 +29,56 @@ namespace GUI_server
         public void DisplayPc(Dictionary<string, string> Settings)
         {
             // Debug.WriteLine(Settings["hostname"] + " | " + Settings["ip"] + " | " + Settings["user_name"] + " | " + Settings["status"]);
+            // create a new "PC"
             UserControl_PC NewPc = new UserControl_PC(Settings["hostname"], Settings["ip"], Convert.ToByte(Settings["status"]), Settings["user_name"], _NextId, this);
-
+            
+            // add the pc to the pc list
             _pcList.Add(NewPc);
-            NewPc.Visible = true;
+            // make it visible
             Panel.Controls.Add(NewPc);
 
+            // create a conxtext menu for the pc
             ContextMenu cm = new ContextMenu();
+            // add the delet option and action for it
             cm.MenuItems.Add("Delet");
             cm.MenuItems[0].Click += ContextmenuAction_item1;
             cm.MenuItems[0].Tag = _NextId;
 
+            // add the context menu to the pc
             NewPc.ContextMenu = cm;
 
             _NextId += 1;
         }
 
+        /// <summary>
+        /// used to remove a pc that is dispayed
+        /// </summary>
+        /// <param name="pcID">id of the pc to remove</param>
         private void removePC(byte pcID)
         {
-            Debug.WriteLine("Deleting pc, ID:" + pcID.ToString());
-            for(int i = pcID; i < _pcList.Count(); i++)
+            // to not exclude issues
+            if (pcID > _pcList.Count())
             {
-                _pcList[i]._ID -= 1;
+                // go on all the pc that have a higher id than the one deleted
+                for (int i = pcID + 1; i < _pcList.Count(); i++)
+                {
+                    // change id to exclude issues
+                    _pcList[i].changeId(Convert.ToByte(_pcList[i]._ID - 1));
+                    _pcList[i].ContextMenu.MenuItems[0].Tag = Convert.ToByte(_pcList[i]._ID - 1);
+                }
+                // if the pc focused is selected or was after the selecter pc
+                if (_focusedPc >= pcID)
+                {
+                    // reset the selection
+                    _focusedPc = 0;
+                }
+                // hide the pc to delet
+                _pcList[pcID].Visible = false;
+                // delet the pc from the controls
+                this.Controls.Remove(_pcList[pcID]);
+                // remove the pc from the list
+                _pcList.Remove(_pcList[pcID]);
             }
-            _pcList[pcID].Visible = false;
-            this.Controls.Remove(_pcList[pcID]);
-            _pcList.Remove(_pcList[pcID]);
         }
 
         public void FocusWindow(byte id)
@@ -61,12 +86,6 @@ namespace GUI_server
             _pcList[id].FocusUserPanel(true);
             _pcList[_focusedPc].FocusUserPanel(false);
             _focusedPc = Convert.ToByte(id);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Random rnd = new Random();
-            FocusWindow(Convert.ToByte(rnd.Next(1, _pcList.Count()-1)));
         }
 
         private void ContextmenuAction_item1(object sender, EventArgs e)
