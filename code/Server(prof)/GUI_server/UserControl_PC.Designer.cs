@@ -28,70 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox_User = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox_dot = new System.Windows.Forms.PictureBox();
             this.label_PcName = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.textBox_User = new System.Windows.Forms.TextBox();
+            this.pictureBox_dot = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_dot)).BeginInit();
             this.SuspendLayout();
             // 
+            // label_PcName
+            // 
+            this.label_PcName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label_PcName.AutoSize = true;
+            this.label_PcName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_PcName.Location = new System.Drawing.Point(10, 9);
+            this.label_PcName.Name = "label_PcName";
+            this.label_PcName.Size = new System.Drawing.Size(139, 25);
+            this.label_PcName.TabIndex = 0;
+            this.label_PcName.Text = "label_PcName";
+            this.label_PcName.TextChanged += new System.EventHandler(this.label_PcName_TextChanged);
+            this.label_PcName.Click += new System.EventHandler(this.Click_Event);
+            // 
             // textBox_User
             // 
-            this.textBox_User.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBox_User.Location = new System.Drawing.Point(14, 47);
-            this.textBox_User.Name = "textBox_User";
-            this.textBox_User.Size = new System.Drawing.Size(128, 20);
-            this.textBox_User.TabIndex = 1;
-            this.textBox_User.Text = "USER_NAME";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.textBox_User.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::GUI_server.Properties.Resources.pc_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(160, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(130, 130);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.textBox_User.Location = new System.Drawing.Point(25, 37);
+            this.textBox_User.Name = "textBox_User";
+            this.textBox_User.Size = new System.Drawing.Size(100, 20);
+            this.textBox_User.TabIndex = 1;
             // 
             // pictureBox_dot
             // 
-            this.pictureBox_dot.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox_dot.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.pictureBox_dot.Image = global::GUI_server.Properties.Resources.dot_red_icon;
-            this.pictureBox_dot.Location = new System.Drawing.Point(14, 110);
+            this.pictureBox_dot.Location = new System.Drawing.Point(60, 65);
             this.pictureBox_dot.Name = "pictureBox_dot";
             this.pictureBox_dot.Size = new System.Drawing.Size(30, 30);
             this.pictureBox_dot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_dot.TabIndex = 2;
             this.pictureBox_dot.TabStop = false;
-            // 
-            // label_PcName
-            // 
-            this.label_PcName.AutoSize = true;
-            this.label_PcName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_PcName.Location = new System.Drawing.Point(12, 10);
-            this.label_PcName.Name = "label_PcName";
-            this.label_PcName.Size = new System.Drawing.Size(130, 31);
-            this.label_PcName.TabIndex = 3;
-            this.label_PcName.Text = "PCNAME";
+            this.pictureBox_dot.Click += new System.EventHandler(this.Click_Event);
             // 
             // UserControl_PC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label_PcName);
+            this.BackColor = System.Drawing.Color.Gray;
             this.Controls.Add(this.pictureBox_dot);
             this.Controls.Add(this.textBox_User);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label_PcName);
             this.Name = "UserControl_PC";
-            this.Size = new System.Drawing.Size(300, 150);
-            this.Load += new System.EventHandler(this.UserControl_PC_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Size = new System.Drawing.Size(150, 105);
+            this.Click += new System.EventHandler(this.Click_Event);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_dot)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -100,9 +88,8 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label_PcName;
         private System.Windows.Forms.TextBox textBox_User;
         private System.Windows.Forms.PictureBox pictureBox_dot;
-        private System.Windows.Forms.Label label_PcName;
     }
 }

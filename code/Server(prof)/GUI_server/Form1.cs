@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -34,6 +35,7 @@ namespace GUI_server
         // list of picture for the maximize button
         List<Bitmap> _maximizePictures = new List<Bitmap>();
 
+        byte _actualUserControl = 0;
 
         public Form_main()
         {
@@ -119,19 +121,10 @@ namespace GUI_server
 
         // action of the buttons to change page (userpanels)
 
-        private void Button_Main_Click(object sender, EventArgs e)
+        private void Button_MenuClick(object sender, EventArgs e)
         {
             hidePanelControls(panel_main, Convert.ToByte((sender as Button).Tag.ToString()));
-        }
-
-        private void button_list_Click(object sender, EventArgs e)
-        {
-            hidePanelControls(panel_main, Convert.ToByte((sender as Button).Tag.ToString()));
-        }
-
-        private void button_settings_Click(object sender, EventArgs e)
-        {
-            hidePanelControls(panel_main, Convert.ToByte((sender as Button).Tag.ToString()));
+            _actualUserControl = Convert.ToByte((sender as Button).Tag.ToString());
         }
 
         // methode used to move the windows when holding click on the topbar
@@ -186,6 +179,109 @@ namespace GUI_server
         private void pictureBox_Close_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void Button_Test_Click(object sender, EventArgs e)
+        {
+            if(_actualUserControl == 1)
+            {
+                var dictionary1 = new Dictionary<string, string>
+                {
+                    { "hostname", "1-------------" },
+                    { "ip", "8.8.8.8" },
+                    { "user_name", "pg66hua" },
+                    { "status", "2" },
+                };
+                var dictionary2 = new Dictionary<string, string>
+                {
+                    { "hostname", "2-------------" },
+                    { "ip", "8.8.8.8" },
+                    { "user_name", "pg66hua" },
+                    { "status", "2" },
+                };
+                var dictionary3 = new Dictionary<string, string>
+                {
+                    { "hostname", "3-------------" },
+                    { "ip", "8.8.8.8" },
+                    { "user_name", "pg66hua" },
+                    { "status", "2" },
+                };
+                var dictionary4 = new Dictionary<string, string>
+                {
+                    { "hostname", "4-------------" },
+                    { "ip", "8.8.8.8" },
+                    { "user_name", "pg66hua" },
+                    { "status", "2" },
+                };
+                var dictionary5 = new Dictionary<string, string>
+                {
+                    { "hostname", "5-------------" },
+                    { "ip", "8.8.8.8" },
+                    { "user_name", "pg66hua" },
+                    { "status", "2" },
+                };
+                var dictionary6 = new Dictionary<string, string>
+                {
+                    { "hostname", "6-------------" },
+                    { "ip", "8.8.8.8" },
+                    { "user_name", "pg66hua" },
+                    { "status", "2" },
+                };
+                var dictionary7 = new Dictionary<string, string>
+                {
+                    { "hostname", "7-------------" },
+                    { "ip", "8.8.8.8" },
+                    { "user_name", "pg66hua" },
+                    { "status", "2" },
+                };
+                var dictionary8 = new Dictionary<string, string>
+                {
+                    { "hostname", "8-------------" },
+                    { "ip", "8.8.8.8" },
+                    { "user_name", "pg66hua" },
+                    { "status", "2" },
+                };
+                var dictionary9 = new Dictionary<string, string>
+                {
+                    { "hostname", "9-------------" },
+                    { "ip", "8.8.8.8" },
+                    { "user_name", "pg66hua" },
+                    { "status", "2" },
+                };
+                var dictionary10 = new Dictionary<string, string>
+                {
+                    { "hostname", "10-------------" },
+                    { "ip", "8.8.8.8" },
+                    { "user_name", "pg66hua" },
+                    { "status", "2" },
+                };
+                var dictionary11 = new Dictionary<string, string>
+                {
+                    { "hostname", "11-------------" },
+                    { "ip", "8.8.8.8" },
+                    { "user_name", "pg66hua" },
+                    { "status", "2" },
+                };
+                List<Dictionary<string, string>> pcList = new List<Dictionary<string, string>>();
+                pcList.Add(dictionary1);
+
+                _userControlList.DisplayPc(dictionary1);
+                _userControlList.DisplayPc(dictionary2);
+                _userControlList.DisplayPc(dictionary3);
+                _userControlList.DisplayPc(dictionary4);
+                _userControlList.DisplayPc(dictionary5);
+                _userControlList.DisplayPc(dictionary6);
+                _userControlList.DisplayPc(dictionary7);
+                _userControlList.DisplayPc(dictionary8);
+                _userControlList.DisplayPc(dictionary9);
+                _userControlList.DisplayPc(dictionary10);
+                _userControlList.DisplayPc(dictionary11);
+            }
+        }
+
+        private void Form_main_Resize(object sender, EventArgs e)
+        {
+            label_size.Text = this.Size.ToString();
         }
     }
 }
