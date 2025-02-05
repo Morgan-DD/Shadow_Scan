@@ -184,5 +184,11 @@
     <None Include="Resources\scna1.ico" />
     <Content Include="Resources\ShadowScan_logo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ShadowScan_Server_1\ShadowScan_Server.csproj">
+      <Project>{4902901d-de11-439e-80e5-b37af71514fe}</Project>
+      <Name>ShadowScan_Server</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

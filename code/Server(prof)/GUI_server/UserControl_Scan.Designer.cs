@@ -144,7 +144,6 @@
             this.textBox_NewPcName.Name = "textBox_NewPcName";
             this.textBox_NewPcName.Size = new System.Drawing.Size(206, 20);
             this.textBox_NewPcName.TabIndex = 4;
-            this.textBox_NewPcName.Text = "INF-A12-M2";
             // 
             // label_changeClass_title
             // 

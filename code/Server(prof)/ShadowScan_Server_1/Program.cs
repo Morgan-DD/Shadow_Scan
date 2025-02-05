@@ -11,16 +11,17 @@ using System.Net.Http;
 
 namespace ShadowScan_Server
 {
-    internal class Program
+    public class Program
     {
         static async Task Main(string[] args)
         {
             var input = new HelloRequest { Name = "LeBoss" };
-
+            /*
             var httpHandler = new SocketsHttpHandler
             {
                 PooledConnectionLifetime = TimeSpan.FromMinutes(5) // Optional: Helps with DNS changes
             };
+            
 
             var channel = GrpcChannel.ForAddress("https://your-grpc-server", new GrpcChannelOptions
             {
@@ -34,6 +35,18 @@ namespace ShadowScan_Server
             Console.WriteLine(reply.Message);
 
             Console.ReadLine();
+            */
         }
+
+        private void pingPc(List<string> hostnames)
+        {
+
+        }
+
+        public string TestFromScanPart()
+        {
+            return "aaaaaaaa";
+        }
+
     }
 }

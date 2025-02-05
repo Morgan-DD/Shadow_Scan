@@ -14,6 +14,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
+using ShadowScan_Server;
 
 namespace GUI_server
 {
@@ -39,6 +40,8 @@ namespace GUI_server
         List<Bitmap> _maximizePictures = new List<Bitmap>();
 
         byte _actualUserControl = 0;
+
+        ShadowScan_Server.Program _shadowScanInstance = new ShadowScan_Server.Program();
 
         public Form_main()
         {
@@ -210,6 +213,8 @@ namespace GUI_server
                 };
                 _userControlList.DisplayPc(Pc);
             }
+
+           Debug.WriteLine(_shadowScanInstance.TestFromScanPart());
         }
     }
 }
