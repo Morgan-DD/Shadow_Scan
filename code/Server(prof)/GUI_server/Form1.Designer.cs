@@ -40,6 +40,7 @@
             this.pictureBox_Close = new System.Windows.Forms.PictureBox();
             this.Button_Test = new System.Windows.Forms.Button();
             this.label_size = new System.Windows.Forms.Label();
+            this.button_loading = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Minimize)).BeginInit();
@@ -181,12 +182,24 @@
             this.label_size.TabIndex = 8;
             this.label_size.Text = "AAA";
             // 
+            // button_loading
+            // 
+            this.button_loading.Location = new System.Drawing.Point(255, 35);
+            this.button_loading.Name = "button_loading";
+            this.button_loading.Size = new System.Drawing.Size(75, 23);
+            this.button_loading.TabIndex = 9;
+            this.button_loading.Tag = "3";
+            this.button_loading.Text = "Loading";
+            this.button_loading.UseVisualStyleBackColor = true;
+            this.button_loading.Click += new System.EventHandler(this.Button_MenuClick);
+            // 
             // Form_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(880, 585);
+            this.Controls.Add(this.button_loading);
             this.Controls.Add(this.label_size);
             this.Controls.Add(this.Button_Test);
             this.Controls.Add(this.panel_top);
@@ -224,6 +237,7 @@
         private System.Windows.Forms.PictureBox pictureBox_Close;
         private System.Windows.Forms.Button Button_Test;
         private System.Windows.Forms.Label label_size;
+        private System.Windows.Forms.Button button_loading;
     }
 }
 

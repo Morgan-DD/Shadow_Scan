@@ -17,9 +17,11 @@ namespace GUI_server
     {
         List<UserControl_PC> _pcList = new List<UserControl_PC>();
 
-        byte _focusedPc = 0;
+        byte _focusedPc = 255;
 
         byte _NextId = 0;
+
+        List<Control> _Panel_rapport_Pages = new List<Control>();
 
         public UserControl_List()
         {
@@ -40,7 +42,7 @@ namespace GUI_server
             // create a conxtext menu for the pc
             ContextMenu cm = new ContextMenu();
             // add the delet option and action for it
-            cm.MenuItems.Add("Delet");
+            cm.MenuItems.Add("Delete");
             cm.MenuItems[0].Click += ContextmenuAction_item1;
             cm.MenuItems[0].Tag = _NextId;
 
@@ -56,7 +58,9 @@ namespace GUI_server
         /// <param name="pcID">id of the pc to remove</param>
         private void removePC(byte pcID)
         {
+            Debug.WriteLine("delete{0}", pcID);
             // to not exclude issues
+            _pcList.Remove(_pcList[0]);
             if (pcID > _pcList.Count())
             {
                 // go on all the pc that have a higher id than the one deleted
@@ -75,17 +79,32 @@ namespace GUI_server
                 // hide the pc to delet
                 _pcList[pcID].Visible = false;
                 // delet the pc from the controls
-                this.Controls.Remove(_pcList[pcID]);
+                Panel.Controls.Remove(_pcList[pcID]);
                 // remove the pc from the list
                 _pcList.Remove(_pcList[pcID]);
             }
         }
 
+        /// <summary>
+        /// focus the pc selected
+        /// </summary>
+        /// <param name="id">Id of the pc to focus</param>
         public void FocusWindow(byte id)
         {
+            // focus the pc selected (background light gray)
             _pcList[id].FocusUserPanel(true);
-            _pcList[_focusedPc].FocusUserPanel(false);
+            if(_focusedPc < _pcList.Count())
+                _pcList[_focusedPc].FocusUserPanel(false);
+            // update the last focused windows (actual one)
             _focusedPc = Convert.ToByte(id);
+
+            if(_pcList.Count() > 0)
+            {
+                panel_rapport.Visible = true;
+                _Panel_rapport_Pages.Add(new UserControl_PcLog());
+                _Panel_rapport_Pages.Add(new UserControl_PcLog());
+                //_Panel_rapport_Pages.Add(new UserControl_PcInfo());
+            }
         }
 
         private void ContextmenuAction_item1(object sender, EventArgs e)

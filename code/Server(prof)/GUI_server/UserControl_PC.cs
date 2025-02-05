@@ -13,15 +13,18 @@ namespace GUI_server
 {
     public partial class UserControl_PC : UserControl
     {
+        // def of all info used
         public byte _ID { get; set; }
 
-        string _pcName;
-        string _pcIp;
-        byte _pcStatus;
-        string _user_Name;
+        public string _pcName { get; set; }
+        public string _pcIp { get; set; }
+        // 0 if turn of or unreachable
+        // 1 if on but wihtout the client side started
+        // 2 if everything is started
+        public byte _pcStatus { get; set; }
+        public string _user_Name { get; set; }
 
-        bool _focused = false;
-
+        // parent Control (custom User control)
         UserControl_List _Parent;
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -34,12 +37,20 @@ namespace GUI_server
           int nWidthEllipse, // width of ellipse
           int nHeightEllipse // height of ellipse
       );
-
+        /// <summary>
+        /// init
+        /// </summary>
+        /// <param name="PcName">hostname of the pc</param>
+        /// <param name="PcIp">Ip of the pc</param>
+        /// <param name="PcStatus">status of the pc</param>
+        /// <param name="UserName">username of the person using the pc</param>
+        /// <param name="iD">id of the pc (for display)</param>
+        /// <param name="Parent">parent control of the pc</param>
         public UserControl_PC(string PcName, string PcIp, byte PcStatus, string UserName, byte iD, UserControl_List Parent)
         {
             InitializeComponent();
+            // set the values into local variables
             _ID = iD;
-            changeId(_ID);
             _Parent = Parent;
 
             _pcName = PcName;
@@ -47,19 +58,26 @@ namespace GUI_server
             _pcStatus = PcStatus;
             _user_Name = UserName;
 
+            // set the text into the label and textbox
             label_PcName.Text = _pcName;
             textBox_User.Text = _user_Name;
+            textBox_User.Width = label_PcName.Width;
+            textBox_User.Location = new Point(label_PcName.Location.X+4, textBox_User.Location.Y);
 
+            // set the icon based on the status
             switch (_pcStatus)
             {
                 case 0:
                     pictureBox_dot.Image = Properties.Resources.dot_red_icon;
+                    label_status.Text = "Hors ligne";
                     break;
                 case 1:
                     pictureBox_dot.Image = Properties.Resources.dot_yellow_icon;
+                    label_status.Text = "Allumé";
                     break;
                 case 2:
                     pictureBox_dot.Image = Properties.Resources.dot_green_icon;
+                    label_status.Text = "Connecté";
                     break;
             }
 
@@ -86,7 +104,6 @@ namespace GUI_server
         public void changeId(byte newId)
         {
             _ID = newId;
-            id_label.Text = _ID.ToString();
         }
     }
 }

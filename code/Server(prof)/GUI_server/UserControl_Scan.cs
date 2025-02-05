@@ -88,7 +88,8 @@ namespace GUI_server
 
         private void button_startScan_Click(object sender, EventArgs e)
         {
-            StartScan();
+            _mainForm.hidePanelControls(3);
+             StartScan();
         }
 
         private void StartScan()

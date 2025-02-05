@@ -33,9 +33,10 @@
             // 
             // label_Title
             // 
+            this.label_Title.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label_Title.AutoSize = true;
             this.label_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Title.Location = new System.Drawing.Point(130, 163);
+            this.label_Title.Location = new System.Drawing.Point(138, 18);
             this.label_Title.Name = "label_Title";
             this.label_Title.Size = new System.Drawing.Size(433, 73);
             this.label_Title.TabIndex = 1;

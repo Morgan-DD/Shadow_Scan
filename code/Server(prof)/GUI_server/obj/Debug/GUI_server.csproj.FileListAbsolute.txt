@@ -49,3 +49,5 @@ C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\bin\
 C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\bin\Debug\Google.Protobuf.xml
 C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\bin\Debug\Grpc.Core.Api.pdb
 C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\bin\Debug\Grpc.Core.Api.xml
+C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\obj\Debug\GUI_server.UserControl_loading.resources
+C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\obj\Debug\GUI_server.textBox_InfoPlus.resources

@@ -15,6 +15,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 using ShadowScan_Server;
+using System.Net.NetworkInformation;
+using System.Threading;
 
 namespace GUI_server
 {
@@ -30,6 +32,7 @@ namespace GUI_server
 
         // users control for the pages, they go into the main panel (panel_main)
         UserControl_main _userControlMain;
+        UserControl_loading _userControlLoading = new UserControl_loading();
         UserControl_List _userControlList = new UserControl_List();
         UserControl_Settings _userControlSettings = new UserControl_Settings();
 
@@ -64,9 +67,15 @@ namespace GUI_server
             _userControlSettings.Visible = false;
             _userControlSettings.Location = new Point(0, 0);
 
+            _userControlLoading.Dock = DockStyle.Fill;
+            panel_main.Controls.Add(_userControlLoading);
+            _userControlLoading.Visible = false;
+            _userControlLoading.Location = new Point(0, 0);
+
             _userContolList.Add(_userControlMain);
             _userContolList.Add(_userControlList);
             _userContolList.Add(_userControlSettings);
+            _userContolList.Add(_userControlLoading);
 
             // add the pictures into picture array used for topbar icons
             _maximizePictures.Add(new Bitmap(Properties.Resources.expand_icon));
@@ -114,12 +123,16 @@ namespace GUI_server
         }
 
         // used to show the usercontrol that we want into the main panel
-        private void hidePanelControls(Panel _panel, byte idToShow)
+        public void hidePanelControls(int idToShow)
         {
+            Debug.WriteLine("show page No {0}", idToShow);
             byte id = 0;
-            _actualUserControl = Convert.ToByte(idToShow);
+            if(idToShow >= 0)
+            {
+                _actualUserControl = Convert.ToByte(idToShow);
+            }
             // check all userpanels
-            foreach (Control control in _panel.Controls)
+            foreach (Control control in panel_main.Controls)
             {
                 // if its the one that we want to show
                 if(id == idToShow)
@@ -136,7 +149,7 @@ namespace GUI_server
 
         private void Button_MenuClick(object sender, EventArgs e)
         {
-            hidePanelControls(panel_main, Convert.ToByte((sender as Button).Tag.ToString()));
+            hidePanelControls(Convert.ToByte((sender as Button).Tag.ToString()));
         }
 
         // methode used to move the windows when holding click on the topbar
@@ -183,7 +196,9 @@ namespace GUI_server
             }
             else
             {
-                WindowState = FormWindowState.Maximized;
+                this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+                this.WindowState = FormWindowState.Maximized;
+                //WindowState = FormWindowState.Maximized;
             }
         }
 
@@ -200,21 +215,26 @@ namespace GUI_server
 
         public void startScan(List<string> pcHostnames)
         {
-            hidePanelControls(panel_main, 1);
+            Thread.Sleep(3000);
             Debug.WriteLine("Scan start (main)");
             foreach (string pcHostname in pcHostnames)
             {
+                //byte status = Convert.ToByte(_shadowScanInstance.pingPc(pcHostname));
+                byte status = 0;
+
                 var Pc = new Dictionary<string, string>
                 {
                     { "hostname", pcHostname },
                     { "ip", "8.8.8.8" },
                     { "user_name", "pg66hua" },
-                    { "status", "2" },
+                    { "status", status.ToString() },
                 };
                 _userControlList.DisplayPc(Pc);
             }
+            hidePanelControls(1);
 
-           Debug.WriteLine(_shadowScanInstance.TestFromScanPart());
+            //Debug.WriteLine(_shadowScanInstance.TestFromScanPart());
+            
         }
     }
 }

@@ -8,11 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using Grpc.Net.Client;
 using System.Net.Http;
+using System.Net.NetworkInformation;
+using System.Diagnostics;
+using System.Threading;
+
 
 namespace ShadowScan_Server
 {
     public class Program
     {
+        byte _maxPingTest = 5;
+
         static async Task Main(string[] args)
         {
             var input = new HelloRequest { Name = "LeBoss" };
@@ -36,15 +42,48 @@ namespace ShadowScan_Server
 
             Console.ReadLine();
             */
+
+            Program test = new Program();
+
+            Console.WriteLine(test.pingPc("inf-a11-m213"));
+
+            Console.ReadKey();
         }
 
-        private void pingPc(List<string> hostnames)
+        /// <summary>
+        /// Ping a pc
+        /// </summary>
+        /// <param name="hostname">hostname of the pc to ping</param>
+        /// <returns>[True] if the pc is pingable, else [false]</returns>
+        public bool pingPc(string hostname) //List<string> hostnames
         {
-
+            // do multiple tries
+            for (int i = 0; i < _maxPingTest; i++) 
+            {
+                try
+                {
+                    // Thread.Sleep(500);
+                    using (Ping pinger = new Ping())
+                    {
+                        PingReply reply = pinger.Send(hostname);
+                        return reply.Status == IPStatus.Success;
+                    }
+                }
+                catch (Exception e) 
+                {
+                    return false;
+                }
+            }
+            return false;
         }
 
-        public string TestFromScanPart()
+        public string testPing(List<string> pcHostnames)
         {
+            foreach (string pcHostname in pcHostnames)
+            {
+                pingPc(pcHostname);
+            }
+
             return "aaaaaaaa";
         }
 

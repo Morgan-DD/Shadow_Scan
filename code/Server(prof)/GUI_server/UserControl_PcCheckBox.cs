@@ -32,5 +32,9 @@ namespace GUI_server
             return checkBox.Checked;
         }
 
+        private void textBox_TextChanged(object sender, EventArgs e)
+        {
+            _pcName = textBox.Text;
+        }
     }
 }

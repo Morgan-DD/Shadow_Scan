@@ -39,6 +39,7 @@
             this.textBox.Name = "textBox";
             this.textBox.Size = new System.Drawing.Size(120, 26);
             this.textBox.TabIndex = 0;
+            this.textBox.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             // 
             // checkBox
             // 

@@ -98,8 +98,20 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl_PcInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_PcInfo.Designer.cs">
+      <DependentUpon>UserControl_PcInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControl_loading.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_loading.Designer.cs">
+      <DependentUpon>UserControl_loading.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControl_PcCheckBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -117,6 +129,12 @@
     </Compile>
     <Compile Include="UserControl_List.Designer.cs">
       <DependentUpon>UserControl_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_PcLog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_PcLog.Designer.cs">
+      <DependentUpon>UserControl_PcLog.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl_Settings.cs">
       <SubType>UserControl</SubType>
@@ -136,11 +154,17 @@
     <EmbeddedResource Include="UserControl_List.resx">
       <DependentUpon>UserControl_List.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_loading.resx">
+      <DependentUpon>UserControl_loading.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControl_PC.resx">
       <DependentUpon>UserControl_PC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl_PcCheckBox.resx">
       <DependentUpon>UserControl_PcCheckBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_PcInfo.resx">
+      <DependentUpon>UserControl_PcInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl_Scan.resx">
       <DependentUpon>UserControl_Scan.cs</DependentUpon>
@@ -179,6 +203,7 @@
     <None Include="Resources\dot_red_icon.png" />
     <Content Include="Resources\expand_icon.png" />
     <Content Include="Resources\hide_icon.png" />
+    <None Include="Resources\loading.gif" />
     <Content Include="Resources\minimize_icon.png" />
     <None Include="Resources\pc_icon.png" />
     <None Include="Resources\scna1.ico" />

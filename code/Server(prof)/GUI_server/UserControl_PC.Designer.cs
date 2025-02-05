@@ -31,7 +31,7 @@
             this.label_PcName = new System.Windows.Forms.Label();
             this.textBox_User = new System.Windows.Forms.TextBox();
             this.pictureBox_dot = new System.Windows.Forms.PictureBox();
-            this.id_label = new System.Windows.Forms.Label();
+            this.label_status = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_dot)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,16 +52,16 @@
             // 
             this.textBox_User.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_User.Location = new System.Drawing.Point(25, 37);
+            this.textBox_User.Location = new System.Drawing.Point(15, 37);
             this.textBox_User.Name = "textBox_User";
-            this.textBox_User.Size = new System.Drawing.Size(125, 20);
+            this.textBox_User.Size = new System.Drawing.Size(147, 20);
             this.textBox_User.TabIndex = 1;
             // 
             // pictureBox_dot
             // 
             this.pictureBox_dot.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.pictureBox_dot.Image = global::GUI_server.Properties.Resources.dot_red_icon;
-            this.pictureBox_dot.Location = new System.Drawing.Point(72, 65);
+            this.pictureBox_dot.Location = new System.Drawing.Point(15, 63);
             this.pictureBox_dot.Name = "pictureBox_dot";
             this.pictureBox_dot.Size = new System.Drawing.Size(30, 30);
             this.pictureBox_dot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -69,21 +69,22 @@
             this.pictureBox_dot.TabStop = false;
             this.pictureBox_dot.Click += new System.EventHandler(this.Click_Event);
             // 
-            // id_label
+            // label_status
             // 
-            this.id_label.AutoSize = true;
-            this.id_label.Location = new System.Drawing.Point(97, 65);
-            this.id_label.Name = "id_label";
-            this.id_label.Size = new System.Drawing.Size(35, 13);
-            this.id_label.TabIndex = 3;
-            this.id_label.Text = "label1";
+            this.label_status.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_status.Location = new System.Drawing.Point(51, 68);
+            this.label_status.Name = "label_status";
+            this.label_status.Size = new System.Drawing.Size(98, 20);
+            this.label_status.TabIndex = 3;
+            this.label_status.Text = "Connecté";
+            this.label_status.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // UserControl_PC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.Controls.Add(this.id_label);
+            this.Controls.Add(this.label_status);
             this.Controls.Add(this.pictureBox_dot);
             this.Controls.Add(this.textBox_User);
             this.Controls.Add(this.label_PcName);
@@ -101,6 +102,6 @@
         private System.Windows.Forms.Label label_PcName;
         private System.Windows.Forms.TextBox textBox_User;
         private System.Windows.Forms.PictureBox pictureBox_dot;
-        private System.Windows.Forms.Label id_label;
+        private System.Windows.Forms.Label label_status;
     }
 }
