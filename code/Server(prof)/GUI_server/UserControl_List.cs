@@ -23,6 +23,8 @@ namespace GUI_server
 
         List<Control> _Panel_rapport_Pages = new List<Control>();
 
+        byte _Panel_rapport_oldShowed_Id = 0;
+
         public UserControl_List()
         {
             InitializeComponent();
@@ -31,12 +33,16 @@ namespace GUI_server
             _Panel_rapport_Pages.Add(new UserControl_PcLog());
             _Panel_rapport_Pages.Add(new UserControl_PcLog());
 
+            
+
             foreach(Control userControl in _Panel_rapport_Pages)
             {
-                panel_rapport.Controls.Add(userControl);
+                panel_rapport_Sub.Controls.Add(userControl);
                 userControl.Visible = false;
                 userControl.Dock = DockStyle.Fill;
             }
+
+            FocusWindow_Rapport(0);
         }
 
         public void DisplayPc(Dictionary<string, string> Settings)
@@ -104,12 +110,12 @@ namespace GUI_server
         {
             // focus the pc selected (background light gray)
             _pcList[id].FocusUserPanel(true);
-            if(_focusedPc < _pcList.Count())
+            if (_focusedPc < _pcList.Count())
                 _pcList[_focusedPc].FocusUserPanel(false);
             // update the last focused windows (actual one)
             _focusedPc = Convert.ToByte(id);
 
-            if(_pcList.Count() > 0)
+            if (_pcList.Count() > 0)
             {
                 panel_rapport.Visible = true;
             }
@@ -119,15 +125,26 @@ namespace GUI_server
             (_Panel_rapport_Pages[0] as UserControl_PcInfo).updateInfos(_pcList[id]._pcName, _pcList[id]._pcIp, _pcList[id]._user_Name, _pcList[id]._user_Name, _pcList[id].getStatusString(), "");
         }
 
+        /// <summary>
+        /// focus the pc selected
+        /// </summary>
+        /// <param name="id">Id of the pc to focus</param>
+        public void FocusWindow_Rapport(byte id)
+        {
+            _Panel_rapport_Pages[_Panel_rapport_oldShowed_Id].Visible = false;
+            _Panel_rapport_Pages[id].Visible = true;
+            _Panel_rapport_oldShowed_Id = id;
+        }
+
         private void ContextmenuAction_item1(object sender, EventArgs e)
         {
             //Debug.WriteLine((sender as MenuItem).Container);
             removePC(Convert.ToByte((sender as MenuItem).Tag.ToString()));
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void ButtonAction_Rapport(object sender, EventArgs e)
         {
-            _Panel_rapport_Pages[0].Visible=true;
+            FocusWindow_Rapport(Convert.ToByte((sender as Button).Tag));
         }
     }
 }

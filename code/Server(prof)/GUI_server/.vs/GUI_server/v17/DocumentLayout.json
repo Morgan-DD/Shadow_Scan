@@ -7,15 +7,7 @@
       "RelativeMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|solutionrelative:usercontrol_list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\server(prof)\\gui_server\\usercontrol_pcinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|solutionrelative:usercontrol_pcinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\server(prof)\\gui_server\\usercontrol_pcinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|solutionrelative:usercontrol_pcinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\usercontrol_list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\server(prof)\\gui_server\\usercontrol_list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|solutionrelative:usercontrol_list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -30,17 +22,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAmwCcAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAmwCcAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-05T09:32:52.083Z",
               "IsPinned": true,
@@ -49,26 +41,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UserControl_PcInfo.cs",
-              "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\UserControl_PcInfo.cs",
-              "RelativeDocumentMoniker": "UserControl_PcInfo.cs",
-              "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\UserControl_PcInfo.cs",
-              "RelativeToolTip": "UserControl_PcInfo.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAC8AAAAhAAAAAAAAAA==",
+              "Title": "UserControl_List.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\UserControl_List.cs",
+              "RelativeDocumentMoniker": "UserControl_List.cs",
+              "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\UserControl_List.cs [Design]",
+              "RelativeToolTip": "UserControl_List.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-05T14:16:26.745Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserControl_PcInfo.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\UserControl_PcInfo.cs",
-              "RelativeDocumentMoniker": "UserControl_PcInfo.cs",
-              "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\UserControl_PcInfo.cs [Design]",
-              "RelativeToolTip": "UserControl_PcInfo.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-05T14:15:40.757Z",
+              "WhenOpened": "2025-02-05T14:24:26.73Z",
+              "IsPinned": true,
               "EditorCaption": " [Design]"
             },
             {
@@ -79,22 +59,11 @@
               "RelativeDocumentMoniker": "UserControl_List.cs",
               "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\UserControl_List.cs",
               "RelativeToolTip": "UserControl_List.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAYwBUAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAIwJIAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-05T13:38:18.012Z",
+              "IsPinned": true,
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserControl_List.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\UserControl_List.cs",
-              "RelativeDocumentMoniker": "UserControl_List.cs",
-              "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\UserControl_List.cs [Design]",
-              "RelativeToolTip": "UserControl_List.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-05T13:02:12.287Z",
-              "EditorCaption": " [Design]"
             }
           ]
         }

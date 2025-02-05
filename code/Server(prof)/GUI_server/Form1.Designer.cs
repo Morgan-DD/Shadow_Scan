@@ -86,7 +86,7 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
             this.pictureBox1.Image = global::GUI_server.Properties.Resources.ShadowScan_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(841, 32);
+            this.pictureBox1.Location = new System.Drawing.Point(891, 32);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(35, 35);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -102,7 +102,7 @@
             this.panel_main.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panel_main.Location = new System.Drawing.Point(3, 73);
             this.panel_main.Name = "panel_main";
-            this.panel_main.Size = new System.Drawing.Size(873, 509);
+            this.panel_main.Size = new System.Drawing.Size(923, 509);
             this.panel_main.TabIndex = 5;
             // 
             // panel_top
@@ -115,7 +115,7 @@
             this.panel_top.Controls.Add(this.pictureBox_Close);
             this.panel_top.Location = new System.Drawing.Point(0, 0);
             this.panel_top.Name = "panel_top";
-            this.panel_top.Size = new System.Drawing.Size(880, 26);
+            this.panel_top.Size = new System.Drawing.Size(930, 26);
             this.panel_top.TabIndex = 6;
             this.panel_top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
             // 
@@ -124,7 +124,7 @@
             this.pictureBox_Minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox_Minimize.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox_Minimize.Image = global::GUI_server.Properties.Resources.hide_icon;
-            this.pictureBox_Minimize.Location = new System.Drawing.Point(804, 3);
+            this.pictureBox_Minimize.Location = new System.Drawing.Point(854, 3);
             this.pictureBox_Minimize.Name = "pictureBox_Minimize";
             this.pictureBox_Minimize.Size = new System.Drawing.Size(20, 20);
             this.pictureBox_Minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -139,7 +139,7 @@
             this.pictureBox_Maximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox_Maximize.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox_Maximize.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Maximize.Image")));
-            this.pictureBox_Maximize.Location = new System.Drawing.Point(830, 3);
+            this.pictureBox_Maximize.Location = new System.Drawing.Point(880, 3);
             this.pictureBox_Maximize.Name = "pictureBox_Maximize";
             this.pictureBox_Maximize.Size = new System.Drawing.Size(20, 20);
             this.pictureBox_Maximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -154,7 +154,7 @@
             this.pictureBox_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox_Close.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox_Close.Image = global::GUI_server.Properties.Resources.close_icon;
-            this.pictureBox_Close.Location = new System.Drawing.Point(856, 3);
+            this.pictureBox_Close.Location = new System.Drawing.Point(906, 3);
             this.pictureBox_Close.Name = "pictureBox_Close";
             this.pictureBox_Close.Size = new System.Drawing.Size(20, 20);
             this.pictureBox_Close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -198,7 +198,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(880, 585);
+            this.ClientSize = new System.Drawing.Size(930, 585);
             this.Controls.Add(this.button_loading);
             this.Controls.Add(this.label_size);
             this.Controls.Add(this.Button_Test);
@@ -210,7 +210,7 @@
             this.Controls.Add(this.Button_Main);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(880, 585);
+            this.MinimumSize = new System.Drawing.Size(930, 585);
             this.Name = "Form_main";
             this.Text = "ShadowScan";
             this.Resize += new System.EventHandler(this.Form_main_Resize);
