@@ -101,7 +101,7 @@
             this.panel_main.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panel_main.Location = new System.Drawing.Point(3, 73);
             this.panel_main.Name = "panel_main";
-            this.panel_main.Size = new System.Drawing.Size(873, 494);
+            this.panel_main.Size = new System.Drawing.Size(873, 509);
             this.panel_main.TabIndex = 5;
             // 
             // panel_top
@@ -171,7 +171,6 @@
             this.Button_Test.TabIndex = 7;
             this.Button_Test.Text = "Test";
             this.Button_Test.UseVisualStyleBackColor = true;
-            this.Button_Test.Click += new System.EventHandler(this.Button_Test_Click);
             // 
             // label_size
             // 
@@ -187,7 +186,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(880, 570);
+            this.ClientSize = new System.Drawing.Size(880, 585);
             this.Controls.Add(this.label_size);
             this.Controls.Add(this.Button_Test);
             this.Controls.Add(this.panel_top);
@@ -198,7 +197,7 @@
             this.Controls.Add(this.Button_Main);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(880, 570);
+            this.MinimumSize = new System.Drawing.Size(880, 585);
             this.Name = "Form_main";
             this.Text = "ShadowScan";
             this.Resize += new System.EventHandler(this.Form_main_Resize);

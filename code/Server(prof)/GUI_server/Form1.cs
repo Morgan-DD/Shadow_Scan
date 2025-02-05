@@ -1,10 +1,13 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -25,7 +28,7 @@ namespace GUI_server
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
 
         // users control for the pages, they go into the main panel (panel_main)
-        UserControl_main _userControlMain = new UserControl_main();
+        UserControl_main _userControlMain;
         UserControl_List _userControlList = new UserControl_List();
         UserControl_Settings _userControlSettings = new UserControl_Settings();
 
@@ -40,6 +43,8 @@ namespace GUI_server
         public Form_main()
         {
             InitializeComponent();
+
+            _userControlMain = new UserControl_main(Convert.ToByte(ConfigurationSettings.AppSettings["DefaultClassSize"]), this);
 
             // add the users control into the main panel
             _userControlMain.Dock = DockStyle.Fill;
@@ -63,6 +68,7 @@ namespace GUI_server
             // add the pictures into picture array used for topbar icons
             _maximizePictures.Add(new Bitmap(Properties.Resources.expand_icon));
             _maximizePictures.Add(new Bitmap(Properties.Resources.minimize_icon));
+
         }
 
         // methode to resize the window
@@ -108,6 +114,7 @@ namespace GUI_server
         private void hidePanelControls(Panel _panel, byte idToShow)
         {
             byte id = 0;
+            _actualUserControl = Convert.ToByte(idToShow);
             // check all userpanels
             foreach (Control control in _panel.Controls)
             {
@@ -127,7 +134,6 @@ namespace GUI_server
         private void Button_MenuClick(object sender, EventArgs e)
         {
             hidePanelControls(panel_main, Convert.ToByte((sender as Button).Tag.ToString()));
-            _actualUserControl = Convert.ToByte((sender as Button).Tag.ToString());
         }
 
         // methode used to move the windows when holding click on the topbar
@@ -184,148 +190,26 @@ namespace GUI_server
             Close();
         }
 
-        private void Button_Test_Click(object sender, EventArgs e)
-        {
-            if(_actualUserControl == 1)
-            {
-                var dictionary1 = new Dictionary<string, string>
-                {
-                    { "hostname", "INF-A11-M201" },
-                    { "ip", "8.8.8.8" },
-                    { "user_name", "pg66hua" },
-                    { "status", "2" },
-                };
-                var dictionary2 = new Dictionary<string, string>
-                {
-                    { "hostname", "INF-A11-M202" },
-                    { "ip", "8.8.8.8" },
-                    { "user_name", "pg66hua" },
-                    { "status", "0" },
-                };
-                var dictionary3 = new Dictionary<string, string>
-                {
-                    { "hostname", "INF-A11-M203" },
-                    { "ip", "8.8.8.8" },
-                    { "user_name", "pg66hua" },
-                    { "status", "2" },
-                };
-                var dictionary4 = new Dictionary<string, string>
-                {
-                    { "hostname", "INF-A11-M204" },
-                    { "ip", "8.8.8.8" },
-                    { "user_name", "pg66hua" },
-                    { "status", "2" },
-                };
-                var dictionary5 = new Dictionary<string, string>
-                {
-                    { "hostname", "INF-A11-M205" },
-                    { "ip", "8.8.8.8" },
-                    { "user_name", "pg66hua" },
-                    { "status", "1" },
-                };
-                var dictionary6 = new Dictionary<string, string>
-                {
-                    { "hostname", "INF-A11-M206" },
-                    { "ip", "8.8.8.8" },
-                    { "user_name", "pg66hua" },
-                    { "status", "2" },
-                };
-                var dictionary7 = new Dictionary<string, string>
-                {
-                    { "hostname", "INF-A11-M207" },
-                    { "ip", "8.8.8.8" },
-                    { "user_name", "pg66hua" },
-                    { "status", "2" },
-                };
-                var dictionary8 = new Dictionary<string, string>
-                {
-                    { "hostname", "INF-A11-M208" },
-                    { "ip", "8.8.8.8" },
-                    { "user_name", "pg66hua" },
-                    { "status", "0" },
-                };
-                var dictionary9 = new Dictionary<string, string>
-                {
-                    { "hostname", "INF-A11-M209" },
-                    { "ip", "8.8.8.8" },
-                    { "user_name", "pg66hua" },
-                    { "status", "0" },
-                };
-                var dictionary10 = new Dictionary<string, string>
-                {
-                    { "hostname", "INF-A11-M210" },
-                    { "ip", "8.8.8.8" },
-                    { "user_name", "pg66hua" },
-                    { "status", "1" },
-                };
-                var dictionary11 = new Dictionary<string, string>
-                {
-                    { "hostname", "INF-A11-M211" },
-                    { "ip", "8.8.8.8" },
-                    { "user_name", "pg66hua" },
-                    { "status", "1" },
-                };
-                var dictionary12 = new Dictionary<string, string>
-                {
-                    { "hostname", "INF-A11-M212" },
-                    { "ip", "8.8.8.8" },
-                    { "user_name", "pg66hua" },
-                    { "status", "1" },
-                };
-                var dictionary13 = new Dictionary<string, string>
-                {
-                    { "hostname", "INF-A11-M213" },
-                    { "ip", "8.8.8.8" },
-                    { "user_name", "pg66hua" }
-                    ,
-                    { "status", "1" },
-                };
-                var dictionary14 = new Dictionary<string, string>
-                {
-                    { "hostname", "INF-A11-M214" },
-                    { "ip", "8.8.8.8" },
-                    { "user_name", "pg66hua" },
-                    { "status", "1" },
-                };
-                var dictionary15 = new Dictionary<string, string>
-                {
-                    { "hostname", "INF-A11-M215" },
-                    { "ip", "8.8.8.8" },
-                    { "user_name", "pg66hua" },
-                    { "status", "1" },
-                };
-                var dictionary16 = new Dictionary<string, string>
-                {
-                    { "hostname", "INF-A11-M216" },
-                    { "ip", "8.8.8.8" },
-                    { "user_name", "pg66hua" },
-                    { "status", "1" },
-                };
-                List<Dictionary<string, string>> pcList = new List<Dictionary<string, string>>();
-                pcList.Add(dictionary1);
-
-                _userControlList.DisplayPc(dictionary1);
-                _userControlList.DisplayPc(dictionary2);
-                _userControlList.DisplayPc(dictionary3);
-                _userControlList.DisplayPc(dictionary4);
-                _userControlList.DisplayPc(dictionary5);
-                _userControlList.DisplayPc(dictionary6);
-                _userControlList.DisplayPc(dictionary7);
-                _userControlList.DisplayPc(dictionary8);
-                _userControlList.DisplayPc(dictionary9);
-                _userControlList.DisplayPc(dictionary10);
-                _userControlList.DisplayPc(dictionary11);
-                _userControlList.DisplayPc(dictionary12);
-                _userControlList.DisplayPc(dictionary13);
-                _userControlList.DisplayPc(dictionary14);
-                _userControlList.DisplayPc(dictionary15);
-                _userControlList.DisplayPc(dictionary16);
-            }
-        }
-
         private void Form_main_Resize(object sender, EventArgs e)
         {
             label_size.Text = this.Size.ToString();
+        }
+
+        public void startScan(List<string> pcHostnames)
+        {
+            hidePanelControls(panel_main, 1);
+            Debug.WriteLine("Scan start (main)");
+            foreach (string pcHostname in pcHostnames)
+            {
+                var Pc = new Dictionary<string, string>
+                {
+                    { "hostname", pcHostname },
+                    { "ip", "8.8.8.8" },
+                    { "user_name", "pg66hua" },
+                    { "status", "2" },
+                };
+                _userControlList.DisplayPc(Pc);
+            }
         }
     }
 }

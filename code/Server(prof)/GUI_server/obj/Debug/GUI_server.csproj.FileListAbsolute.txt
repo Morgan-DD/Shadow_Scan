@@ -39,3 +39,4 @@ C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\obj\
 C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\obj\Debug\GUI_server.UserControl_main.resources
 C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\obj\Debug\GUI_server.UserControl_Settings.resources
 C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\obj\Debug\GUI_server.UserControl_PC.resources
+C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\obj\Debug\GUI_server.UserControl_PcCheckBox.resources
