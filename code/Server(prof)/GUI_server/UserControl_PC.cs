@@ -105,5 +105,10 @@ namespace GUI_server
         {
             _ID = newId;
         }
+
+        public string getStatusString()
+        {
+            return label_status.Text;
+        }
     }
 }

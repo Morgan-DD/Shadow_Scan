@@ -166,6 +166,9 @@
     <EmbeddedResource Include="UserControl_PcInfo.resx">
       <DependentUpon>UserControl_PcInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_PcLog.resx">
+      <DependentUpon>UserControl_PcLog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControl_Scan.resx">
       <DependentUpon>UserControl_Scan.cs</DependentUpon>
     </EmbeddedResource>

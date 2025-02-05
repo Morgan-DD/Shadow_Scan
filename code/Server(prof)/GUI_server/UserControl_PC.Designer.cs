@@ -78,6 +78,7 @@
             this.label_status.TabIndex = 3;
             this.label_status.Text = "Connecté";
             this.label_status.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_status.Click += new System.EventHandler(this.Click_Event);
             // 
             // UserControl_PC
             // 

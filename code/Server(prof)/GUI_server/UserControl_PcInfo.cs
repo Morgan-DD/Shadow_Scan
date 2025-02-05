@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace GUI_server
 {
-    public partial class textBox_InfoPlus : UserControl
+    public partial class UserControl_PcInfo : UserControl
     {
         public string _Hostname { get; set; }
         public string _IP { get; set; }
@@ -19,9 +20,13 @@ namespace GUI_server
         public string _Status { get; set; }
         public string _Infos { get; set; }
 
-        public textBox_InfoPlus(string hostname, string IP, string Username_Name, string Username_P, string Status, string Infos)
+        public UserControl_PcInfo()
         {
             InitializeComponent();
+        }
+
+        public void updateInfos(string hostname, string IP, string Username_Name, string Username_P, string Status, string Infos)
+        {
 
             _Hostname = hostname;
             _IP = IP;
@@ -36,6 +41,11 @@ namespace GUI_server
             textBox_Username_P.Text = Username_P;
             textBox_Status.Text = Status;
             textbox_infos.Text = Infos;
+        }
+
+        private void pictureBox_Close_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
         }
     }
 }

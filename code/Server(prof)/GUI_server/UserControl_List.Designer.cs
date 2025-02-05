@@ -31,6 +31,7 @@
             this.label_Title = new System.Windows.Forms.Label();
             this.Panel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel_rapport = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label_Title
@@ -58,17 +59,29 @@
             this.panel_rapport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel_rapport.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel_rapport.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_rapport.Location = new System.Drawing.Point(676, 51);
             this.panel_rapport.Name = "panel_rapport";
             this.panel_rapport.Size = new System.Drawing.Size(294, 534);
             this.panel_rapport.TabIndex = 3;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(77, 20);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // UserControl_List
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel_rapport);
             this.Controls.Add(this.Panel);
             this.Controls.Add(this.label_Title);
@@ -84,5 +97,6 @@
         private System.Windows.Forms.Label label_Title;
         private System.Windows.Forms.FlowLayoutPanel Panel;
         private System.Windows.Forms.Panel panel_rapport;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -26,6 +26,17 @@ namespace GUI_server
         public UserControl_List()
         {
             InitializeComponent();
+
+            _Panel_rapport_Pages.Add(new UserControl_PcInfo());
+            _Panel_rapport_Pages.Add(new UserControl_PcLog());
+            _Panel_rapport_Pages.Add(new UserControl_PcLog());
+
+            foreach(Control userControl in _Panel_rapport_Pages)
+            {
+                panel_rapport.Controls.Add(userControl);
+                userControl.Visible = false;
+                userControl.Dock = DockStyle.Fill;
+            }
         }
 
         public void DisplayPc(Dictionary<string, string> Settings)
@@ -101,16 +112,22 @@ namespace GUI_server
             if(_pcList.Count() > 0)
             {
                 panel_rapport.Visible = true;
-                _Panel_rapport_Pages.Add(new UserControl_PcLog());
-                _Panel_rapport_Pages.Add(new UserControl_PcLog());
-                //_Panel_rapport_Pages.Add(new UserControl_PcInfo());
             }
+            string status = _pcList[id].getStatusString();
+            //Debug.WriteLine(status);
+            _Panel_rapport_Pages[0].Visible = true;
+            (_Panel_rapport_Pages[0] as UserControl_PcInfo).updateInfos(_pcList[id]._pcName, _pcList[id]._pcIp, _pcList[id]._user_Name, _pcList[id]._user_Name, _pcList[id].getStatusString(), "");
         }
 
         private void ContextmenuAction_item1(object sender, EventArgs e)
         {
             //Debug.WriteLine((sender as MenuItem).Container);
             removePC(Convert.ToByte((sender as MenuItem).Tag.ToString()));
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            _Panel_rapport_Pages[0].Visible=true;
         }
     }
 }
