@@ -55,8 +55,9 @@ namespace ShadowScan_Server
         /// </summary>
         /// <param name="hostname">hostname of the pc to ping</param>
         /// <returns>[True] if the pc is pingable, else [false]</returns>
-        public bool pingPc(string hostname) //List<string> hostnames
+        public (byte, string) pingPc(string hostname) //List<string> hostnames
         {
+            // Debug.WriteLine(hostname);
             // do multiple tries
             for (int i = 0; i < _maxPingTest; i++) 
             {
@@ -66,26 +67,14 @@ namespace ShadowScan_Server
                     using (Ping pinger = new Ping())
                     {
                         PingReply reply = pinger.Send(hostname);
-                        return reply.Status == IPStatus.Success;
+                        return (Convert.ToByte(reply.Status == IPStatus.Success), reply.Address.ToString());
                     }
                 }
                 catch (Exception e) 
                 {
-                    return false;
                 }
             }
-            return false;
+            return (0, "NONE");
         }
-
-        public string testPing(List<string> pcHostnames)
-        {
-            foreach (string pcHostname in pcHostnames)
-            {
-                pingPc(pcHostname);
-            }
-
-            return "aaaaaaaa";
-        }
-
     }
 }

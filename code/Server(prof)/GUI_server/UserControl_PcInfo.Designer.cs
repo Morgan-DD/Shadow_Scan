@@ -45,6 +45,8 @@
             // 
             // textBox_IP
             // 
+            this.textBox_IP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_IP.Location = new System.Drawing.Point(12, 79);
             this.textBox_IP.Name = "textBox_IP";
             this.textBox_IP.Size = new System.Drawing.Size(124, 20);
@@ -52,6 +54,8 @@
             // 
             // textbox_infos
             // 
+            this.textbox_infos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textbox_infos.Location = new System.Drawing.Point(12, 262);
             this.textbox_infos.Name = "textbox_infos";
             this.textbox_infos.Size = new System.Drawing.Size(124, 20);
@@ -59,6 +63,8 @@
             // 
             // textBox_Status
             // 
+            this.textBox_Status.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_Status.Location = new System.Drawing.Point(12, 209);
             this.textBox_Status.Name = "textBox_Status";
             this.textBox_Status.Size = new System.Drawing.Size(124, 20);
@@ -66,6 +72,8 @@
             // 
             // textBox_Username_P
             // 
+            this.textBox_Username_P.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_Username_P.Location = new System.Drawing.Point(12, 160);
             this.textBox_Username_P.Name = "textBox_Username_P";
             this.textBox_Username_P.Size = new System.Drawing.Size(124, 20);
@@ -73,6 +81,8 @@
             // 
             // textBox_Username_Name
             // 
+            this.textBox_Username_Name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_Username_Name.Location = new System.Drawing.Point(12, 134);
             this.textBox_Username_Name.Name = "textBox_Username_Name";
             this.textBox_Username_Name.Size = new System.Drawing.Size(124, 20);
@@ -80,6 +90,8 @@
             // 
             // textBox_Hostname
             // 
+            this.textBox_Hostname.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_Hostname.Location = new System.Drawing.Point(12, 25);
             this.textBox_Hostname.Name = "textBox_Hostname";
             this.textBox_Hostname.Size = new System.Drawing.Size(124, 20);

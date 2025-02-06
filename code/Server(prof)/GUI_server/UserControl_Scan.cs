@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -23,6 +24,11 @@ namespace GUI_server
         byte _defaultPcNumbers;
 
         string _defaultPcName = "INF-{0}-M2";
+
+        [DllImport("user32.dll")]
+        static extern IntPtr SendMessage(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam);
+
+        const uint WM_SETREDRAW = 0x000B;
 
         public UserControl_main(byte defaultPcNumbers, Form_main mainForm)
         {
@@ -86,10 +92,24 @@ namespace GUI_server
             return PcHostname;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        // TODO: Faire le scna (StartScan) dans un thread séparé pour permettre l'affichage de la page de chargment durant le scan
         private void button_startScan_Click(object sender, EventArgs e)
         {
-            _mainForm.hidePanelControls(3);
-             StartScan();
+            _mainForm.ShowPanelControl(3);
+            //StartRedraw(_mainForm);
+            StartScan();
+        }
+
+        //
+        void StartRedraw(Control control)
+        {
+            SendMessage(control.Handle, WM_SETREDRAW, new IntPtr(1), IntPtr.Zero);
+            control.Invalidate();
         }
 
         private void StartScan()

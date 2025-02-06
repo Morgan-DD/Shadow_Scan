@@ -123,7 +123,7 @@ namespace GUI_server
         }
 
         // used to show the usercontrol that we want into the main panel
-        public void hidePanelControls(int idToShow)
+        public void ShowPanelControl(int idToShow)
         {
             Debug.WriteLine("show page No {0}", idToShow);
             byte id = 0;
@@ -149,7 +149,7 @@ namespace GUI_server
 
         private void Button_MenuClick(object sender, EventArgs e)
         {
-            hidePanelControls(Convert.ToByte((sender as Button).Tag.ToString()));
+            ShowPanelControl(Convert.ToByte((sender as Button).Tag.ToString()));
         }
 
         // methode used to move the windows when holding click on the topbar
@@ -215,26 +215,28 @@ namespace GUI_server
 
         public void startScan(List<string> pcHostnames)
         {
-            Thread.Sleep(3000);
+            string NoInfoMessage = "None";
             Debug.WriteLine("Scan start (main)");
             foreach (string pcHostname in pcHostnames)
             {
-                byte status = Convert.ToByte(_shadowScanInstance.pingPc(pcHostname));
-                //byte status = 0;
+                (byte status, string ip) = _shadowScanInstance.pingPc(pcHostname);
 
+                Debug.WriteLine($"hostname: {pcHostname}\nIP: {ip}\nStatus:{status}\n------------------------");
+                // byte status = 0;
                 var Pc = new Dictionary<string, string>
                 {
                     { "hostname", pcHostname },
-                    { "ip", "8.8.8.8" },
-                    { "user_name", "pg66hua" },
+                    { "ip", NoInfoMessage },
+                    { "user_name", NoInfoMessage },
                     { "status", status.ToString() },
                 };
+                if (status > 0)
+                {
+                    Pc["ip"] = ip;
+                }
                 _userControlList.DisplayPc(Pc);
             }
-            hidePanelControls(1);
-
-            //Debug.WriteLine(_shadowScanInstance.TestFromScanPart());
-            
+            ShowPanelControl(1);
         }
     }
 }

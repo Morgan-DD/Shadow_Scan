@@ -33,13 +33,14 @@ namespace GUI_server
             _Panel_rapport_Pages.Add(new UserControl_PcLog());
             _Panel_rapport_Pages.Add(new UserControl_PcLog());
 
-            
 
-            foreach(Control userControl in _Panel_rapport_Pages)
+            // TODO: la taille des users_controls dans le panel "_Panel_rapport_Pages" ne sont pas automatique
+            foreach (Control userControl in _Panel_rapport_Pages)
             {
-                panel_rapport_Sub.Controls.Add(userControl);
                 userControl.Visible = false;
+                userControl.Location = new Point(0, 0);
                 userControl.Dock = DockStyle.Fill;
+                panel_rapport_Sub.Controls.Add(userControl);
             }
 
             FocusWindow_Rapport(0);
@@ -122,6 +123,7 @@ namespace GUI_server
             string status = _pcList[id].getStatusString();
             //Debug.WriteLine(status);
             _Panel_rapport_Pages[0].Visible = true;
+            _Panel_rapport_Pages[0].Dock = DockStyle.Fill;
             (_Panel_rapport_Pages[0] as UserControl_PcInfo).updateInfos(_pcList[id]._pcName, _pcList[id]._pcIp, _pcList[id]._user_Name, _pcList[id]._user_Name, _pcList[id].getStatusString(), "");
         }
 
