@@ -17,7 +17,7 @@ namespace ShadowScan_Server
 {
     public class Program
     {
-        byte _maxPingTest = 5;
+        byte _maxPingTest = 1;
 
         static async Task Main(string[] args)
         {

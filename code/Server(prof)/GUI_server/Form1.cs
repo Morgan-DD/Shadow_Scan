@@ -219,8 +219,8 @@ namespace GUI_server
             Debug.WriteLine("Scan start (main)");
             foreach (string pcHostname in pcHostnames)
             {
-                //byte status = Convert.ToByte(_shadowScanInstance.pingPc(pcHostname));
-                byte status = 0;
+                byte status = Convert.ToByte(_shadowScanInstance.pingPc(pcHostname));
+                //byte status = 0;
 
                 var Pc = new Dictionary<string, string>
                 {
