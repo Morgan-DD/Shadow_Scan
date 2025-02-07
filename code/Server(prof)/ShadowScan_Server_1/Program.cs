@@ -55,7 +55,7 @@ namespace ShadowScan_Server
         /// </summary>
         /// <param name="hostname">hostname of the pc to ping</param>
         /// <returns>[True] if the pc is pingable, else [false]</returns>
-        public (byte, string) pingPc(string hostname) //List<string> hostnames
+        public (byte, string) pingPc(string hostname)
         {
             // Debug.WriteLine(hostname);
             // do multiple tries

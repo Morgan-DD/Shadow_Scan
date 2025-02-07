@@ -38,6 +38,7 @@
             this.label_SubListNameTitle = new System.Windows.Forms.Label();
             this.button_save = new System.Windows.Forms.Button();
             this.button_NewSubList = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label_Title
@@ -105,7 +106,6 @@
             // textBox_SubListName
             // 
             this.textBox_SubListName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_SubListName.Enabled = false;
             this.textBox_SubListName.Location = new System.Drawing.Point(770, 60);
             this.textBox_SubListName.Name = "textBox_SubListName";
             this.textBox_SubListName.Size = new System.Drawing.Size(157, 20);
@@ -146,11 +146,22 @@
             this.button_NewSubList.UseVisualStyleBackColor = true;
             this.button_NewSubList.Click += new System.EventHandler(this.button_NewSubList_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(803, 559);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // UserControl_RessourcesList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.button_NewSubList);
             this.Controls.Add(this.button_save);
             this.Controls.Add(this.label_SubListNameTitle);
@@ -180,5 +191,6 @@
         private System.Windows.Forms.Label label_SubListNameTitle;
         private System.Windows.Forms.Button button_save;
         private System.Windows.Forms.Button button_NewSubList;
+        private System.Windows.Forms.Button button1;
     }
 }

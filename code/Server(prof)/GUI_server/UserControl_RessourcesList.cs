@@ -1,48 +1,57 @@
 ﻿using GUI_server.Properties;
 using Microsoft.Toolkit.Uwp.Notifications;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.StartScreen;
+using Windows.UI.Xaml.Shapes;
 
 namespace GUI_server
 {
     public partial class UserControl_RessourcesList : UserControl
     {
+        // used to get the infos from the json
         JsonManager _jsonManager;
 
+        // main list of banned ressources
         List<UserControl_PcCheckBox> _PcCheckBoxList = new List<UserControl_PcCheckBox>();
-
+        // list of list of banned ressources (list of sublists)
         List<List<UserControl_PcCheckBox>> _PcCheckBoxSubLists = new List<List<UserControl_PcCheckBox>>();
+        // id of the actual sublist
         byte _idSubList = 0;
+        // name of the json file for the sublists
+        string _subListJsonFileName = "RessourcesConfig_SubList.json";
 
         public UserControl_RessourcesList(JsonManager jsonManager)
         {
             InitializeComponent();
             _jsonManager = jsonManager;
+            // create a sublist at the begining
             createNewSubList();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            displayMainList();
-        }
-
+        // display the main list
         public void displayMainList()
         {
+            // go on all the ressources
             foreach(Resource resource in _jsonManager.Ressources)
             {
+                // create a temp ressource
                 UserControl_PcCheckBox tempRessource = new UserControl_PcCheckBox(resource.pathUrl);
+                // set her settings
                 tempRessource.Visible = true;
                 tempRessource.Size = new Size(flowLayoutPanel_MainList.Width-25, tempRessource.Height);
+                // change the color based on the type
                 switch (resource.type)
                 {
                     case "0": // website
@@ -60,44 +69,53 @@ namespace GUI_server
                 }
                 tempRessource.Tag = resource.type;
                 tempRessource.changeCheckBoxStatus(false);
+                // add the ressource to a flowLayoutPanel
                 flowLayoutPanel_MainList.Controls.Add(tempRessource);
                 _PcCheckBoxList.Add(tempRessource);
 
+                // configure the layout panels so they can have a scroll bar if there is a lot of resources
                 flowLayoutPanel_MainList.AutoScroll = true;
                 flowLayoutPanel_MainList.VerticalScroll.Value = flowLayoutPanel_MainList.VerticalScroll.Maximum;
-
                 flowLayoutPanel_SubList.AutoScroll = true;
                 flowLayoutPanel_SubList.VerticalScroll.Value = flowLayoutPanel_SubList.VerticalScroll.Maximum;
             }
         }
 
+
         private void button_moveRight_Click(object sender, EventArgs e)
         {
+            // add the marked ressources into the sublist
             addToSubList();
-            if(textBox_SubListName.Text == "")
-            {
-                textBox_SubListName.Text = ("Sans Titre " + _idSubList);
-                textBox_SubListName.Focus();
-            }
         }
 
+        /// <summary>
+        /// add from main list to the sublist
+        /// </summary>
         private void addToSubList()
         {
+            // templist of the element that will be added (not used every times)
             List<UserControl_PcCheckBox> tempList = new List<UserControl_PcCheckBox>();
             
+            // check all ressources on the mainlist
             foreach (UserControl_PcCheckBox userControl_PcCheckBox in _PcCheckBoxList)
             {
+                // if the ressource is checked (will go to the sublist)
                 if (userControl_PcCheckBox.isChecked())
                 {
+                    // uncheck the textbox
                     userControl_PcCheckBox.changeCheckBoxStatus(false);
+                    // create a new ressource (graphical)
                     UserControl_PcCheckBox tempUserControl = new UserControl_PcCheckBox(userControl_PcCheckBox._pcName);
+                    // set the parameters (tag is used for display part)
                     tempUserControl.Tag = userControl_PcCheckBox.Tag;
+                    // if that's the first sublist
                     if(_PcCheckBoxSubLists.Count() == 0)
                     {
                         tempList.Add(tempUserControl);
                     }
                     else
                     {
+                        // if the sublist is empty
                         if (_PcCheckBoxSubLists.Count() <= _idSubList)
                             tempList.Add(tempUserControl);
                         else
@@ -105,6 +123,7 @@ namespace GUI_server
                     }
                 }
             }
+            //
             if (_PcCheckBoxSubLists.Count() == 0)
             {
                 _PcCheckBoxSubLists.Add(tempList);
@@ -183,17 +202,12 @@ namespace GUI_server
             comboBox_SubList.Items[_idSubList] = textBox_SubListName.Text;
         }
 
-        public void saveSubList()
-        {
-
-        }
-
         private void createNewSubList()
         {
             if(_PcCheckBoxSubLists.Count() > 0)
                 _idSubList += 1;
             flowLayoutPanel_SubList.Controls.Clear();
-            comboBox_SubList.Items.Add(("Sans titre " + comboBox_SubList.Items.Count));
+            comboBox_SubList.Items.Add(("Sans titre " + (comboBox_SubList.Items.Count + 1)));
             textBox_SubListName.Text = comboBox_SubList.Items[_idSubList].ToString();
         }
 
@@ -209,6 +223,48 @@ namespace GUI_server
             else
                 button_NewSubList.Enabled = true;
 
+        }
+
+        public void saveSubList()
+        {
+            var list = new List<dynamic>();
+            foreach (List<UserControl_PcCheckBox> userControl_PcCheckBoxList in _PcCheckBoxSubLists)
+            {
+                if(userControl_PcCheckBoxList.Count() > 0)
+                {
+                    foreach (UserControl_PcCheckBox userControl_PcCheckBox in userControl_PcCheckBoxList)
+                    {
+                        list.Add(new {
+                            type = userControl_PcCheckBox.Tag,
+                            pathUrl = userControl_PcCheckBox._pcName
+                        });
+                    }
+                }
+            }
+            var json = JsonConvert.SerializeObject(list);
+
+            if (File.Exists(_subListJsonFileName))
+            {
+                Debug.WriteLine("File already exist");
+            }
+            else
+            {
+                string savePath = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), _subListJsonFileName);
+                //File.WriteAllText(json, savePath);
+                using (StreamWriter sw = File.AppendText(savePath))
+                {
+                    sw.WriteLine(json);
+                }
+                Debug.WriteLine($"{savePath}");
+            }
+
+            Debug.WriteLine(json);
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            saveSubList();
         }
     }
 }
