@@ -31,10 +31,10 @@
             this.label_Title = new System.Windows.Forms.Label();
             this.Panel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel_rapport = new System.Windows.Forms.Panel();
-            this.panel_rapport_Sub = new System.Windows.Forms.Panel();
-            this.button_Info = new System.Windows.Forms.Button();
-            this.button_Logs = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button_Logs = new System.Windows.Forms.Button();
+            this.button_Info = new System.Windows.Forms.Button();
+            this.panel_rapport_Sub = new System.Windows.Forms.Panel();
             this.panel_rapport.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,23 +75,16 @@
             this.panel_rapport.TabIndex = 3;
             this.panel_rapport.Click += new System.EventHandler(this.ButtonAction_Rapport);
             // 
-            // panel_rapport_Sub
+            // button3
             // 
-            this.panel_rapport_Sub.Location = new System.Drawing.Point(-1, 36);
-            this.panel_rapport_Sub.Name = "panel_rapport_Sub";
-            this.panel_rapport_Sub.Size = new System.Drawing.Size(294, 497);
-            this.panel_rapport_Sub.TabIndex = 0;
-            // 
-            // button_Info
-            // 
-            this.button_Info.Location = new System.Drawing.Point(3, 7);
-            this.button_Info.Name = "button_Info";
-            this.button_Info.Size = new System.Drawing.Size(75, 23);
-            this.button_Info.TabIndex = 1;
-            this.button_Info.Tag = "0";
-            this.button_Info.Text = "Informations";
-            this.button_Info.UseVisualStyleBackColor = true;
-            this.button_Info.Click += new System.EventHandler(this.ButtonAction_Rapport);
+            this.button3.Location = new System.Drawing.Point(165, 7);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 3;
+            this.button3.Tag = "2";
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.ButtonAction_Rapport);
             // 
             // button_Logs
             // 
@@ -104,16 +97,25 @@
             this.button_Logs.UseVisualStyleBackColor = true;
             this.button_Logs.Click += new System.EventHandler(this.ButtonAction_Rapport);
             // 
-            // button3
+            // button_Info
             // 
-            this.button3.Location = new System.Drawing.Point(165, 7);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Tag = "2";
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.ButtonAction_Rapport);
+            this.button_Info.Location = new System.Drawing.Point(3, 7);
+            this.button_Info.Name = "button_Info";
+            this.button_Info.Size = new System.Drawing.Size(75, 23);
+            this.button_Info.TabIndex = 1;
+            this.button_Info.Tag = "0";
+            this.button_Info.Text = "Informations";
+            this.button_Info.UseVisualStyleBackColor = true;
+            this.button_Info.Click += new System.EventHandler(this.ButtonAction_Rapport);
+            // 
+            // panel_rapport_Sub
+            // 
+            this.panel_rapport_Sub.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel_rapport_Sub.Location = new System.Drawing.Point(0, 36);
+            this.panel_rapport_Sub.Name = "panel_rapport_Sub";
+            this.panel_rapport_Sub.Size = new System.Drawing.Size(294, 497);
+            this.panel_rapport_Sub.TabIndex = 0;
             // 
             // UserControl_List
             // 

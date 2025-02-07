@@ -29,12 +29,14 @@ namespace GUI_server
         {
             InitializeComponent();
 
+            //panel_rapport_Sub.Dock = DockStyle.Fill;
+
             _Panel_rapport_Pages.Add(new UserControl_PcInfo());
             _Panel_rapport_Pages.Add(new UserControl_PcLog());
             _Panel_rapport_Pages.Add(new UserControl_PcLog());
 
 
-            // TODO: la taille des users_controls dans le panel "_Panel_rapport_Pages" ne sont pas automatique
+            // TODO: quand sur la page log et on click sur un autre pc, affiche la page info et le bouton log ne marche plus
             foreach (Control userControl in _Panel_rapport_Pages)
             {
                 userControl.Visible = false;
