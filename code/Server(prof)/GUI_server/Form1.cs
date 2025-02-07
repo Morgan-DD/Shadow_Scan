@@ -13,10 +13,6 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
-using ShadowScan_Server;
-using System.Net.NetworkInformation;
-using System.Threading;
 
 namespace GUI_server
 {
@@ -35,6 +31,7 @@ namespace GUI_server
         UserControl_loading _userControlLoading = new UserControl_loading();
         UserControl_List _userControlList = new UserControl_List();
         UserControl_Settings _userControlSettings = new UserControl_Settings();
+        UserControl_RessourcesList _userControlRessourceList;
 
         // list of these control panels
         List<Control> _userContolList = new List<Control>();
@@ -44,13 +41,27 @@ namespace GUI_server
 
         byte _actualUserControl = 0;
 
+        // logical part
         ShadowScan_Server.Program _shadowScanInstance = new ShadowScan_Server.Program();
+
+        // used to manage the json data for the banned ressources
+        JsonManager _jsonManager;
 
         public Form_main()
         {
             InitializeComponent();
 
+
             _userControlMain = new UserControl_main(Convert.ToByte(ConfigurationSettings.AppSettings["DefaultClassSize"]), this);
+
+            // retrive the info from the json file
+            using (StreamReader r = new StreamReader(ConfigurationSettings.AppSettings["JsonFilePath"]))
+            {
+                string json = r.ReadToEnd().Trim();
+                _jsonManager = JsonConvert.DeserializeObject<JsonManager>(json);
+            }
+
+            _userControlRessourceList = new UserControl_RessourcesList(_jsonManager);
 
             // add the users control into the main panel
             _userControlMain.Dock = DockStyle.Fill;
@@ -72,15 +83,21 @@ namespace GUI_server
             _userControlLoading.Visible = false;
             _userControlLoading.Location = new Point(0, 0);
 
+            _userControlRessourceList.Dock = DockStyle.Fill;
+            panel_main.Controls.Add(_userControlRessourceList);
+            _userControlRessourceList.Visible = false;
+            _userControlRessourceList.Location = new Point(0, 0);
+
             _userContolList.Add(_userControlMain);
             _userContolList.Add(_userControlList);
             _userContolList.Add(_userControlSettings);
             _userContolList.Add(_userControlLoading);
+            _userContolList.Add(_userControlRessourceList);
 
             // add the pictures into picture array used for topbar icons
             _maximizePictures.Add(new Bitmap(Properties.Resources.expand_icon));
             _maximizePictures.Add(new Bitmap(Properties.Resources.minimize_icon));
-
+            
         }
 
         // methode to resize the window
@@ -125,7 +142,6 @@ namespace GUI_server
         // used to show the usercontrol that we want into the main panel
         public void ShowPanelControl(int idToShow)
         {
-            Debug.WriteLine("show page No {0}", idToShow);
             byte id = 0;
             if(idToShow >= 0)
             {
@@ -216,12 +232,10 @@ namespace GUI_server
         public void startScan(List<string> pcHostnames)
         {
             string NoInfoMessage = "None";
-            Debug.WriteLine("Scan start (main)");
             foreach (string pcHostname in pcHostnames)
             {
                 (byte status, string ip) = _shadowScanInstance.pingPc(pcHostname);
 
-                Debug.WriteLine($"hostname: {pcHostname}\nIP: {ip}\nStatus:{status}\n------------------------");
                 // byte status = 0;
                 var Pc = new Dictionary<string, string>
                 {

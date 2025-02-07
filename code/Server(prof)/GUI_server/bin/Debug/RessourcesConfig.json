@@ -1,0 +1,24 @@
+{
+	"Ressources": [
+		{
+			"type": "0",
+			"pathUrl": "https://chatgpt.com/"
+		},
+		{
+			"type": "0",
+			"pathUrl": "https://gemini.google.com/"
+		},
+		{
+			"type": "0",
+			"pathUrl": "https://ia.net/"
+		},
+		{
+			"type": "1",
+			"pathUrl": "ms-teams.exe"
+		},
+		{
+			"type": "2",
+			"pathUrl": "M152-reponses"
+		}
+	]
+}

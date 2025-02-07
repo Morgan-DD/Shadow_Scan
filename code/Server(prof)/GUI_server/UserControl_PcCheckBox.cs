@@ -36,5 +36,11 @@ namespace GUI_server
         {
             _pcName = textBox.Text;
         }
+
+        public void setTextBoxColor(Color color)
+        {
+            textBox.BackColor = color;
+            textBox.BorderStyle = BorderStyle.None;
+        }
     }
 }

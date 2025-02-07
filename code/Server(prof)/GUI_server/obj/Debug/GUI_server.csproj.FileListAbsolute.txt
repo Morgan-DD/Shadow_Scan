@@ -34,7 +34,6 @@ C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\obj\
 C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\obj\Debug\GUI_server.csproj.Up2Date
 C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\obj\Debug\GUI_server.exe
 C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\obj\Debug\GUI_server.pdb
-C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\obj\Debug\GUI_server.Form_main.resources
 C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\obj\Debug\GUI_server.UserControl_List.resources
 C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\obj\Debug\GUI_server.UserControl_main.resources
 C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\obj\Debug\GUI_server.UserControl_Settings.resources
@@ -52,3 +51,8 @@ C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\bin\
 C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\obj\Debug\GUI_server.UserControl_loading.resources
 C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\obj\Debug\GUI_server.UserControl_PcInfo.resources
 C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\obj\Debug\GUI_server.UserControl_PcLog.resources
+C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\obj\Debug\GUI_server.UserControl_RessourcesList.resources
+C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\bin\Debug\Microsoft.Toolkit.Uwp.Notifications.dll
+C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\bin\Debug\Microsoft.Toolkit.Uwp.Notifications.pdb
+C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\bin\Debug\Microsoft.Toolkit.Uwp.Notifications.xml
+C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\obj\Debug\GUI_server.Form_main.resources

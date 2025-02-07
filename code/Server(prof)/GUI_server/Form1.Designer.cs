@@ -37,10 +37,11 @@
             this.panel_top = new System.Windows.Forms.Panel();
             this.pictureBox_Minimize = new System.Windows.Forms.PictureBox();
             this.pictureBox_Maximize = new System.Windows.Forms.PictureBox();
+            this.label_size = new System.Windows.Forms.Label();
             this.pictureBox_Close = new System.Windows.Forms.PictureBox();
             this.Button_Test = new System.Windows.Forms.Button();
-            this.label_size = new System.Windows.Forms.Label();
             this.button_loading = new System.Windows.Forms.Button();
+            this.button_RessourceList = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Minimize)).BeginInit();
@@ -112,6 +113,7 @@
             this.panel_top.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.panel_top.Controls.Add(this.pictureBox_Minimize);
             this.panel_top.Controls.Add(this.pictureBox_Maximize);
+            this.panel_top.Controls.Add(this.label_size);
             this.panel_top.Controls.Add(this.pictureBox_Close);
             this.panel_top.Location = new System.Drawing.Point(0, 0);
             this.panel_top.Name = "panel_top";
@@ -138,7 +140,7 @@
             // 
             this.pictureBox_Maximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox_Maximize.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox_Maximize.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Maximize.Image")));
+            this.pictureBox_Maximize.Image = global::GUI_server.Properties.Resources.expand_icon;
             this.pictureBox_Maximize.Location = new System.Drawing.Point(880, 3);
             this.pictureBox_Maximize.Name = "pictureBox_Maximize";
             this.pictureBox_Maximize.Size = new System.Drawing.Size(20, 20);
@@ -148,6 +150,15 @@
             this.pictureBox_Maximize.Click += new System.EventHandler(this.pictureBox_Maximize_Click);
             this.pictureBox_Maximize.MouseEnter += new System.EventHandler(this.pictureBox_Enter);
             this.pictureBox_Maximize.MouseLeave += new System.EventHandler(this.pictureBox_Leave);
+            // 
+            // label_size
+            // 
+            this.label_size.AutoSize = true;
+            this.label_size.Location = new System.Drawing.Point(22, 9);
+            this.label_size.Name = "label_size";
+            this.label_size.Size = new System.Drawing.Size(28, 13);
+            this.label_size.TabIndex = 8;
+            this.label_size.Text = "AAA";
             // 
             // pictureBox_Close
             // 
@@ -166,21 +177,12 @@
             // 
             // Button_Test
             // 
-            this.Button_Test.Location = new System.Drawing.Point(408, 43);
+            this.Button_Test.Location = new System.Drawing.Point(741, 35);
             this.Button_Test.Name = "Button_Test";
             this.Button_Test.Size = new System.Drawing.Size(75, 23);
             this.Button_Test.TabIndex = 7;
             this.Button_Test.Text = "Test";
             this.Button_Test.UseVisualStyleBackColor = true;
-            // 
-            // label_size
-            // 
-            this.label_size.AutoSize = true;
-            this.label_size.Location = new System.Drawing.Point(489, 45);
-            this.label_size.Name = "label_size";
-            this.label_size.Size = new System.Drawing.Size(28, 13);
-            this.label_size.TabIndex = 8;
-            this.label_size.Text = "AAA";
             // 
             // button_loading
             // 
@@ -193,14 +195,25 @@
             this.button_loading.UseVisualStyleBackColor = true;
             this.button_loading.Click += new System.EventHandler(this.Button_MenuClick);
             // 
+            // button_RessourceList
+            // 
+            this.button_RessourceList.Location = new System.Drawing.Point(336, 35);
+            this.button_RessourceList.Name = "button_RessourceList";
+            this.button_RessourceList.Size = new System.Drawing.Size(120, 23);
+            this.button_RessourceList.TabIndex = 10;
+            this.button_RessourceList.Tag = "4";
+            this.button_RessourceList.Text = "Liste des Ressources";
+            this.button_RessourceList.UseVisualStyleBackColor = true;
+            this.button_RessourceList.Click += new System.EventHandler(this.Button_MenuClick);
+            // 
             // Form_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(930, 585);
+            this.Controls.Add(this.button_RessourceList);
             this.Controls.Add(this.button_loading);
-            this.Controls.Add(this.label_size);
             this.Controls.Add(this.Button_Test);
             this.Controls.Add(this.panel_top);
             this.Controls.Add(this.panel_main);
@@ -216,11 +229,11 @@
             this.Resize += new System.EventHandler(this.Form_main_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel_top.ResumeLayout(false);
+            this.panel_top.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Minimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Maximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Close)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -238,6 +251,7 @@
         private System.Windows.Forms.Button Button_Test;
         private System.Windows.Forms.Label label_size;
         private System.Windows.Forms.Button button_loading;
+        private System.Windows.Forms.Button button_RessourceList;
     }
 }
 
