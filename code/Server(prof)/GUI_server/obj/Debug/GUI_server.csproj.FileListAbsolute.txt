@@ -16,19 +16,6 @@ C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\bin\
 C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\bin\Debug\System.Text.Json.dll
 C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\bin\Debug\System.Threading.Tasks.Extensions.dll
 C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\bin\Debug\System.ValueTuple.dll
-C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
-C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\bin\Debug\Newtonsoft.Json.xml
-C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\bin\Debug\RestSharp.xml
-C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\bin\Debug\System.Buffers.xml
-C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\bin\Debug\System.CodeDom.xml
-C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\bin\Debug\System.IO.Pipelines.xml
-C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\bin\Debug\System.Memory.xml
-C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\bin\Debug\System.Numerics.Vectors.xml
-C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\bin\Debug\System.Text.Encodings.Web.xml
-C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\bin\Debug\System.Text.Json.xml
-C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\bin\Debug\System.ValueTuple.xml
 C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\obj\Debug\GUI_server.Properties.Resources.resources
 C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\obj\Debug\GUI_server.csproj.CoreCompileInputs.cache
 C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\obj\Debug\GUI_server.csproj.Up2Date
@@ -54,5 +41,6 @@ C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\obj\
 C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\obj\Debug\GUI_server.UserControl_RessourcesList.resources
 C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\bin\Debug\Microsoft.Toolkit.Uwp.Notifications.dll
 C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\bin\Debug\Microsoft.Toolkit.Uwp.Notifications.pdb
-C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\bin\Debug\Microsoft.Toolkit.Uwp.Notifications.xml
 C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\obj\Debug\GUI_server.Form_main.resources
+C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\obj\Debug\GUI_server.csproj.SuggestedBindingRedirects.cache
+C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\obj\Debug\GUI_server.exe.config

@@ -62,6 +62,7 @@ namespace GUI_server
             }
 
             _userControlRessourceList = new UserControl_RessourcesList(_jsonManager);
+            _userControlRessourceList.displayMainList();
 
             // add the users control into the main panel
             _userControlMain.Dock = DockStyle.Fill;

@@ -32,6 +32,11 @@ namespace GUI_server
             return checkBox.Checked;
         }
 
+        public void changeCheckBoxStatus(bool status)
+        {
+            checkBox.Checked = status;
+        }
+
         private void textBox_TextChanged(object sender, EventArgs e)
         {
             _pcName = textBox.Text;
