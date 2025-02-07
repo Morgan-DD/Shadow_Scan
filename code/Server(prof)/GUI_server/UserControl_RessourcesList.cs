@@ -28,6 +28,7 @@ namespace GUI_server
         {
             InitializeComponent();
             _jsonManager = jsonManager;
+            createNewSubList();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -73,7 +74,11 @@ namespace GUI_server
         private void button_moveRight_Click(object sender, EventArgs e)
         {
             addToSubList();
-            textBox_SubListName.Focus();
+            if(textBox_SubListName.Text == "")
+            {
+                textBox_SubListName.Text = ("Sans Titre " + _idSubList);
+                textBox_SubListName.Focus();
+            }
         }
 
         private void addToSubList()
@@ -87,16 +92,29 @@ namespace GUI_server
                     userControl_PcCheckBox.changeCheckBoxStatus(false);
                     UserControl_PcCheckBox tempUserControl = new UserControl_PcCheckBox(userControl_PcCheckBox._pcName);
                     tempUserControl.Tag = userControl_PcCheckBox.Tag;
-                    if (_PcCheckBoxSubLists.Count() == 0)
+                    if(_PcCheckBoxSubLists.Count() == 0)
+                    {
                         tempList.Add(tempUserControl);
+                    }
                     else
-                        _PcCheckBoxSubLists[_idSubList].Add(tempUserControl);
+                    {
+                        if (_PcCheckBoxSubLists.Count() <= _idSubList)
+                            tempList.Add(tempUserControl);
+                        else
+                            _PcCheckBoxSubLists[_idSubList].Add(tempUserControl);
+                    }
                 }
             }
             if (_PcCheckBoxSubLists.Count() == 0)
             {
-                comboBox_SubList.Items.Add(("Sans Nom " + _idSubList));
                 _PcCheckBoxSubLists.Add(tempList);
+            }
+            else
+            {
+                if (_PcCheckBoxSubLists.Count() <= _idSubList)
+                {
+                    _PcCheckBoxSubLists.Add(tempList);
+                }
             }
             displaySubList();
         }
@@ -172,7 +190,8 @@ namespace GUI_server
 
         private void createNewSubList()
         {
-            _idSubList += 1;
+            if(_PcCheckBoxSubLists.Count() > 0)
+                _idSubList += 1;
             flowLayoutPanel_SubList.Controls.Clear();
             comboBox_SubList.Items.Add(("Sans titre " + comboBox_SubList.Items.Count));
             textBox_SubListName.Text = comboBox_SubList.Items[_idSubList].ToString();
