@@ -325,9 +325,12 @@ namespace GUI_server
             displaySubList();
         }
 
-        private void deletSubList()
+        private void deletSubList(byte id)
         {
-
+            _PcCheckBoxSubLists.Remove(_PcCheckBoxSubLists[id]);
+            comboBox_SubList.Items.RemoveAt(id);
+            changeSubList(0);
+            displaySubList();
         }
 
         private void button_removeSubList_Click(object sender, EventArgs e)
@@ -337,7 +340,7 @@ namespace GUI_server
 
         private void button_DeletSubList_Click(object sender, EventArgs e)
         {
-
+            deletSubList(_idSubList);
         }
     }
 }

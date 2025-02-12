@@ -3,27 +3,27 @@
   "WorkspaceRootPath": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\usercontrol_ressourceslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|solutionrelative:usercontrol_ressourceslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\server(prof)\\gui_server\\usercontrol_ressourceslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|solutionrelative:usercontrol_ressourceslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\server(prof)\\gui_server\\jsonmanager_mainlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\usercontrol_ressourceslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|solutionrelative:usercontrol_ressourceslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\jsonmanager_mainlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|solutionrelative:jsonmanager_mainlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\server(prof)\\gui_server\\jsonmanager_sublist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\jsonmanager_sublist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|solutionrelative:jsonmanager_sublist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\server(prof)\\gui_server\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\server(prof)\\gui_server\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
@@ -47,8 +47,7 @@
               "ViewState": "AgIAAD0AAAAAAAAAAAAqwE4AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-12T08:16:27.781Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -60,8 +59,7 @@
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-12T08:16:26.321Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -73,8 +71,7 @@
               "RelativeToolTip": "JsonManager_MainList.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T10:37:42.937Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-12T10:37:42.937Z"
             },
             {
               "$type": "Document",
@@ -86,33 +83,31 @@
               "RelativeToolTip": "JsonManager_SubList.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T10:37:40.906Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-12T10:37:40.906Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "UserControl_RessourcesList.cs",
               "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\UserControl_RessourcesList.cs",
               "RelativeDocumentMoniker": "UserControl_RessourcesList.cs",
               "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\UserControl_RessourcesList.cs",
               "RelativeToolTip": "UserControl_RessourcesList.cs",
-              "ViewState": "AgIAACgBAAAAAAAAAAAwwEEBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADkBAAAAAAAAAAAwwEoBAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-12T08:28:41.947Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "UserControl_RessourcesList.cs [Design]",
               "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\UserControl_RessourcesList.cs",
               "RelativeDocumentMoniker": "UserControl_RessourcesList.cs",
               "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\UserControl_RessourcesList.cs [Design]",
               "RelativeToolTip": "UserControl_RessourcesList.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-07T09:43:41.171Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-02-07T09:43:41.171Z"
             }
           ]
         }
