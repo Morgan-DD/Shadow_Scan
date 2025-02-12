@@ -44,10 +44,6 @@ namespace ShadowScan_Server
             */
 
             Program test = new Program();
-
-            Console.WriteLine(test.pingPc("inf-a11-m213"));
-
-            Console.ReadKey();
         }
 
         /// <summary>

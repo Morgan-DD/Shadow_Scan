@@ -10,6 +10,8 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Resources;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -42,10 +44,26 @@ namespace GUI_server
             _JsonManager_MainList = jsonManager;
             _JsonManager_SubList = jsonManagerSub;
             // create a sublist at the begining
+
+            comboBox_addMainList.Items.Add("Site Web");
+            comboBox_addMainList.Items.Add("Application");
+            comboBox_addMainList.Items.Add("Fichier");
+
+            /*
+            byte tempID = 0;
+            foreach (Control comboboxItem in comboBox_addMainList.Items) 
+            {
+                comboboxItem.Tag = tempID;
+                tempID++;
+            }*/
+
             if (jsonManagerSub.Count == 0) 
             {
                 createNewSubList();
             }
+
+            // TODO : la textbox les ressources displays dans le panel des sublists à un probème de taille
+
         }
 
         // display the main list
@@ -125,6 +143,34 @@ namespace GUI_server
             changeSubList(0);
         }
 
+        private void addToMainList(byte type, string urlPath)
+        {
+            UserControl_PcCheckBox tempItem = new UserControl_PcCheckBox(urlPath);
+            tempItem.Tag = type;
+            flowLayoutPanel_MainList.Controls.Add(tempItem);
+            tempItem.Visible = true;
+            tempItem.Size = new Size(flowLayoutPanel_MainList.Width - 25, tempItem.Height);
+            tempItem.changeCheckBoxStatus(false);
+
+            switch (Convert.ToString(type))
+            {
+                case "0": // website
+                    tempItem.BackColor = Color.FromArgb(100, 125, 151, 171);
+                    tempItem.setTextBoxColor(Color.FromArgb(255, 106, 128, 145));
+                    break;
+                case "1": // app
+                    tempItem.BackColor = Color.FromArgb(100, 151, 125, 171);
+                    tempItem.setTextBoxColor(Color.FromArgb(255, 117, 107, 125));
+                    break;
+                case "2": // file
+                    tempItem.BackColor = Color.FromArgb(100, 172, 125, 125);
+                    tempItem.setTextBoxColor(Color.FromArgb(255, 145, 106, 106));
+                    break;
+            }
+
+            _PcCheckBoxList.Add(tempItem);
+        }
+
 
         private void button_moveRight_Click(object sender, EventArgs e)
         {
@@ -182,6 +228,7 @@ namespace GUI_server
                 }
             }
             displaySubList();
+            saveSubList("");
         }
 
         private void changeSubList(byte id)
@@ -247,7 +294,7 @@ namespace GUI_server
         private void button_save_Click(object sender, EventArgs e)
         {
             comboBox_SubList.Items[_idSubList] = textBox_SubListName.Text;
-            saveSubList();
+            saveSubList("");
         }
 
         private void createNewSubList()
@@ -263,6 +310,7 @@ namespace GUI_server
         private void button_NewSubList_Click(object sender, EventArgs e)
         {
             createNewSubList();
+            textBox_SubListName.Focus();
         }
 
         private void textBox_SubListName_TextChanged(object sender, EventArgs e)
@@ -274,9 +322,13 @@ namespace GUI_server
 
         }
 
-        public void saveSubList()
+        public void saveSubList(string path)
         {
             string savePath = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), _subListJsonFileName);
+            if (!(path.ToLower() == "default") && !(path.ToLower() == ""))
+            {
+                savePath = path;
+            }
             var list = new List<object>();
             int id = 0;
             foreach (List<UserControl_PcCheckBox> userControl_PcCheckBoxList in _PcCheckBoxSubLists)
@@ -297,15 +349,54 @@ namespace GUI_server
                 }
                 id++;
             }
-            var json = JsonConvert.SerializeObject(list);
+            string json = JsonConvert.SerializeObject(list, Formatting.Indented);
             //File.WriteAllText(json, savePath);
             File.WriteAllText(savePath, json);
 
         }
 
+        private void save_subListById(string path, byte id)
+        {
+            var list = new List<object>();
+            foreach (UserControl_PcCheckBox userControl_PcCheckBoxList in _PcCheckBoxSubLists[_idSubList])
+            {
+                list.Add(new
+                {
+                    type = userControl_PcCheckBoxList.Tag,
+                    pathUrl = userControl_PcCheckBoxList._pcName
+                });
+            }
+            id++;
+            string json = JsonConvert.SerializeObject(list, Formatting.Indented);
+            //File.WriteAllText(json, savePath);
+            File.WriteAllText(path, json);
+        }
+        
+
+        private void saveMainList(string path)
+        {
+            string savePath = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), ConfigurationSettings.AppSettings["JsonFilePath"]);
+            if (!(path.ToLower() == "default") && !(path.ToLower() == ""))
+            {
+                savePath = path;
+            }
+            var resources = new List<object>();
+            foreach (UserControl_PcCheckBox mainListItem in _PcCheckBoxList)
+            {
+                resources.Add(new 
+                { 
+                    type = mainListItem.Tag,
+                    pathUrl = mainListItem._pcName 
+                }); ;
+            }
+            var jsonObject = new { Ressources = resources };
+            string json = JsonConvert.SerializeObject(jsonObject, Formatting.Indented);
+            File.WriteAllText(savePath, json);
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            saveSubList();
+            saveSubList("");
         }
 
         private void removeFromActualSubList()
@@ -341,6 +432,81 @@ namespace GUI_server
         private void button_DeletSubList_Click(object sender, EventArgs e)
         {
             deletSubList(_idSubList);
+        }
+
+        private void checkToActivateButtonAddMainList()
+        {
+            button_addToMainList.Enabled = (comboBox_addMainList.SelectedItem != null && textBox_addMainList.Text != String.Empty);
+        }
+
+        private void comboBox_addMainList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            checkToActivateButtonAddMainList();
+        }
+
+        private void textBox_addMainList_TextChanged(object sender, EventArgs e)
+        {
+            checkToActivateButtonAddMainList();
+        }
+
+        private void button_addToMainList_Click(object sender, EventArgs e)
+        {
+            addToMainList(Convert.ToByte(comboBox_addMainList.SelectedIndex), textBox_addMainList.Text);
+            textBox_addMainList.Text = "";
+            comboBox_addMainList.SelectedIndex = 0;
+            button_addToMainList.Enabled=false;
+            saveMainList("");
+        }
+
+        private void textBox_SubListName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                comboBox_SubList.Items[_idSubList] = textBox_SubListName.Text;
+                saveSubList("");
+            }
+        }
+
+        private void exportButtonAction(object sender, EventArgs e)
+        {
+            exportList("ShadowScan_Liste.json", Convert.ToByte((sender as Button).Tag));
+        }
+
+        private void exportMainList(string exportPath)
+        {
+            File.Copy((ConfigurationSettings.AppSettings["JsonFilePath"]), exportPath, true);
+        }
+
+        private void exportList(string defaultFileName, byte type)
+        {
+            SaveFileDialog sf = new SaveFileDialog();
+            // Feed the dummy name to the save dialog
+            sf.FileName = defaultFileName;
+
+            if (sf.ShowDialog() == DialogResult.OK)
+            {
+                // Now here's our save folder
+                string savePath = System.IO.Path.GetDirectoryName(sf.FileName);
+                if(savePath != "*json")
+                {
+                    savePath += ".json";
+                }
+
+                switch (type)
+                {
+                    case 0:
+                        // exporter la liste principale
+                        exportMainList(savePath);
+                        break;
+                    case 1:
+                        saveSubList(savePath);
+                        break;
+                    case 2:
+                        // TODO: export la subliste actuelle
+                        save_subListById(savePath, _idSubList);
+                        break;
+                }
+            }
         }
     }
 }
