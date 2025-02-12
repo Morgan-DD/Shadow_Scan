@@ -61,7 +61,8 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="JsonManager.cs" />
+    <Compile Include="JsonManager_MainList.cs" />
+    <Compile Include="JsonManager_SubList.cs" />
     <Compile Include="UserControl_PcInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>

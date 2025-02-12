@@ -45,7 +45,10 @@ namespace GUI_server
         ShadowScan_Server.Program _shadowScanInstance = new ShadowScan_Server.Program();
 
         // used to manage the json data for the banned ressources
-        JsonManager _jsonManager;
+        JsonManager_MainList _JsonManager_MainList;
+
+        // used to manage the json data from the sublist of banned ressources
+        List<JsonManager_SubList> _jsonManager_SubList;
 
         public Form_main()
         {
@@ -58,10 +61,18 @@ namespace GUI_server
             using (StreamReader r = new StreamReader(ConfigurationSettings.AppSettings["JsonFilePath"]))
             {
                 string json = r.ReadToEnd().Trim();
-                _jsonManager = JsonConvert.DeserializeObject<JsonManager>(json);
+                _JsonManager_MainList = JsonConvert.DeserializeObject<JsonManager_MainList>(json);
             }
+            string subListJsonFilePath = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), ConfigurationSettings.AppSettings["JsonFilePath_Sublist"]);
+            if(File.Exists(subListJsonFilePath))
+            {
+                string json = File.ReadAllText(subListJsonFilePath);
 
-            _userControlRessourceList = new UserControl_RessourcesList(_jsonManager);
+                // Deserialize JSON directly into a list of Lists_SubList
+                _jsonManager_SubList = JsonConvert.DeserializeObject<List<JsonManager_SubList>>(json);
+            }
+            
+            _userControlRessourceList = new UserControl_RessourcesList(_JsonManager_MainList, _jsonManager_SubList);
             _userControlRessourceList.displayMainList();
 
             // add the users control into the main panel

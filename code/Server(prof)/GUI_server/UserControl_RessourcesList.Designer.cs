@@ -39,6 +39,8 @@
             this.button_save = new System.Windows.Forms.Button();
             this.button_NewSubList = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button_removeSubList = new System.Windows.Forms.Button();
+            this.button_DeletSubList = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label_Title
@@ -85,7 +87,7 @@
             // button_clearSubList
             // 
             this.button_clearSubList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_clearSubList.Location = new System.Drawing.Point(537, 559);
+            this.button_clearSubList.Location = new System.Drawing.Point(429, 479);
             this.button_clearSubList.Name = "button_clearSubList";
             this.button_clearSubList.Size = new System.Drawing.Size(75, 23);
             this.button_clearSubList.TabIndex = 9;
@@ -126,7 +128,7 @@
             // button_save
             // 
             this.button_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_save.Location = new System.Drawing.Point(618, 559);
+            this.button_save.Location = new System.Drawing.Point(537, 559);
             this.button_save.Name = "button_save";
             this.button_save.Size = new System.Drawing.Size(75, 23);
             this.button_save.TabIndex = 14;
@@ -138,7 +140,7 @@
             // 
             this.button_NewSubList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button_NewSubList.Enabled = false;
-            this.button_NewSubList.Location = new System.Drawing.Point(699, 559);
+            this.button_NewSubList.Location = new System.Drawing.Point(618, 559);
             this.button_NewSubList.Name = "button_NewSubList";
             this.button_NewSubList.Size = new System.Drawing.Size(75, 23);
             this.button_NewSubList.TabIndex = 15;
@@ -148,7 +150,8 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(803, 559);
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(429, 559);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 16;
@@ -156,11 +159,35 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button_removeSubList
+            // 
+            this.button_removeSubList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_removeSubList.Location = new System.Drawing.Point(699, 559);
+            this.button_removeSubList.Name = "button_removeSubList";
+            this.button_removeSubList.Size = new System.Drawing.Size(66, 23);
+            this.button_removeSubList.TabIndex = 17;
+            this.button_removeSubList.Text = "Supprimer";
+            this.button_removeSubList.UseVisualStyleBackColor = true;
+            this.button_removeSubList.Click += new System.EventHandler(this.button_removeSubList_Click);
+            // 
+            // button_DeletSubList
+            // 
+            this.button_DeletSubList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_DeletSubList.Location = new System.Drawing.Point(770, 559);
+            this.button_DeletSubList.Name = "button_DeletSubList";
+            this.button_DeletSubList.Size = new System.Drawing.Size(100, 23);
+            this.button_DeletSubList.TabIndex = 18;
+            this.button_DeletSubList.Text = "Supprimer la liste";
+            this.button_DeletSubList.UseVisualStyleBackColor = true;
+            this.button_DeletSubList.Click += new System.EventHandler(this.button_DeletSubList_Click);
+            // 
             // UserControl_RessourcesList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.Controls.Add(this.button_DeletSubList);
+            this.Controls.Add(this.button_removeSubList);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button_NewSubList);
             this.Controls.Add(this.button_save);
@@ -192,5 +219,7 @@
         private System.Windows.Forms.Button button_save;
         private System.Windows.Forms.Button button_NewSubList;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_removeSubList;
+        private System.Windows.Forms.Button button_DeletSubList;
     }
 }
