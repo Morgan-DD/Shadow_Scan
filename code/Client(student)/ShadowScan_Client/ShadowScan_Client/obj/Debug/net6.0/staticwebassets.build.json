@@ -1,12 +1,11 @@
 {
   "Version": 1,
-  "Hash": "yMeaH35BJf9Uv4DtT3YQV8K5wbrEvo/5vymrPyKup1k=",
+  "Hash": "XdmaSLE5xYwAkQ86f+wFlfgfwA89UGvIgXN1a2mV6+Y=",
   "Source": "ShadowScan_Client",
   "BasePath": "_content/ShadowScan_Client",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "Assets": []
 }

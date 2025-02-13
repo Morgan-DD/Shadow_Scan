@@ -1,5 +1,7 @@
 ﻿using Grpc.Net.Client;
 using ShadowScan_Client;
+using Grpc.Net.Compression;
+using Grpc.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +9,6 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Grpc.Net.Client;
-using System.Net.Http;
 using System.Net.NetworkInformation;
 using System.Diagnostics;
 using System.Threading;
@@ -47,7 +48,8 @@ namespace ShadowScan_Server
             */
 
             Program thisProgram = new Program();
-            thisProgram.connectToGRPCServer("a");
+            thisProgram.connectToGRPCServer("https://INF-A23-P203:55052");
+            Console.ReadKey();
 
 
         }
@@ -81,6 +83,40 @@ namespace ShadowScan_Server
 
         private async void connectToGRPCServer(string hostname) 
         {
+            var input = new HelloRequest { Name = "LeBoss" };
+
+            /*
+            var httpHandler = new SocketsHttpHandler
+            {
+                PooledConnectionLifetime = TimeSpan.FromMinutes(5) // Optional: Helps with DNS changes
+            };
+
+            var channel = GrpcChannel.ForAddress("hostname", new GrpcChannelOptions
+            {
+                HttpHandler = httpHandler
+            });
+            */
+
+            /*
+            var channel = GrpcChannel.ForAddress(hostname);
+            var client = new Greeter.GreeterClient(channel);
+            var response = await client.SayHelloAsync(new HelloRequest { Name = ".NET" });
+
+            var reply = await client.SayHelloAsync(input);
+
+            Console.WriteLine(reply.Message);
+
+            Console.ReadLine();*/
+
+            var channel = GrpcChannel.ForAddress("https://localhost:5001", new GrpcChannelOptions
+            {
+                HttpHandler = new GrpcWebHandler(new HttpClientHandler())
+            });
+
+            var client = new Greeter.GreeterClient(channel);
+            var response = await client.SayHelloAsync(new HelloRequest { Name = ".NET" });
+
+            /*
             // Create a gRPC channel
             var channel = GrpcChannel.ForAddress("https://localhost:5001");
 
@@ -91,6 +127,7 @@ namespace ShadowScan_Server
             var response = await client.SayHelloAsync(new HelloRequest { Name = "John" });
 
             Console.WriteLine($"Server Response: {response.Message}");
+            */
         }
     }
 }

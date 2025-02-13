@@ -8,11 +8,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddGrpc();
 
-/*
+
 builder.WebHost.ConfigureKestrel(options =>
 {
     options.ListenAnyIP(55052); // Bind to all network interfaces
-}); ;*/
+}); ;
 
 var app = builder.Build();
 
