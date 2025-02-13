@@ -43,20 +43,13 @@ namespace GUI_server
             InitializeComponent();
             _JsonManager_MainList = jsonManager;
             _JsonManager_SubList = jsonManagerSub;
-            // create a sublist at the begining
 
+            // add entry to the sublist
             comboBox_addMainList.Items.Add("Site Web");
             comboBox_addMainList.Items.Add("Application");
             comboBox_addMainList.Items.Add("Fichier");
 
-            /*
-            byte tempID = 0;
-            foreach (Control comboboxItem in comboBox_addMainList.Items) 
-            {
-                comboboxItem.Tag = tempID;
-                tempID++;
-            }*/
-
+            // create a sublist if no one is imported
             if (jsonManagerSub.Count == 0) 
             {
                 createNewSubList();
@@ -106,11 +99,14 @@ namespace GUI_server
                 flowLayoutPanel_SubList.VerticalScroll.Value = flowLayoutPanel_SubList.VerticalScroll.Maximum;
             }
 
-            byte tesstID = 0;
+            // foreach into the sublist ressources
             foreach(JsonManager_SubList subList in _JsonManager_SubList)
             {
+                // create a new sublist
                 createNewSubList();
+                // add the sublist into the combobox
                 comboBox_SubList.Items[comboBox_SubList.Items.Count - 1] = subList.Category;
+                // list of ressources
                 List<UserControl_PcCheckBox> tempList = new List<UserControl_PcCheckBox>();
                 foreach (Item_SubList item in subList.Items)
                 {
@@ -138,7 +134,6 @@ namespace GUI_server
                 }
  
                 _PcCheckBoxSubLists.Add(tempList);
-                tesstID++;
             }
             changeSubList(0);
         }

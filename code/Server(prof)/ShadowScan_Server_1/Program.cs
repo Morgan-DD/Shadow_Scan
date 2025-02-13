@@ -19,7 +19,10 @@ namespace ShadowScan_Server
     {
         byte _maxPingTest = 1;
 
-        static async Task Main(string[] args)
+        
+
+
+        static void Main(string[] args)
         {
             var input = new HelloRequest { Name = "LeBoss" };
             /*
@@ -43,7 +46,10 @@ namespace ShadowScan_Server
             Console.ReadLine();
             */
 
-            Program test = new Program();
+            Program thisProgram = new Program();
+            thisProgram.connectToGRPCServer("a");
+
+
         }
 
         /// <summary>
@@ -71,6 +77,20 @@ namespace ShadowScan_Server
                 }
             }
             return (0, "NONE");
+        }
+
+        private async void connectToGRPCServer(string hostname) 
+        {
+            // Create a gRPC channel
+            var channel = GrpcChannel.ForAddress("https://localhost:5001");
+
+            // Create a client instance
+            var client = new Greeter.GreeterClient(channel);
+
+            // Call the RPC method
+            var response = await client.SayHelloAsync(new HelloRequest { Name = "John" });
+
+            Console.WriteLine($"Server Response: {response.Message}");
         }
     }
 }
