@@ -47,5 +47,10 @@ namespace GUI_server
             textBox.BackColor = color;
             textBox.BorderStyle = BorderStyle.None;
         }
+
+        private void UserControl_PcCheckBox_Click(object sender, EventArgs e)
+        {
+            checkBox.Checked = !checkBox.Checked;
+        }
     }
 }

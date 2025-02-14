@@ -110,7 +110,7 @@ namespace ShadowScan_Server
 
             var channel = GrpcChannel.ForAddress("https://localhost:5001", new GrpcChannelOptions
             {
-                HttpHandler = new GrpcWebHandler(new HttpClientHandler())
+                //HttpHandler = new GrpcWebHandler(new HttpClientHandler())
             });
 
             var client = new Greeter.GreeterClient(channel);

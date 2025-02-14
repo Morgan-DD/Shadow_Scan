@@ -96,9 +96,18 @@ namespace GUI_server
             _maximizePictures.Add(new Bitmap(Properties.Resources.expand_icon));
             _maximizePictures.Add(new Bitmap(Properties.Resources.minimize_icon));
 
-            ShowPanelControl(Convert.ToInt16(ConfigurationSettings.AppSettings["pageToStart"]));
-
             Thread.Sleep(1000);
+
+            try
+            {
+                ShowPanelControl(Convert.ToInt16(ConfigurationSettings.AppSettings["pageToStart"]));
+            }
+            catch
+            {
+                ShowPanelControl(0);
+            }
+
+
         }
 
         // methode to resize the window

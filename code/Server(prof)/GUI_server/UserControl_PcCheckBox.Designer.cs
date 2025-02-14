@@ -63,6 +63,7 @@
             this.Controls.Add(this.textBox);
             this.Name = "UserControl_PcCheckBox";
             this.Size = new System.Drawing.Size(150, 36);
+            this.Click += new System.EventHandler(this.UserControl_PcCheckBox_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 

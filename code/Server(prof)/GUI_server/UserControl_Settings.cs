@@ -16,7 +16,7 @@ namespace GUI_server
     {
         private List<UserControl_SingleSetting> _SettingsList = new List<UserControl_SingleSetting>();
 
-        Configuration
+        //Configuration
 
         public UserControl_Settings()
         {
@@ -34,11 +34,17 @@ namespace GUI_server
 
         private void button_save_Click(object sender, EventArgs e)
         {
+            Configuration configManager = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            KeyValueConfigurationCollection confCollection = configManager.AppSettings.Settings;
+
             foreach(UserControl_SingleSetting tempUserControl in _SettingsList)
             {
-                ConfigurationSettings.AppSettings[tempUserControl._SettingName] = tempUserControl._SettingValue;
-
+                //ConfigurationSettings.AppSettings[tempUserControl._SettingName].
+                confCollection[tempUserControl._SettingName].Value = tempUserControl._SettingValue;
+                tempUserControl.Save();
             }
+
+            configManager.Save(ConfigurationSaveMode.Modified);
         }
     }
 }

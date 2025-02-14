@@ -59,3 +59,4 @@ C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\bin\
 C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\bin\Debug\System.Net.Http.WinHttpHandler.xml
 C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
 C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\obj\Debug\GUI_server.UserControl_SingleSetting.resources
+C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Server(prof)\GUI_server\bin\Debug\System.Configuration.ConfigurationManager.dll
