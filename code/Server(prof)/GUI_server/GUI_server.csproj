@@ -119,6 +119,12 @@
     <Compile Include="UserControl_Scan.Designer.cs">
       <DependentUpon>UserControl_Scan.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl_SingleSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_SingleSetting.Designer.cs">
+      <DependentUpon>UserControl_SingleSetting.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl_Settings.resx">
       <DependentUpon>UserControl_Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_SingleSetting.resx">
+      <DependentUpon>UserControl_SingleSetting.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

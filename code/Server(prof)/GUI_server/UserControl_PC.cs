@@ -24,6 +24,9 @@ namespace GUI_server
         public byte _pcStatus { get; set; }
         public string _user_Name { get; set; }
 
+        // logs des action du pc
+        public List<string> _PcLogs { get; set; } = new List<string>();
+
         // parent Control (custom User control)
         UserControl_List _Parent;
 
@@ -69,17 +72,18 @@ namespace GUI_server
             {
                 case 0:
                     pictureBox_dot.Image = Properties.Resources.dot_red_icon;
-                    label_status.Text = "Hors ligne";
+                    label_status.Text = "Offline";
                     break;
                 case 1:
                     pictureBox_dot.Image = Properties.Resources.dot_yellow_icon;
-                    label_status.Text = "Allumé";
+                    label_status.Text = "Turn on";
                     break;
                 case 2:
                     pictureBox_dot.Image = Properties.Resources.dot_green_icon;
-                    label_status.Text = "Connecté";
+                    label_status.Text = "Online";
                     break;
             }
+            _PcLogs.Add(_Parent.formatLog("Start Scan, status: " + label_status.Text.ToString()));
 
             this.Width = label_PcName.Width + 20;
 

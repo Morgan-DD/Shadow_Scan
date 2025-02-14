@@ -25,11 +25,15 @@ namespace GUI_server
 
         byte _Panel_rapport_oldShowed_Id = 0;
 
-        public UserControl_List()
+        byte _ActualPanelRapport = 0;
+
+        Form_main _Parent;
+
+        public UserControl_List(Form_main parent)
         {
             InitializeComponent();
 
-            //panel_rapport_Sub.Dock = DockStyle.Fill;
+            _Parent = parent;
 
             _Panel_rapport_Pages.Add(new UserControl_PcInfo());
             _Panel_rapport_Pages.Add(new UserControl_PcLog());
@@ -45,15 +49,14 @@ namespace GUI_server
                 panel_rapport_Sub.Controls.Add(userControl);
             }
 
-            FocusWindow_Rapport(0);
+            //FocusWindow_Rapport(0);
         }
 
         public void DisplayPc(Dictionary<string, string> Settings)
         {
-            // Debug.WriteLine(Settings["hostname"] + " | " + Settings["ip"] + " | " + Settings["user_name"] + " | " + Settings["status"]);
             // create a new "PC"
             UserControl_PC NewPc = new UserControl_PC(Settings["hostname"], Settings["ip"], Convert.ToByte(Settings["status"]), Settings["user_name"], _NextId, this);
-            
+
             // add the pc to the pc list
             _pcList.Add(NewPc);
             // make it visible
@@ -122,11 +125,10 @@ namespace GUI_server
             {
                 panel_rapport.Visible = true;
             }
-            string status = _pcList[id].getStatusString();
-            //Debug.WriteLine(status);
-            _Panel_rapport_Pages[0].Visible = true;
-            _Panel_rapport_Pages[0].Dock = DockStyle.Fill;
+            _Panel_rapport_Pages[_Panel_rapport_oldShowed_Id].Visible = true;
+            //_Panel_rapport_Pages[0].Dock = DockStyle.Fill;
             (_Panel_rapport_Pages[0] as UserControl_PcInfo).updateInfos(_pcList[id]._pcName, _pcList[id]._pcIp, _pcList[id]._user_Name, _pcList[id]._user_Name, _pcList[id].getStatusString(), "");
+            (_Panel_rapport_Pages[1] as UserControl_PcLog).updateInfos(_pcList[id]._PcLogs);
         }
 
         /// <summary>
@@ -149,6 +151,11 @@ namespace GUI_server
         private void ButtonAction_Rapport(object sender, EventArgs e)
         {
             FocusWindow_Rapport(Convert.ToByte((sender as Button).Tag));
+        }
+
+        public string formatLog(string logMessage)
+        {
+            return _Parent.formatLog(logMessage);
         }
     }
 }

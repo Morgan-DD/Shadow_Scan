@@ -12,9 +12,23 @@ namespace GUI_server
 {
     public partial class UserControl_PcLog : UserControl
     {
+        // logs des action du pc
+        public List<string> _PcLogs { get; set; }
+
         public UserControl_PcLog()
         {
             InitializeComponent();
+        }
+
+        public void updateInfos(List<string> PcLogs)
+        {
+            _PcLogs = PcLogs;
+            textBox_PcLogs.Text = String.Join("\n", _PcLogs.ToArray());
+        }
+
+        private void pictureBox_Close_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
         }
     }
 }

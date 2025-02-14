@@ -35,12 +35,15 @@ namespace GUI_server
             _Status = Status;
             _Infos = Infos;
 
+
             textBox_Hostname.Text = hostname;
             textBox_IP.Text = IP;
             textBox_Username_Name.Text = Username_Name;
             textBox_Username_P.Text = Username_P;
             textBox_Status.Text = Status;
             textbox_infos.Text = Infos;
+
+
         }
 
         private void pictureBox_Close_Click(object sender, EventArgs e)

@@ -11,6 +11,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -29,12 +30,12 @@ namespace GUI_server
         // users control for the pages, they go into the main panel (panel_main)
         UserControl_main _userControlMain;
         UserControl_loading _userControlLoading = new UserControl_loading();
-        UserControl_List _userControlList = new UserControl_List();
         UserControl_Settings _userControlSettings = new UserControl_Settings();
+        UserControl_List _userControlList;
         UserControl_RessourcesList _userControlRessourceList;
 
         // list of these control panels
-        List<Control> _userContolList = new List<Control>();
+        List<Control> _userContolListAll = new List<Control>();
 
         // list of picture for the maximize button
         List<Bitmap> _maximizePictures = new List<Bitmap>();
@@ -56,6 +57,7 @@ namespace GUI_server
 
 
             _userControlMain = new UserControl_main(Convert.ToByte(ConfigurationSettings.AppSettings["DefaultClassSize"]), this);
+            _userControlList = new UserControl_List(this);
 
             // retrive the info from the json file
             using (StreamReader r = new StreamReader(ConfigurationSettings.AppSettings["JsonFilePath"]))
@@ -75,41 +77,28 @@ namespace GUI_server
             _userControlRessourceList = new UserControl_RessourcesList(_JsonManager_MainList, _jsonManager_SubList);
             _userControlRessourceList.displayMainList();
 
+            _userContolListAll.Add(_userControlMain);
+            _userContolListAll.Add(_userControlList);
+            _userContolListAll.Add(_userControlSettings);
+            _userContolListAll.Add(_userControlLoading);
+            _userContolListAll.Add(_userControlRessourceList);
+
             // add the users control into the main panel
-            _userControlMain.Dock = DockStyle.Fill;
-            panel_main.Controls.Add(_userControlMain);
-            _userControlMain.Location = new Point(0, 0);
-
-            _userControlList.Dock = DockStyle.Fill;
-            panel_main.Controls.Add(_userControlList);
-            _userControlList.Visible = false;
-            _userControlList.Location = new Point(0, 0);
-
-            _userControlSettings.Dock = DockStyle.Fill;
-            panel_main.Controls.Add(_userControlSettings);
-            _userControlSettings.Visible = false;
-            _userControlSettings.Location = new Point(0, 0);
-
-            _userControlLoading.Dock = DockStyle.Fill;
-            panel_main.Controls.Add(_userControlLoading);
-            _userControlLoading.Visible = false;
-            _userControlLoading.Location = new Point(0, 0);
-
-            _userControlRessourceList.Dock = DockStyle.Fill;
-            panel_main.Controls.Add(_userControlRessourceList);
-            _userControlRessourceList.Visible = false;
-            _userControlRessourceList.Location = new Point(0, 0);
-
-            _userContolList.Add(_userControlMain);
-            _userContolList.Add(_userControlList);
-            _userContolList.Add(_userControlSettings);
-            _userContolList.Add(_userControlLoading);
-            _userContolList.Add(_userControlRessourceList);
+            foreach (Control UserControl in _userContolListAll)
+            {
+                UserControl.Dock = DockStyle.Fill;
+                panel_main.Controls.Add(UserControl);
+                UserControl.Visible = false;
+                UserControl.Location = new Point(0, 0);
+            }
 
             // add the pictures into picture array used for topbar icons
             _maximizePictures.Add(new Bitmap(Properties.Resources.expand_icon));
             _maximizePictures.Add(new Bitmap(Properties.Resources.minimize_icon));
-            
+
+            ShowPanelControl(Convert.ToInt16(ConfigurationSettings.AppSettings["pageToStart"]));
+
+            Thread.Sleep(1000);
         }
 
         // methode to resize the window
@@ -263,6 +252,17 @@ namespace GUI_server
                 _userControlList.DisplayPc(Pc);
             }
             ShowPanelControl(1);
+        }
+
+        public string formatLog(string logMessage)
+        {
+            logMessage = "[" + DateTime.Now.ToString("MM/dd/yyyy HH:mm") + "] : " + logMessage;
+            return logMessage;
+        }
+
+        public void changeConfigVallue(string key, string newValue) 
+        {
+            ConfigurationSettings.AppSettings[key] = newValue;
         }
     }
 }

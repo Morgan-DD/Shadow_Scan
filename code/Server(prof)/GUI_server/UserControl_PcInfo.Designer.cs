@@ -49,6 +49,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_IP.Location = new System.Drawing.Point(12, 79);
             this.textBox_IP.Name = "textBox_IP";
+            this.textBox_IP.ReadOnly = true;
             this.textBox_IP.Size = new System.Drawing.Size(124, 20);
             this.textBox_IP.TabIndex = 21;
             // 
@@ -58,6 +59,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textbox_infos.Location = new System.Drawing.Point(12, 262);
             this.textbox_infos.Name = "textbox_infos";
+            this.textbox_infos.ReadOnly = true;
             this.textbox_infos.Size = new System.Drawing.Size(124, 20);
             this.textbox_infos.TabIndex = 20;
             // 
@@ -67,6 +69,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_Status.Location = new System.Drawing.Point(12, 209);
             this.textBox_Status.Name = "textBox_Status";
+            this.textBox_Status.ReadOnly = true;
             this.textBox_Status.Size = new System.Drawing.Size(124, 20);
             this.textBox_Status.TabIndex = 19;
             // 
@@ -76,6 +79,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_Username_P.Location = new System.Drawing.Point(12, 160);
             this.textBox_Username_P.Name = "textBox_Username_P";
+            this.textBox_Username_P.ReadOnly = true;
             this.textBox_Username_P.Size = new System.Drawing.Size(124, 20);
             this.textBox_Username_P.TabIndex = 18;
             // 
@@ -85,6 +89,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_Username_Name.Location = new System.Drawing.Point(12, 134);
             this.textBox_Username_Name.Name = "textBox_Username_Name";
+            this.textBox_Username_Name.ReadOnly = true;
             this.textBox_Username_Name.Size = new System.Drawing.Size(124, 20);
             this.textBox_Username_Name.TabIndex = 17;
             // 
@@ -94,6 +99,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_Hostname.Location = new System.Drawing.Point(12, 25);
             this.textBox_Hostname.Name = "textBox_Hostname";
+            this.textBox_Hostname.ReadOnly = true;
             this.textBox_Hostname.Size = new System.Drawing.Size(124, 20);
             this.textBox_Hostname.TabIndex = 16;
             // 
