@@ -103,14 +103,6 @@
     {
       "type": "2",
       "pathUrl": "Code-Review-Guidelines.pdf"
-    },
-    {
-      "type": "0",
-      "pathUrl": "http://example.com/bedroom.php"
-    },
-    {
-      "type": 0,
-      "pathUrl": "Test1"
     }
   ]
 }

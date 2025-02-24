@@ -75,19 +75,24 @@ namespace GUI_server
             }
             
             _userControlRessourceList = new UserControl_RessourcesList(_JsonManager_MainList, _jsonManager_SubList);
-            _userControlRessourceList.displayMainList();
+            _userControlRessourceList.ImportJsonAndDisplay();
 
             _userContolListAll.Add(_userControlMain);
+            panel_main.Controls.Add(_userControlMain);
             _userContolListAll.Add(_userControlList);
+            panel_main.Controls.Add(_userControlList);
             _userContolListAll.Add(_userControlSettings);
+            panel_main.Controls.Add(_userControlSettings);
             _userContolListAll.Add(_userControlLoading);
+            panel_main.Controls.Add(_userControlLoading);
             _userContolListAll.Add(_userControlRessourceList);
+            panel_main.Controls.Add(_userControlRessourceList);
 
             // add the users control into the main panel
             foreach (Control UserControl in _userContolListAll)
             {
                 UserControl.Dock = DockStyle.Fill;
-                panel_main.Controls.Add(UserControl);
+                //panel_main.Controls.Add(UserControl);
                 UserControl.Visible = false;
                 UserControl.Location = new Point(0, 0);
             }

@@ -46,6 +46,7 @@
             this.button_ExportSubList_All = new System.Windows.Forms.Button();
             this.label_Export = new System.Windows.Forms.Label();
             this.button_ExportSubList_Single = new System.Windows.Forms.Button();
+            this.button_DeletFromMainList = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label_Title
@@ -167,8 +168,7 @@
             // 
             // textBox_addMainList
             // 
-            this.textBox_addMainList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBox_addMainList.Location = new System.Drawing.Point(3, 559);
+            this.textBox_addMainList.Location = new System.Drawing.Point(3, 62);
             this.textBox_addMainList.Name = "textBox_addMainList";
             this.textBox_addMainList.Size = new System.Drawing.Size(183, 20);
             this.textBox_addMainList.TabIndex = 19;
@@ -176,9 +176,8 @@
             // 
             // button_addToMainList
             // 
-            this.button_addToMainList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button_addToMainList.Enabled = false;
-            this.button_addToMainList.Location = new System.Drawing.Point(318, 557);
+            this.button_addToMainList.Location = new System.Drawing.Point(318, 60);
             this.button_addToMainList.Name = "button_addToMainList";
             this.button_addToMainList.Size = new System.Drawing.Size(75, 23);
             this.button_addToMainList.TabIndex = 20;
@@ -188,9 +187,8 @@
             // 
             // comboBox_addMainList
             // 
-            this.comboBox_addMainList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.comboBox_addMainList.FormattingEnabled = true;
-            this.comboBox_addMainList.Location = new System.Drawing.Point(192, 558);
+            this.comboBox_addMainList.Location = new System.Drawing.Point(192, 61);
             this.comboBox_addMainList.Name = "comboBox_addMainList";
             this.comboBox_addMainList.Size = new System.Drawing.Size(121, 21);
             this.comboBox_addMainList.TabIndex = 21;
@@ -243,11 +241,23 @@
             this.button_ExportSubList_Single.UseVisualStyleBackColor = true;
             this.button_ExportSubList_Single.Click += new System.EventHandler(this.exportButtonAction);
             // 
+            // button_DeletFromMainList
+            // 
+            this.button_DeletFromMainList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button_DeletFromMainList.Location = new System.Drawing.Point(3, 559);
+            this.button_DeletFromMainList.Name = "button_DeletFromMainList";
+            this.button_DeletFromMainList.Size = new System.Drawing.Size(390, 23);
+            this.button_DeletFromMainList.TabIndex = 26;
+            this.button_DeletFromMainList.Text = "Delete";
+            this.button_DeletFromMainList.UseVisualStyleBackColor = true;
+            this.button_DeletFromMainList.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // UserControl_RessourcesList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.Controls.Add(this.button_DeletFromMainList);
             this.Controls.Add(this.button_ExportSubList_Single);
             this.Controls.Add(this.label_Export);
             this.Controls.Add(this.button_ExportSubList_All);
@@ -293,5 +303,6 @@
         private System.Windows.Forms.Button button_ExportSubList_All;
         private System.Windows.Forms.Label label_Export;
         private System.Windows.Forms.Button button_ExportSubList_Single;
+        private System.Windows.Forms.Button button_DeletFromMainList;
     }
 }

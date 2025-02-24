@@ -60,9 +60,10 @@ namespace GUI_server
         }
 
         // display the main list
-        public void displayMainList()
+        public void ImportJsonAndDisplay()
         {
             // go on all the ressources
+
             foreach(Ressource_MainList resource in _JsonManager_MainList.Ressources)
             {
                 // create a temp ressource
@@ -136,6 +137,42 @@ namespace GUI_server
                 _PcCheckBoxSubLists.Add(tempList);
             }
             changeSubList(0);
+        }
+
+        private void displayMainListItems()
+        {
+            flowLayoutPanel_MainList.Controls.Clear();
+            try
+            {
+
+                foreach (UserControl_PcCheckBox userControl_PcCheckBox in _PcCheckBoxList)
+                {
+                    userControl_PcCheckBox.Visible = true;
+                    userControl_PcCheckBox.Size = new Size(flowLayoutPanel_MainList.Width - 25, userControl_PcCheckBox.Height);
+                    switch (userControl_PcCheckBox.Tag)
+                    {
+                        case "0": // website
+                            userControl_PcCheckBox.BackColor = Color.FromArgb(100, 125, 151, 171);
+                            userControl_PcCheckBox.setTextBoxColor(Color.FromArgb(255, 106, 128, 145));
+                            break;
+                        case "1": // app
+                            userControl_PcCheckBox.BackColor = Color.FromArgb(100, 151, 125, 171);
+                            userControl_PcCheckBox.setTextBoxColor(Color.FromArgb(255, 117, 107, 125));
+                            break;
+                        case "2": // file
+                            userControl_PcCheckBox.BackColor = Color.FromArgb(100, 172, 125, 125);
+                            userControl_PcCheckBox.setTextBoxColor(Color.FromArgb(255, 145, 106, 106));
+                            break;
+                    }
+                    flowLayoutPanel_SubList.Controls.Add(userControl_PcCheckBox);
+                }
+                if (_PcCheckBoxSubLists[_idSubList].Count > 0)
+                {
+                    textBox_SubListName.Enabled = true;
+                }
+                comboBox_SubList.SelectedIndex = _idSubList;
+            }
+            catch (Exception ex) { }
         }
 
         private void addToMainList(byte type, string urlPath)
@@ -411,6 +448,28 @@ namespace GUI_server
             displaySubList();
         }
 
+        private void removeFromMainList()
+        {
+            List<Control> ToRemove = new List<Control>();
+
+            foreach (Control userControl_PcCheckBox in _PcCheckBoxList)
+            {
+                if ((userControl_PcCheckBox as UserControl_PcCheckBox).isChecked())
+                {
+                    ToRemove.Add(userControl_PcCheckBox);
+                }
+            }
+
+            foreach (Control control in ToRemove) 
+            {
+                flowLayoutPanel_MainList.Controls.Remove(control);
+                _PcCheckBoxList.Remove((control as UserControl_PcCheckBox));
+            }
+
+            //displayMainListItems();
+            saveMainList("");
+        }
+
         private void deletSubList(byte id)
         {
             _PcCheckBoxSubLists.Remove(_PcCheckBoxSubLists[id]);
@@ -516,6 +575,11 @@ namespace GUI_server
             }
 
             return list;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            removeFromMainList();
         }
     }
 }
