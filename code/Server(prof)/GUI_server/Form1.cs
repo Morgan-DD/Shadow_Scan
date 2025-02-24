@@ -51,6 +51,8 @@ namespace GUI_server
         // used to manage the json data from the sublist of banned ressources
         List<JsonManager_SubList> _jsonManager_SubList;
 
+        MessagesManager _MessageManager = new MessagesManager();
+
         public Form_main()
         {
             InitializeComponent();
@@ -283,6 +285,16 @@ namespace GUI_server
         public List<string> getActualSubList()
         {
             return _userControlRessourceList.getActualSubList();
+        }
+
+        private void Button_Test_Click(object sender, EventArgs e)
+        {
+            _MessageManager.ShowMessage("CECI EST UN TEST DE MESSAGE WINDOWS");
+        }
+
+        private void ReportIllegalAction(string action, string pc, string user) 
+        {
+
         }
     }
 }

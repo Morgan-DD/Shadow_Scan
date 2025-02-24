@@ -63,6 +63,7 @@
     </Compile>
     <Compile Include="JsonManager_MainList.cs" />
     <Compile Include="JsonManager_SubList.cs" />
+    <Compile Include="MessagesManager.cs" />
     <Compile Include="UserControl_PcInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
