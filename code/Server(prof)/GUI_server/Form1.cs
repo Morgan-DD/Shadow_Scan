@@ -239,7 +239,7 @@ namespace GUI_server
             label_size.Text = this.Size.ToString();
         }
 
-        public void startScan(List<string> pcHostnames)
+        public void startScan(List<string> pcHostnames, string ressourcesListName)
         {
             string NoInfoMessage = "None";
             foreach (string pcHostname in pcHostnames)
@@ -272,6 +272,12 @@ namespace GUI_server
         public void changeConfigVallue(string key, string newValue) 
         {
             ConfigurationSettings.AppSettings[key] = newValue;
+        }
+
+
+        public List<string> getActualSubList()
+        {
+            return _userControlRessourceList.getActualSubList();
         }
     }
 }

@@ -41,8 +41,13 @@
             this.label_changeClass_title = new System.Windows.Forms.Label();
             this.button_modifyClass = new System.Windows.Forms.Button();
             this.button_startScan = new System.Windows.Forms.Button();
+            this.panel_ressourcesList = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.comboBox_ressourcesList = new System.Windows.Forms.ComboBox();
             this.panel_className.SuspendLayout();
             this.panel_modifyClassName.SuspendLayout();
+            this.panel_ressourcesList.SuspendLayout();
             this.SuspendLayout();
             // 
             // label_Title
@@ -90,7 +95,7 @@
             this.label_PcName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label_PcName.AutoSize = true;
             this.label_PcName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_PcName.Location = new System.Drawing.Point(459, 115);
+            this.label_PcName.Location = new System.Drawing.Point(481, 58);
             this.label_PcName.Name = "label_PcName";
             this.label_PcName.Size = new System.Drawing.Size(225, 24);
             this.label_PcName.TabIndex = 8;
@@ -101,9 +106,9 @@
             this.flowLayoutPanel_pcList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel_pcList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.flowLayoutPanel_pcList.Location = new System.Drawing.Point(418, 143);
+            this.flowLayoutPanel_pcList.Location = new System.Drawing.Point(440, 86);
             this.flowLayoutPanel_pcList.Name = "flowLayoutPanel_pcList";
-            this.flowLayoutPanel_pcList.Size = new System.Drawing.Size(312, 373);
+            this.flowLayoutPanel_pcList.Size = new System.Drawing.Size(312, 375);
             this.flowLayoutPanel_pcList.TabIndex = 9;
             // 
             // panel_className
@@ -111,7 +116,7 @@
             this.panel_className.Controls.Add(this.textBox_ClassName);
             this.panel_className.Controls.Add(this.label_sub_title);
             this.panel_className.Controls.Add(this.button_validateClassName);
-            this.panel_className.Location = new System.Drawing.Point(50, 93);
+            this.panel_className.Location = new System.Drawing.Point(50, 68);
             this.panel_className.Name = "panel_className";
             this.panel_className.Size = new System.Drawing.Size(233, 130);
             this.panel_className.TabIndex = 10;
@@ -122,7 +127,7 @@
             this.panel_modifyClassName.Controls.Add(this.textBox_NewPcName);
             this.panel_modifyClassName.Controls.Add(this.label_changeClass_title);
             this.panel_modifyClassName.Controls.Add(this.button_modifyClass);
-            this.panel_modifyClassName.Location = new System.Drawing.Point(50, 229);
+            this.panel_modifyClassName.Location = new System.Drawing.Point(50, 204);
             this.panel_modifyClassName.Name = "panel_modifyClassName";
             this.panel_modifyClassName.Size = new System.Drawing.Size(233, 151);
             this.panel_modifyClassName.TabIndex = 11;
@@ -167,9 +172,9 @@
             // 
             // button_startScan
             // 
-            this.button_startScan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button_startScan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button_startScan.Enabled = false;
-            this.button_startScan.Location = new System.Drawing.Point(50, 466);
+            this.button_startScan.Location = new System.Drawing.Point(484, 467);
             this.button_startScan.Name = "button_startScan";
             this.button_startScan.Size = new System.Drawing.Size(233, 50);
             this.button_startScan.TabIndex = 13;
@@ -177,11 +182,51 @@
             this.button_startScan.UseVisualStyleBackColor = true;
             this.button_startScan.Click += new System.EventHandler(this.button_startScan_Click);
             // 
+            // panel_ressourcesList
+            // 
+            this.panel_ressourcesList.Controls.Add(this.comboBox_ressourcesList);
+            this.panel_ressourcesList.Controls.Add(this.label2);
+            this.panel_ressourcesList.Controls.Add(this.button1);
+            this.panel_ressourcesList.Location = new System.Drawing.Point(29, 361);
+            this.panel_ressourcesList.Name = "panel_ressourcesList";
+            this.panel_ressourcesList.Size = new System.Drawing.Size(278, 100);
+            this.panel_ressourcesList.TabIndex = 12;
+            this.panel_ressourcesList.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(254, 24);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Liste des ressources bannies";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(102, 75);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Modifier";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // comboBox_ressourcesList
+            // 
+            this.comboBox_ressourcesList.FormattingEnabled = true;
+            this.comboBox_ressourcesList.Location = new System.Drawing.Point(36, 49);
+            this.comboBox_ressourcesList.Name = "comboBox_ressourcesList";
+            this.comboBox_ressourcesList.Size = new System.Drawing.Size(206, 21);
+            this.comboBox_ressourcesList.TabIndex = 7;
+            this.comboBox_ressourcesList.SelectedIndexChanged += new System.EventHandler(this.comboBox_ressourcesList_SelectedIndexChanged);
+            // 
             // UserControl_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.Controls.Add(this.panel_ressourcesList);
             this.Controls.Add(this.button_startScan);
             this.Controls.Add(this.panel_modifyClassName);
             this.Controls.Add(this.panel_className);
@@ -189,11 +234,13 @@
             this.Controls.Add(this.label_PcName);
             this.Controls.Add(this.label_Title);
             this.Name = "UserControl_main";
-            this.Size = new System.Drawing.Size(777, 548);
+            this.Size = new System.Drawing.Size(777, 534);
             this.panel_className.ResumeLayout(false);
             this.panel_className.PerformLayout();
             this.panel_modifyClassName.ResumeLayout(false);
             this.panel_modifyClassName.PerformLayout();
+            this.panel_ressourcesList.ResumeLayout(false);
+            this.panel_ressourcesList.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,5 +260,9 @@
         private System.Windows.Forms.Button button_modifyClass;
         private System.Windows.Forms.Label label_ChangeClass_detais;
         private System.Windows.Forms.Button button_startScan;
+        private System.Windows.Forms.Panel panel_ressourcesList;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox_ressourcesList;
     }
 }

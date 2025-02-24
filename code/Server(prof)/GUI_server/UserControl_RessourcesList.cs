@@ -503,5 +503,19 @@ namespace GUI_server
                 }
             }
         }
+
+        public List<string> getActualSubList() 
+        {
+            List<string> list = new List<string>();
+
+            list.Add("Liste principale");
+
+            foreach (string sub in comboBox_SubList.Items)
+            {
+                list.Add(sub);
+            }
+
+            return list;
+        }
     }
 }

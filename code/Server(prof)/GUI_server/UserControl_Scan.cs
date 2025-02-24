@@ -25,6 +25,8 @@ namespace GUI_server
 
         string _defaultPcName = "INF-{0}-M2";
 
+        string _selectedList = "";
+
         [DllImport("user32.dll")]
         static extern IntPtr SendMessage(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam);
 
@@ -55,7 +57,8 @@ namespace GUI_server
             {
                 generatePcName(textBox_ClassName.Text);
                 panel_modifyClassName.Visible = true;
-                button_startScan.Enabled = true;
+                refreshComboBox();
+                panel_ressourcesList.Visible = true;
             }
             else if (textBox_ClassName.Text != String.Empty)
             {
@@ -102,6 +105,7 @@ namespace GUI_server
         {
             _mainForm.ShowPanelControl(3);
             //StartRedraw(_mainForm);
+            _selectedList = comboBox_ressourcesList.Items[comboBox_ressourcesList.SelectedIndex].ToString();
             StartScan();
         }
 
@@ -117,7 +121,7 @@ namespace GUI_server
             List<string> pcHostnames = getPcToScan();
             if (pcHostnames.Count() > 0)
             {
-                _mainForm.startScan(pcHostnames);
+                _mainForm.startScan(pcHostnames, _selectedList);
                 resetToZero();
             }
             else
@@ -130,6 +134,7 @@ namespace GUI_server
         {
             button_startScan.Enabled = false;
             panel_modifyClassName.Visible = false;
+            panel_ressourcesList.Visible = false;
             foreach (UserControl_PcCheckBox pc in _pcNames)
             {
                 flowLayoutPanel_pcList.Controls.Remove(pc);
@@ -137,6 +142,19 @@ namespace GUI_server
             textBox_ClassName.Text = String.Empty;
             textBox_NewPcName.Text = String.Empty;
             _pcNames.Clear();
+        }
+
+        private void refreshComboBox()
+        {
+            foreach (string pcCheckBox in _mainForm.getActualSubList())
+            {
+                comboBox_ressourcesList.Items.Add(pcCheckBox);
+            }
+        }
+
+        private void comboBox_ressourcesList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            button_startScan.Enabled = true;
         }
     }
 }
