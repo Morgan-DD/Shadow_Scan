@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -99,7 +100,6 @@ namespace GUI_server
         /// <param name="pcID">id of the pc to remove</param>
         private void removePC(byte pcID)
         {
-            Debug.WriteLine("delete{0}", pcID);
             // to not exclude issues
             _pcList.Remove(_pcList[0]);
             if (pcID > _pcList.Count())
@@ -132,16 +132,32 @@ namespace GUI_server
         /// <param name="id">Id of the pc to focus</param>
         public void FocusWindow(byte id)
         {
-            // focus the pc selected (background light gray)
-            _pcList[id].FocusUserPanel(true);
-            if (_focusedPc < _pcList.Count())
+            if (id >= 255)
+            { 
                 _pcList[_focusedPc].FocusUserPanel(false);
-            // update the last focused windows (actual one)
-            _focusedPc = Convert.ToByte(id);
-    
-            // add the infos of the actual pc to the info panel pages
-            (_Panel_rapport_Pages[0] as UserControl_PcInfo).updateInfos(_pcList[id]._pcName, _pcList[id]._pcIp, _pcList[id]._user_Name, _pcList[id]._user_Name, _pcList[id].getStatusString(), "");
-            (_Panel_rapport_Pages[1] as UserControl_PcLog).updateInfos(_pcList[id]._PcLogs);
+                FocusWindow_Rapport(id);
+            } else {
+                // focus the pc selected (background light gray)
+                _pcList[id].FocusUserPanel(true);
+                if (_focusedPc < _pcList.Count())
+                    _pcList[_focusedPc].FocusUserPanel(false);
+                // update the last focused windows (actual one)
+
+                if (id == _focusedPc)
+                {
+                    (_Panel_rapport_Pages[0] as UserControl_PcInfo).clearTextBoxes();
+                    (_Panel_rapport_Pages[1] as UserControl_PcLog).clearTextBox();
+                    FocusWindow_Rapport(255);
+                }
+                else
+                {
+                    // add the infos of the actual pc to the info panel pages
+                    (_Panel_rapport_Pages[0] as UserControl_PcInfo).updateInfos(_pcList[id]._pcName, _pcList[id]._pcIp, _pcList[id]._user_Name, _pcList[id]._user_Name, _pcList[id].getStatusString(), "");
+                    (_Panel_rapport_Pages[1] as UserControl_PcLog).updateInfos(_pcList[id]._PcLogs);
+                }
+
+                _focusedPc = Convert.ToByte(id);
+            }
         }
 
         /// <summary>
@@ -150,12 +166,18 @@ namespace GUI_server
         /// <param name="id">Id of the pc to focus</param>
         public void FocusWindow_Rapport(byte id)
         {
-            // hide the page actually focused page
-            _Panel_rapport_Pages[_Panel_rapport_oldShowed_Id].Visible = false;
-            // show the wanted page
-            _Panel_rapport_Pages[id].Visible = true;
-            // update id with new showed page
-            _Panel_rapport_oldShowed_Id = id;
+            if (_Panel_rapport_oldShowed_Id < _Panel_rapport_Pages.Count()) {
+                // hide the page actually focused page
+                _Panel_rapport_Pages[_Panel_rapport_oldShowed_Id].Visible = false;
+            }
+
+            if (id < 255)
+            {
+                // show the wanted page
+                _Panel_rapport_Pages[id].Visible = true;
+                // update id with new showed page
+                _Panel_rapport_oldShowed_Id = id;
+            }
         }
 
         private void ContextmenuAction_item1(object sender, EventArgs e)
@@ -179,6 +201,30 @@ namespace GUI_server
         {
             // add the date to the log
             return _Parent.formatLog(logMessage);
+        }
+
+        public async void ReportInfraction(string action, string pc, string user)
+        {
+            int id = 0;
+            int tempID = 0;
+            foreach (UserControl_PC item in _pcList) 
+            {
+                if(item._pcIp == pc)
+                {
+                    id=tempID;
+                }
+                tempID++;
+            }
+            _pcList[id]._PcLogs.Add(formatLog(action));
+            _pcList[id].setToAlertMod(true);
+            FocusWindow(255);
+            /*
+            await Task.Run(() =>
+            {
+                Thread.Sleep(10000);
+                _pcList[id].setToAlertMod(false);
+            });
+            */
         }
     }
 }

@@ -71,7 +71,13 @@ namespace ShadowScan_Server
                     using (Ping pinger = new Ping())
                     {
                         PingReply reply = pinger.Send(hostname);
-                        return (Convert.ToByte(reply.Status == IPStatus.Success), reply.Address.ToString());
+                        bool pingStatus = reply.Status == IPStatus.Success;
+                        string ip = "";
+                        if (pingStatus) 
+                        {
+                            ip = reply.Address.ToString();
+                        }
+                        return (Convert.ToByte(pingStatus),ip);
                     }
                 }
                 catch (Exception e) 

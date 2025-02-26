@@ -290,6 +290,7 @@ namespace GUI_server
         private void Button_Test_Click(object sender, EventArgs e)
         {
             _MessageManager.ShowMessage("CECI EST UN TEST DE MESSAGE WINDOWS");
+            _userControlList.ReportInfraction("TEST","INF-A11-M201","User1");
         }
 
         private void ReportIllegalAction(string action, string pc, string user) 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -23,7 +24,12 @@ namespace GUI_server
         public void updateInfos(List<string> PcLogs)
         {
             _PcLogs = PcLogs;
-            textBox_PcLogs.Text = String.Join("\n", _PcLogs.ToArray());
+            textBox_PcLogs.Text = String.Join("\r\n", _PcLogs.ToArray());
+        }
+
+        public void clearTextBox()
+        {
+            textBox_PcLogs.Text = String.Empty;
         }
 
         private void pictureBox_Close_Click(object sender, EventArgs e)

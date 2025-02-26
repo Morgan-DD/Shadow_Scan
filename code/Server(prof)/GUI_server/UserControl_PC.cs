@@ -30,6 +30,9 @@ namespace GUI_server
         // parent Control (custom User control)
         UserControl_List _Parent;
 
+        // color of the background
+        Color _color;
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
       (
@@ -88,11 +91,14 @@ namespace GUI_server
             this.Width = label_PcName.Width + 20;
 
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+
+            _color = this.BackColor;
         }
 
         public void FocusUserPanel(bool state)
         {
             this.BackColor = state ? Color.LightGray : Color.Gray;
+            
         }
 
         public void AlertMod(bool state)
@@ -113,6 +119,12 @@ namespace GUI_server
         public string getStatusString()
         {
             return label_status.Text;
+        }
+
+        public void setToAlertMod(bool type)
+        {
+            if (type) this.BackColor = Color.Red;
+            else this.BackColor = Color.Gray;
         }
     }
 }

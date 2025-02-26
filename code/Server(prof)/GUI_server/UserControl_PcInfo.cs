@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Windows.Networking;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace GUI_server
@@ -44,6 +45,16 @@ namespace GUI_server
             textbox_infos.Text = Infos;
 
 
+        }
+
+        public void clearTextBoxes()
+        {
+            textBox_Hostname.Text = String.Empty;
+            textBox_IP.Text = String.Empty;
+            textBox_Username_Name.Text = String.Empty;
+            textBox_Username_P.Text = String.Empty;
+            textBox_Status.Text = String.Empty;
+            textbox_infos.Text = String.Empty;
         }
 
         private void pictureBox_Close_Click(object sender, EventArgs e)
