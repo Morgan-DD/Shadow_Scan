@@ -103,7 +103,7 @@ namespace GUI_server
 
         public void AlertMod(bool state)
         {
-            this.BackColor = state ? Color.Red : Color.Gray;
+            this.BackColor = state ? Color.FromArgb(128, 255, 192, 192) : Color.Gray;
         }
 
         private void Click_Event(Object sender, EventArgs e)

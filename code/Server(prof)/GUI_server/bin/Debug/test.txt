@@ -1,0 +1,23 @@
+cpu
+286
+266 | https://www.toppreise.ch/comparison-prix/Processeurs/AMD-Ryzen-7-7700X-Raphael-8x-4-5GHz-Socket-AM5-100-000000591-p705275?selsort=rd
+gpu
+451
+442 | https://www.toppreise.ch/comparison-prix/Cartes-graphiques/SAPPHIRE-Radeon-RX-7800-XT-Pulse-Radeon-RX-7800-XT-11330-02-20G-p738657?selsort=rd
+case
+145
+145
+ssd
+270
+260
+mobo
+169
+160 | https://www.toppreise.ch/comparison-prix/Cartes-meres/GIGABYTE-B650-GAMING-X-AX-V2-Rev-1-x-AMD-B650-p756946?selsort=rd
+alim
+133
+-
+ram
+169
+146 | https://www.toppreise.ch/comparison-prix/Memoire-vive/CORSAIR-Vengeance-Kit-DDR5-4800-Intel-optimized-CMK64GX5M2A4800C40-p699485?selsort=rd
+cooler
+85

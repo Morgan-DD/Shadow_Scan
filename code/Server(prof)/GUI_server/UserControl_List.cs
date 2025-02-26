@@ -17,7 +17,7 @@ namespace GUI_server
     public partial class UserControl_List : UserControl
     {
         // list of pc (user control)
-        List<UserControl_PC> _pcList = new List<UserControl_PC>();
+        public List<UserControl_PC> _pcList { get; set; }
 
         // id of the focused pc 
         //      255 is like null
@@ -42,6 +42,8 @@ namespace GUI_server
         public UserControl_List(Form_main parent)
         {
             InitializeComponent();
+
+            _pcList = new List<UserControl_PC>();
 
             _Parent = parent;
 
@@ -203,7 +205,7 @@ namespace GUI_server
             return _Parent.formatLog(logMessage);
         }
 
-        public async void ReportInfraction(string action, string pc, string user)
+        public async void ReportInfraction(string infraction, string pc, string user)
         {
             int id = 0;
             int tempID = 0;
@@ -215,9 +217,13 @@ namespace GUI_server
                 }
                 tempID++;
             }
-            _pcList[id]._PcLogs.Add(formatLog(action));
-            _pcList[id].setToAlertMod(true);
-            FocusWindow(255);
+            try
+            {
+                _pcList[id]._PcLogs.Add(formatLog(infraction));
+                _pcList[id].setToAlertMod(true);
+                FocusWindow(255);
+            }
+            catch (Exception ex) { }
             /*
             await Task.Run(() =>
             {

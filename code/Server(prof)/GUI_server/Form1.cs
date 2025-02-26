@@ -51,7 +51,7 @@ namespace GUI_server
         // used to manage the json data from the sublist of banned ressources
         List<JsonManager_SubList> _jsonManager_SubList;
 
-        MessagesManager _MessageManager = new MessagesManager();
+        InfractionManager _MessageManager = new InfractionManager();
 
         public Form_main()
         {
@@ -289,8 +289,13 @@ namespace GUI_server
 
         private void Button_Test_Click(object sender, EventArgs e)
         {
-            _MessageManager.ShowMessage("CECI EST UN TEST DE MESSAGE WINDOWS");
-            _userControlList.ReportInfraction("TEST","INF-A11-M201","User1");
+            Random rand = new Random();
+            List<string> temparay = new List<string>();
+            temparay.Add("chatgpt.com");
+            temparay.Add("google.gemini.com");
+            temparay.Add("ia.com");
+            _MessageManager.ReportInfraction(1, temparay, Convert.ToByte(rand.Next(0, _userControlList._pcList.Count())), "pg66hua", _userControlList);
+            //_userControlList.ReportInfraction("TEST","INF-A11-M201","User1");
         }
 
         private void ReportIllegalAction(string action, string pc, string user) 
