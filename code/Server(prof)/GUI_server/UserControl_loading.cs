@@ -16,5 +16,16 @@ namespace GUI_server
         {
             InitializeComponent();
         }
+
+        public void displayMessage(string message)
+        {
+            textBox_Message.Text = message;
+            showTextBoxMessage(true);
+        }
+
+        public void showTextBoxMessage(bool status)
+        {
+            textBox_Message.Visible=status;
+        }
     }
 }

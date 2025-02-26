@@ -103,8 +103,6 @@ namespace GUI_server
         // TODO: Faire le scna (StartScan) dans un thread séparé pour permettre l'affichage de la page de chargment durant le scan
         private void button_startScan_Click(object sender, EventArgs e)
         {
-            _mainForm.ShowPanelControl(3);
-            //StartRedraw(_mainForm);
             _selectedList = comboBox_ressourcesList.Items[comboBox_ressourcesList.SelectedIndex].ToString();
             StartScan();
         }
@@ -118,6 +116,7 @@ namespace GUI_server
 
         private void StartScan()
         {
+            _mainForm.showLoadingScreen("Détection des pc en cours");
             List<string> pcHostnames = getPcToScan();
             if (pcHostnames.Count() > 0)
             {

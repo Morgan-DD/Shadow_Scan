@@ -30,6 +30,7 @@
         {
             this.pictureBox_gif = new System.Windows.Forms.PictureBox();
             this.label_loadingTitle = new System.Windows.Forms.Label();
+            this.textBox_Message = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gif)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,10 +55,23 @@
             this.label_loadingTitle.TabIndex = 1;
             this.label_loadingTitle.Text = "Chargement en cours";
             // 
+            // textBox_Message
+            // 
+            this.textBox_Message.AcceptsReturn = true;
+            this.textBox_Message.AcceptsTab = true;
+            this.textBox_Message.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox_Message.Location = new System.Drawing.Point(143, 382);
+            this.textBox_Message.Name = "textBox_Message";
+            this.textBox_Message.Size = new System.Drawing.Size(215, 20);
+            this.textBox_Message.TabIndex = 2;
+            this.textBox_Message.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox_Message.Visible = false;
+            // 
             // UserControl_loading
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.textBox_Message);
             this.Controls.Add(this.label_loadingTitle);
             this.Controls.Add(this.pictureBox_gif);
             this.Name = "UserControl_loading";
@@ -72,5 +86,6 @@
 
         private System.Windows.Forms.PictureBox pictureBox_gif;
         private System.Windows.Forms.Label label_loadingTitle;
+        private System.Windows.Forms.TextBox textBox_Message;
     }
 }

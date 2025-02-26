@@ -178,6 +178,17 @@ namespace GUI_server
             }
         }
 
+        public void showLoadingScreen(string message)
+        {
+            _userControlLoading.displayMessage(message);
+            ShowPanelControl(3);
+        }
+
+        public void hideLoadingScreen()
+        {
+
+        }
+
         // action of the buttons to change page (userpanels)
 
         private void Button_MenuClick(object sender, EventArgs e)
@@ -246,12 +257,12 @@ namespace GUI_server
             label_size.Text = this.Size.ToString();
         }
 
-        public void startScan(List<string> pcHostnames, string ressourcesListName)
+        public async void startScan(List<string> pcHostnames, string ressourcesListName)
         {
             string NoInfoMessage = "None";
             foreach (string pcHostname in pcHostnames)
             {
-                (byte status, string ip) = _shadowScanInstance.pingPc(pcHostname);
+                (byte status, string ip) = await Task.Run(() => _shadowScanInstance.pingPc(pcHostname));
 
                 // byte status = 0;
                 var Pc = new Dictionary<string, string>
@@ -268,6 +279,8 @@ namespace GUI_server
                 _userControlList.DisplayPc(Pc);
             }
             ShowPanelControl(1);
+            _userControlLoading.showTextBoxMessage(false);
+
         }
 
         public string formatLog(string logMessage)

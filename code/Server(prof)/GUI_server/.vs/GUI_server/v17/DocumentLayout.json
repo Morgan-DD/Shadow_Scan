@@ -3,6 +3,34 @@
   "WorkspaceRootPath": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\server(prof)\\gui_server\\usercontrol_loading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|solutionrelative:usercontrol_loading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\server(prof)\\gui_server\\usercontrol_loading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|solutionrelative:usercontrol_loading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\server(prof)\\gui_server\\usercontrol_scan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|solutionrelative:usercontrol_scan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\server(prof)\\gui_server\\usercontrol_scan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|solutionrelative:usercontrol_scan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\usercontrol_list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|solutionrelative:usercontrol_list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\server(prof)\\gui_server\\infractionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|solutionrelative:infractionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,18 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\usercontrol_ressourceslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|solutionrelative:usercontrol_ressourceslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\server(prof)\\gui_server\\usercontrol_list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|solutionrelative:usercontrol_list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\usercontrol_pc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -49,17 +65,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAA8BAAAAAAAAAAAiwCgBAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAIBAAAAAAAAAADwvxkBAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-24T13:16:04.076Z",
               "IsPinned": true,
@@ -67,7 +83,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "UserControl_List.cs",
               "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\UserControl_List.cs",
               "RelativeDocumentMoniker": "UserControl_List.cs",
@@ -81,7 +97,57 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
+              "Title": "UserControl_Scan.cs",
+              "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\UserControl_Scan.cs",
+              "RelativeDocumentMoniker": "UserControl_Scan.cs",
+              "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\UserControl_Scan.cs",
+              "RelativeToolTip": "UserControl_Scan.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAiwHYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T12:58:06.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserControl_Scan.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\UserControl_Scan.cs",
+              "RelativeDocumentMoniker": "UserControl_Scan.cs",
+              "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\UserControl_Scan.cs [Design]",
+              "RelativeToolTip": "UserControl_Scan.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T12:58:04.466Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserControl_loading.cs",
+              "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\UserControl_loading.cs",
+              "RelativeDocumentMoniker": "UserControl_loading.cs",
+              "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\UserControl_loading.cs",
+              "RelativeToolTip": "UserControl_loading.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T12:54:46.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserControl_loading.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\UserControl_loading.cs",
+              "RelativeDocumentMoniker": "UserControl_loading.cs",
+              "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\UserControl_loading.cs [Design]",
+              "RelativeToolTip": "UserControl_loading.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T12:54:20.197Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\ShadowScan_Server_1\\Program.cs",
               "RelativeDocumentMoniker": "..\\ShadowScan_Server_1\\Program.cs",
@@ -89,12 +155,11 @@
               "RelativeToolTip": "..\\ShadowScan_Server_1\\Program.cs",
               "ViewState": "AgIAADYAAAAAAAAAAAAgwEsAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T07:34:39.538Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-26T07:34:39.538Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "UserControl_PC.cs",
               "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\UserControl_PC.cs",
               "RelativeDocumentMoniker": "UserControl_PC.cs",
@@ -102,12 +167,11 @@
               "RelativeToolTip": "UserControl_PC.cs",
               "ViewState": "AgIAAGMAAAAAAAAAAAAAAHQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T07:29:31.051Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-26T07:29:31.051Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
@@ -119,19 +183,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "UserControl_RessourcesList.cs [Design]",
               "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\UserControl_RessourcesList.cs",
               "RelativeDocumentMoniker": "UserControl_RessourcesList.cs",
               "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\UserControl_RessourcesList.cs [Design]",
               "RelativeToolTip": "UserControl_RessourcesList.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T09:35:31.791Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-02-24T09:35:31.791Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "UserControl_RessourcesList.cs",
               "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\UserControl_RessourcesList.cs",
               "RelativeDocumentMoniker": "UserControl_RessourcesList.cs",
@@ -139,12 +202,11 @@
               "RelativeToolTip": "UserControl_RessourcesList.cs",
               "ViewState": "AgIAAAkBAAAAAAAAAAAiwPQBAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T09:35:33.727Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-24T09:35:33.727Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "InfractionManager.cs",
               "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\InfractionManager.cs",
               "RelativeDocumentMoniker": "InfractionManager.cs",
@@ -157,7 +219,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "UserControl_PcLog.cs",
               "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\UserControl_PcLog.cs",
               "RelativeDocumentMoniker": "UserControl_PcLog.cs",
@@ -169,7 +231,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "UserControl_PcInfo.cs",
               "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\UserControl_PcInfo.cs",
               "RelativeDocumentMoniker": "UserControl_PcInfo.cs",
@@ -177,8 +239,7 @@
               "RelativeToolTip": "UserControl_PcInfo.cs",
               "ViewState": "AgIAAB4AAAAAAAAAAAAiwDEAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T08:05:47.733Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-26T08:05:47.733Z"
             }
           ]
         }
