@@ -1,15 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\Server(prof)\\GUI_server\\",
+  "WorkspaceRootPath": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|ShadowScan_Server||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\server(prof)\\gui_server\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4902901D-DE11-439E-80E5-B37AF71514FE}|..\\ShadowScan_Server_1\\ShadowScan_Server.csproj|c:\\users\\shadow\\documents\\github\\shadow_scan\\code\\server(prof)\\shadowscan_server_1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\server(prof)\\gui_server\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4902901D-DE11-439E-80E5-B37AF71514FE}|..\\ShadowScan_Server_1\\ShadowScan_Server.csproj|c:\\users\\shadow\\documents\\github\\shadow_scan\\code\\server(prof)\\shadowscan_server_1\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
+      "AbsoluteMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\server(prof)\\gui_server\\infractionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|solutionrelative:infractionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\server(prof)\\gui_server\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E6B37016-A346-4DC3-9F94-054770AA07CC}|GUI_server.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,31 +26,57 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ShadowScan_Server",
-              "DocumentMoniker": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\Server(prof)\\ShadowScan_Server_1\\ShadowScan_Server.csproj",
-              "RelativeDocumentMoniker": "..\\ShadowScan_Server_1\\ShadowScan_Server.csproj",
-              "ToolTip": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\Server(prof)\\ShadowScan_Server_1\\ShadowScan_Server.csproj",
-              "RelativeToolTip": "..\\ShadowScan_Server_1\\ShadowScan_Server.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-27T12:48:43.563Z",
+              "DocumentIndex": 1,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\App.config",
+              "RelativeDocumentMoniker": "App.config",
+              "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\App.config",
+              "RelativeToolTip": "App.config",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAD4AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-02-27T15:16:47.892Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\Server(prof)\\ShadowScan_Server_1\\Program.cs",
-              "RelativeDocumentMoniker": "..\\ShadowScan_Server_1\\Program.cs",
-              "ToolTip": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\Server(prof)\\ShadowScan_Server_1\\Program.cs",
-              "RelativeToolTip": "..\\ShadowScan_Server_1\\Program.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAApwF0AAAA3AAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAABoBAAAAAAAAAADgvysBAAClAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T12:36:17.299Z",
+              "WhenOpened": "2025-02-27T15:16:25.838Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T15:16:23.89Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "InfractionManager.cs",
+              "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\InfractionManager.cs",
+              "RelativeDocumentMoniker": "InfractionManager.cs",
+              "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\InfractionManager.cs",
+              "RelativeToolTip": "InfractionManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T15:15:14.311Z",
               "EditorCaption": ""
             }
           ]

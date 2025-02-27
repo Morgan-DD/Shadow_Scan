@@ -37,10 +37,8 @@
             this.panel_top = new System.Windows.Forms.Panel();
             this.pictureBox_Minimize = new System.Windows.Forms.PictureBox();
             this.pictureBox_Maximize = new System.Windows.Forms.PictureBox();
-            this.label_size = new System.Windows.Forms.Label();
             this.pictureBox_Close = new System.Windows.Forms.PictureBox();
             this.Button_Test = new System.Windows.Forms.Button();
-            this.button_loading = new System.Windows.Forms.Button();
             this.button_RessourceList = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_top.SuspendLayout();
@@ -113,7 +111,6 @@
             this.panel_top.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.panel_top.Controls.Add(this.pictureBox_Minimize);
             this.panel_top.Controls.Add(this.pictureBox_Maximize);
-            this.panel_top.Controls.Add(this.label_size);
             this.panel_top.Controls.Add(this.pictureBox_Close);
             this.panel_top.Location = new System.Drawing.Point(0, 0);
             this.panel_top.Name = "panel_top";
@@ -151,15 +148,6 @@
             this.pictureBox_Maximize.MouseEnter += new System.EventHandler(this.pictureBox_Enter);
             this.pictureBox_Maximize.MouseLeave += new System.EventHandler(this.pictureBox_Leave);
             // 
-            // label_size
-            // 
-            this.label_size.AutoSize = true;
-            this.label_size.Location = new System.Drawing.Point(22, 9);
-            this.label_size.Name = "label_size";
-            this.label_size.Size = new System.Drawing.Size(28, 13);
-            this.label_size.TabIndex = 8;
-            this.label_size.Text = "AAA";
-            // 
             // pictureBox_Close
             // 
             this.pictureBox_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -185,20 +173,9 @@
             this.Button_Test.UseVisualStyleBackColor = true;
             this.Button_Test.Click += new System.EventHandler(this.Button_Test_Click);
             // 
-            // button_loading
-            // 
-            this.button_loading.Location = new System.Drawing.Point(255, 35);
-            this.button_loading.Name = "button_loading";
-            this.button_loading.Size = new System.Drawing.Size(75, 23);
-            this.button_loading.TabIndex = 9;
-            this.button_loading.Tag = "3";
-            this.button_loading.Text = "Loading";
-            this.button_loading.UseVisualStyleBackColor = true;
-            this.button_loading.Click += new System.EventHandler(this.Button_MenuClick);
-            // 
             // button_RessourceList
             // 
-            this.button_RessourceList.Location = new System.Drawing.Point(336, 35);
+            this.button_RessourceList.Location = new System.Drawing.Point(255, 35);
             this.button_RessourceList.Name = "button_RessourceList";
             this.button_RessourceList.Size = new System.Drawing.Size(120, 23);
             this.button_RessourceList.TabIndex = 10;
@@ -214,7 +191,6 @@
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(930, 585);
             this.Controls.Add(this.button_RessourceList);
-            this.Controls.Add(this.button_loading);
             this.Controls.Add(this.Button_Test);
             this.Controls.Add(this.panel_top);
             this.Controls.Add(this.panel_main);
@@ -227,10 +203,8 @@
             this.MinimumSize = new System.Drawing.Size(930, 585);
             this.Name = "Form_main";
             this.Text = "ShadowScan";
-            this.Resize += new System.EventHandler(this.Form_main_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel_top.ResumeLayout(false);
-            this.panel_top.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Minimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Maximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Close)).EndInit();
@@ -250,8 +224,6 @@
         private System.Windows.Forms.PictureBox pictureBox_Maximize;
         private System.Windows.Forms.PictureBox pictureBox_Close;
         private System.Windows.Forms.Button Button_Test;
-        private System.Windows.Forms.Label label_size;
-        private System.Windows.Forms.Button button_loading;
         private System.Windows.Forms.Button button_RessourceList;
     }
 }
