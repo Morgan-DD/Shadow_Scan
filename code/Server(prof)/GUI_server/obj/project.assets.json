@@ -3601,17 +3601,17 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pg66hua\\.nuget\\packages\\": {},
+    "C:\\Users\\shadow\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\GUI_server.csproj",
+      "projectUniqueName": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\Server(prof)\\GUI_server\\GUI_server.csproj",
       "projectName": "GUI_server",
-      "projectPath": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\GUI_server.csproj",
-      "packagesPath": "C:\\Users\\pg66hua\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\GUI_server\\obj\\",
+      "projectPath": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\Server(prof)\\GUI_server\\GUI_server.csproj",
+      "packagesPath": "C:\\Users\\shadow\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\Server(prof)\\GUI_server\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "UsingMicrosoftNETSdk": false,
@@ -3619,7 +3619,7 @@
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\pg66hua\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\shadow\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3633,8 +3633,8 @@
       "frameworks": {
         "net472": {
           "projectReferences": {
-            "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\ShadowScan_Server_1\\ShadowScan_Server.csproj": {
-              "projectPath": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Server(prof)\\ShadowScan_Server_1\\ShadowScan_Server.csproj"
+            "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\Server(prof)\\ShadowScan_Server_1\\ShadowScan_Server.csproj": {
+              "projectPath": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\Server(prof)\\ShadowScan_Server_1\\ShadowScan_Server.csproj"
             }
           }
         }

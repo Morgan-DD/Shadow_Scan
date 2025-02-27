@@ -116,8 +116,7 @@ C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Server(prof)\ShadowScan_Server
 C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Server(prof)\ShadowScan_Server_1\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Server(prof)\ShadowScan_Server_1\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Server(prof)\ShadowScan_Server_1\obj\Debug\ShadowScan_Server.csproj.AssemblyReference.cache
-C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Server(prof)\ShadowScan_Server_1\obj\Debug\ShadowScan_Server.csproj.SuggestedBindingRedirects.cache
 C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Server(prof)\ShadowScan_Server_1\obj\Debug\ShadowScan_Server.csproj.CoreCompileInputs.cache
-C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Server(prof)\ShadowScan_Server_1\obj\Debug\ShadowScan_Server.csproj.CopyComplete
 C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Server(prof)\ShadowScan_Server_1\obj\Debug\ShadowScan_Server.exe
 C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Server(prof)\ShadowScan_Server_1\obj\Debug\ShadowScan_Server.pdb
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Server(prof)\ShadowScan_Server_1\obj\Debug\ShadowSc.A3599EB3.Up2Date

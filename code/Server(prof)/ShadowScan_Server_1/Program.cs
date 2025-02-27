@@ -8,10 +8,10 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using Grpc.Net.Client;
 using System.Net.NetworkInformation;
 using System.Diagnostics;
 using System.Threading;
+using System.Net;
 
 
 namespace ShadowScan_Server
@@ -26,6 +26,7 @@ namespace ShadowScan_Server
         static void Main(string[] args)
         {
             var input = new HelloRequest { Name = "LeBoss" };
+
             /*
             var httpHandler = new SocketsHttpHandler
             {
@@ -91,49 +92,17 @@ namespace ShadowScan_Server
         {
             var input = new HelloRequest { Name = "LeBoss" };
 
-            /*
-            var httpHandler = new SocketsHttpHandler
-            {
-                PooledConnectionLifetime = TimeSpan.FromMinutes(5) // Optional: Helps with DNS changes
-            };
-
-            var channel = GrpcChannel.ForAddress("hostname", new GrpcChannelOptions
+            var httpHandler = new HttpClientHandler();
+            // httpHandler.DefaultRequestVersion = HttpVersion.Version11;
+            var channel = GrpcChannel.ForAddress(hostname, new GrpcChannelOptions
             {
                 HttpHandler = httpHandler
             });
-            */
 
-            /*
-            var channel = GrpcChannel.ForAddress(hostname);
-            var client = new Greeter.GreeterClient(channel);
-            var response = await client.SayHelloAsync(new HelloRequest { Name = ".NET" });
-
-            var reply = await client.SayHelloAsync(input);
-
-            Console.WriteLine(reply.Message);
-
-            Console.ReadLine();*/
-
-            var channel = GrpcChannel.ForAddress("https://localhost:5001", new GrpcChannelOptions
-            {
-                //HttpHandler = new GrpcWebHandler(new HttpClientHandler())
-            });
 
             var client = new Greeter.GreeterClient(channel);
             var response = await client.SayHelloAsync(new HelloRequest { Name = ".NET" });
-
-            /*
-            // Create a gRPC channel
-            var channel = GrpcChannel.ForAddress("https://localhost:5001");
-
-            // Create a client instance
-            var client = new Greeter.GreeterClient(channel);
-
-            // Call the RPC method
-            var response = await client.SayHelloAsync(new HelloRequest { Name = "John" });
-
-            Console.WriteLine($"Server Response: {response.Message}");
-            */
+            Console.WriteLine(response);
         }
     }
 }

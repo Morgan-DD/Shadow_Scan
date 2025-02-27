@@ -21,7 +21,6 @@ C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Cli
 C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Client\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Client\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Client\obj\Debug\net6.0\scopedcss\bundle\ShadowScan_Client.styles.css
-C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Client\obj\Debug\net6.0\ShadowScan_Client.csproj.CopyComplete
 C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Client\obj\Debug\net6.0\ShadowScan_Client.dll
 C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Client\obj\Debug\net6.0\refint\ShadowScan_Client.dll
 C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Client\obj\Debug\net6.0\ShadowScan_Client.pdb
@@ -66,3 +65,14 @@ C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Client(student)\ShadowScan_C
 C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Client(student)\ShadowScan_Client\ShadowScan_Client\obj\Debug\net6.0\ShadowScan_Client.pdb
 C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Client(student)\ShadowScan_Client\ShadowScan_Client\obj\Debug\net6.0\ShadowScan_Client.genruntimeconfig.cache
 C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Client(student)\ShadowScan_Client\ShadowScan_Client\obj\Debug\net6.0\ref\ShadowScan_Client.dll
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Client\bin\Debug\net6.0\ShadowScan_Client.staticwebassets.endpoints.json
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Client\obj\Debug\net6.0\ShadowScan_Client.sourcelink.json
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Client\obj\Debug\net6.0\staticwebassets.build.endpoints.json
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Client\obj\Debug\net6.0\staticwebassets\msbuild.ShadowScan_Client.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Client\obj\Debug\net6.0\staticwebassets\msbuild.ShadowScan_Client.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Client\obj\Debug\net6.0\staticwebassets\msbuild.build.ShadowScan_Client.props
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Client\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.ShadowScan_Client.props
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Client\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.ShadowScan_Client.props
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Client\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Client\obj\Debug\net6.0\staticwebassets.upToDateCheck.txt
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Client\obj\Debug\net6.0\ShadowSc.4F01178A.Up2Date
