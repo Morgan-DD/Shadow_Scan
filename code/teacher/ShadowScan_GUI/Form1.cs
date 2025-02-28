@@ -345,6 +345,8 @@ namespace ShadowScan_GUI
         // todo: suppress
         private void Button_Test_Click(object sender, EventArgs e)
         {
+            _shadowScanInstance.connectToGRPCServer("INF-A23-P203");
+            /*
             Random rand = new Random();
             List<string> temparay = new List<string>();
             temparay.Add("chatgpt.com");
@@ -352,6 +354,7 @@ namespace ShadowScan_GUI
             temparay.Add("ia.com");
             // _MessageManager.ReportInfraction(1, temparay, Convert.ToByte(rand.Next(0, _userControlList._pcList.Count())), "pg66hua", _userControlList);
             //_userControlList.ReportInfraction("TEST","INF-A11-M201","User1");
+            */
         }
 
         private void ReportIllegalAction(string action, string pc, string user) 

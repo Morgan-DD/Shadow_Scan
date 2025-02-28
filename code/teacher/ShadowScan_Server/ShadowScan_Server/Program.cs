@@ -8,7 +8,10 @@ using System.Threading.Tasks;
 using Grpc.Net.Client;
 using System.Net.Http;
 using ShadowScan_Server;
+using Grpc;
 using System.Net.NetworkInformation;
+using ShadowScan_Client;
+using System.Diagnostics;
 
 namespace ShadowScan_Server
 {
@@ -18,7 +21,7 @@ namespace ShadowScan_Server
 
         static async Task Main(string[] args)
         {
-
+            // thisProgram.connectToGRPCServer("INF-A23-P203");                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               );
             Console.ReadLine();
         }
 
@@ -55,23 +58,23 @@ namespace ShadowScan_Server
             return (0, "NONE");
         }
 
-        private async void connectToGRPCServer(string hostname)
+        public async void connectToGRPCServer(string hostname)
         {
-            /*
+            
             var input = new HelloRequest { Name = "LeBoss" };
 
             var httpHandler = new HttpClientHandler();
             // httpHandler.DefaultRequestVersion = HttpVersion.Version11;
-            var channel = GrpcChannel.ForAddress(hostname, new GrpcChannelOptions
+            var channel = GrpcChannel.ForAddress("http://" + hostname + ":55052", new GrpcChannelOptions
             {
                 HttpHandler = httpHandler
             });
 
 
             var client = new Greeter.GreeterClient(channel);
-            // var response = await client.SayHelloAsync(new HelloRequest { Name = ".NET" });
-            */
-            // Console.WriteLine(response);
+            var response = await client.SayHelloAsync(new HelloRequest { Name = ".AAAAAAAAAA" });
+            
+            Debug.WriteLine(response.Message);
         }
     }
 }
