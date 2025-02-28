@@ -11,11 +11,11 @@
       "RelativeMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\teacher\\shadowscan_gui\\usercontrol_scan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\usercontrol_scan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|solutionrelative:usercontrol_scan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\teacher\\shadowscan_gui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "UserControl_Scan.cs",
               "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\UserControl_Scan.cs",
               "RelativeToolTip": "UserControl_Scan.cs",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAiwIIAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAiwHQAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-28T12:26:14.708Z",
               "EditorCaption": ""
@@ -50,8 +50,7 @@
               "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\UserControl_Scan.cs [Design]",
               "RelativeToolTip": "UserControl_Scan.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T12:26:13.407Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-02-28T12:26:13.407Z"
             },
             {
               "$type": "Document",
@@ -75,8 +74,7 @@
               "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\Form1.cs [Design]",
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T11:01:15.988Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-02-28T11:01:15.988Z"
             }
           ]
         }
