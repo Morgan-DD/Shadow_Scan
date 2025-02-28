@@ -24,16 +24,16 @@ namespace ShadowScan_Client {
     static GreetReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJQcm90b3MvZ3JlZXQucHJvdG8SBWdyZWV0IhwKDEhlbGxvUmVxdWVzdBIM",
-            "CgRuYW1lGAEgASgJIh0KCkhlbGxvUmVwbHkSDwoHbWVzc2FnZRgBIAEoCTI9",
-            "CgdHcmVldGVyEjIKCFNheUhlbGxvEhMuZ3JlZXQuSGVsbG9SZXF1ZXN0GhEu",
-            "Z3JlZXQuSGVsbG9SZXBseUIUqgIRU2hhZG93U2Nhbl9DbGllbnRiBnByb3Rv",
-            "Mw=="));
+            "ChJQcm90b3MvZ3JlZXQucHJvdG8SBWdyZWV0IicKDEhlbGxvUmVxdWVzdBIX",
+            "Cg9UZWFjaGVySG9zdG5hbWUYASABKAkiHAoKSGVsbG9SZXBseRIOCgZzdGF0",
+            "dXMYASABKAgyPQoHR3JlZXRlchIyCghTYXlIZWxsbxITLmdyZWV0LkhlbGxv",
+            "UmVxdWVzdBoRLmdyZWV0LkhlbGxvUmVwbHlCFKoCEVNoYWRvd1NjYW5fQ2xp",
+            "ZW50YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::ShadowScan_Client.HelloRequest), global::ShadowScan_Client.HelloRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::ShadowScan_Client.HelloReply), global::ShadowScan_Client.HelloReply.Parser, new[]{ "Message" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::ShadowScan_Client.HelloRequest), global::ShadowScan_Client.HelloRequest.Parser, new[]{ "TeacherHostname" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::ShadowScan_Client.HelloReply), global::ShadowScan_Client.HelloReply.Parser, new[]{ "Status" }, null, null, null, null)
           }));
     }
     #endregion
@@ -78,7 +78,7 @@ namespace ShadowScan_Client {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HelloRequest(HelloRequest other) : this() {
-      name_ = other.name_;
+      teacherHostname_ = other.teacherHostname_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,15 +88,15 @@ namespace ShadowScan_Client {
       return new HelloRequest(this);
     }
 
-    /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 1;
-    private string name_ = "";
+    /// <summary>Field number for the "TeacherHostname" field.</summary>
+    public const int TeacherHostnameFieldNumber = 1;
+    private string teacherHostname_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Name {
-      get { return name_; }
+    public string TeacherHostname {
+      get { return teacherHostname_; }
       set {
-        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        teacherHostname_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -115,7 +115,7 @@ namespace ShadowScan_Client {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Name != other.Name) return false;
+      if (TeacherHostname != other.TeacherHostname) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -123,7 +123,7 @@ namespace ShadowScan_Client {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (TeacherHostname.Length != 0) hash ^= TeacherHostname.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -142,9 +142,9 @@ namespace ShadowScan_Client {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Name.Length != 0) {
+      if (TeacherHostname.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(Name);
+        output.WriteString(TeacherHostname);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -156,9 +156,9 @@ namespace ShadowScan_Client {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Name.Length != 0) {
+      if (TeacherHostname.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(Name);
+        output.WriteString(TeacherHostname);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -170,8 +170,8 @@ namespace ShadowScan_Client {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Name.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      if (TeacherHostname.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TeacherHostname);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -185,8 +185,8 @@ namespace ShadowScan_Client {
       if (other == null) {
         return;
       }
-      if (other.Name.Length != 0) {
-        Name = other.Name;
+      if (other.TeacherHostname.Length != 0) {
+        TeacherHostname = other.TeacherHostname;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -208,7 +208,7 @@ namespace ShadowScan_Client {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            Name = input.ReadString();
+            TeacherHostname = input.ReadString();
             break;
           }
         }
@@ -231,7 +231,7 @@ namespace ShadowScan_Client {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            Name = input.ReadString();
+            TeacherHostname = input.ReadString();
             break;
           }
         }
@@ -279,7 +279,7 @@ namespace ShadowScan_Client {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HelloReply(HelloReply other) : this() {
-      message_ = other.message_;
+      status_ = other.status_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -289,15 +289,15 @@ namespace ShadowScan_Client {
       return new HelloReply(this);
     }
 
-    /// <summary>Field number for the "message" field.</summary>
-    public const int MessageFieldNumber = 1;
-    private string message_ = "";
+    /// <summary>Field number for the "status" field.</summary>
+    public const int StatusFieldNumber = 1;
+    private bool status_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Message {
-      get { return message_; }
+    public bool Status {
+      get { return status_; }
       set {
-        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        status_ = value;
       }
     }
 
@@ -316,7 +316,7 @@ namespace ShadowScan_Client {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Message != other.Message) return false;
+      if (Status != other.Status) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -324,7 +324,7 @@ namespace ShadowScan_Client {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Message.Length != 0) hash ^= Message.GetHashCode();
+      if (Status != false) hash ^= Status.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -343,9 +343,9 @@ namespace ShadowScan_Client {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Message.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Message);
+      if (Status != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Status);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -357,9 +357,9 @@ namespace ShadowScan_Client {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Message.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Message);
+      if (Status != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Status);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -371,8 +371,8 @@ namespace ShadowScan_Client {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Message.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+      if (Status != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -386,8 +386,8 @@ namespace ShadowScan_Client {
       if (other == null) {
         return;
       }
-      if (other.Message.Length != 0) {
-        Message = other.Message;
+      if (other.Status != false) {
+        Status = other.Status;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -408,8 +408,8 @@ namespace ShadowScan_Client {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            Message = input.ReadString();
+          case 8: {
+            Status = input.ReadBool();
             break;
           }
         }
@@ -431,8 +431,8 @@ namespace ShadowScan_Client {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            Message = input.ReadString();
+          case 8: {
+            Status = input.ReadBool();
             break;
           }
         }

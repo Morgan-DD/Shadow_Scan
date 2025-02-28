@@ -286,6 +286,10 @@ namespace ShadowScan_GUI
                 
                 // ping the pc
                 (byte status, string ip) = await Task.Run(() => _shadowScanInstance.pingPc(pcHostname));
+                if (await isGrpcServerReachable(pcHostname))
+                {
+                    status = 2;
+                }
 
                 // create an array that is used to transfert infos
                 var Pc = new Dictionary<string, string>
@@ -342,10 +346,9 @@ namespace ShadowScan_GUI
             return _userControlRessourceList.getActualSubList();
         }
 
-        // todo: suppress
+        // todo: suppressW
         private void Button_Test_Click(object sender, EventArgs e)
         {
-            _shadowScanInstance.connectToGRPCServer("INF-A23-P203");
             /*
             Random rand = new Random();
             List<string> temparay = new List<string>();
@@ -356,6 +359,12 @@ namespace ShadowScan_GUI
             //_userControlList.ReportInfraction("TEST","INF-A11-M201","User1");
             */
         }
+
+        public async Task<bool> isGrpcServerReachable(string hostname)
+        {
+            return await _shadowScanInstance.isGRPCServerReachabel(hostname); ;
+        }
+
 
         private void ReportIllegalAction(string action, string pc, string user) 
         {

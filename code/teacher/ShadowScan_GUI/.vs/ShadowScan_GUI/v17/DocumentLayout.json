@@ -3,18 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\teacher\\ShadowScan_GUI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{328A56E4-07A2-43A1-BDD0-4FB7D8189B9A}|..\\ShadowScan_Server\\ShadowScan_Server\\ShadowScan_Server.csproj|c:\\users\\shadow\\documents\\github\\shadow_scan\\code\\teacher\\shadowscan_server\\shadowscan_server\\protos\\greet.proto||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{328A56E4-07A2-43A1-BDD0-4FB7D8189B9A}|..\\ShadowScan_Server\\ShadowScan_Server\\ShadowScan_Server.csproj|c:\\users\\shadow\\documents\\github\\shadow_scan\\code\\teacher\\shadowscan_server\\shadowscan_server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|c:\\users\\shadow\\documents\\github\\shadow_scan\\code\\teacher\\shadowscan_gui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|c:\\users\\shadow\\documents\\github\\shadow_scan\\code\\teacher\\shadowscan_gui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,53 +18,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "greet.proto",
-              "DocumentMoniker": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\teacher\\ShadowScan_Server\\ShadowScan_Server\\Protos\\greet.proto",
-              "RelativeDocumentMoniker": "..\\ShadowScan_Server\\ShadowScan_Server\\Protos\\greet.proto",
-              "ToolTip": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\teacher\\ShadowScan_Server\\ShadowScan_Server\\Protos\\greet.proto",
-              "RelativeToolTip": "..\\ShadowScan_Server\\ShadowScan_Server\\Protos\\greet.proto",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003853|",
-              "WhenOpened": "2025-02-28T09:46:04.577Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\teacher\\ShadowScan_Server\\ShadowScan_Server\\Program.cs",
               "RelativeDocumentMoniker": "..\\ShadowScan_Server\\ShadowScan_Server\\Program.cs",
               "ToolTip": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\teacher\\ShadowScan_Server\\ShadowScan_Server\\Program.cs",
               "RelativeToolTip": "..\\ShadowScan_Server\\ShadowScan_Server\\Program.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAjwEgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAewBgAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T09:42:21.045Z",
+              "WhenOpened": "2025-02-28T10:39:34.755Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\teacher\\ShadowScan_GUI\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\teacher\\ShadowScan_GUI\\Form1.cs",
-              "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAEsBAAAAAAAAAAAjwFoBAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T09:41:48.422Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\teacher\\ShadowScan_GUI\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\teacher\\ShadowScan_GUI\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T09:41:43.028Z",
-              "EditorCaption": " [Design]"
             }
           ]
         }

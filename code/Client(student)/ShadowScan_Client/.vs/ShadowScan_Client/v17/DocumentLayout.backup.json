@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\Client(student)\\ShadowScan_Client\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1A71DA4E-E1D0-4992-9E06-E04E1371D07A}|ShadowScan_Client\\ShadowScan_Client.csproj|c:\\users\\shadow\\documents\\github\\shadow_scan\\code\\client(student)\\shadowscan_client\\shadowscan_client\\protos\\protobuf.proto||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{1A71DA4E-E1D0-4992-9E06-E04E1371D07A}|ShadowScan_Client\\ShadowScan_Client.csproj|solutionrelative:shadowscan_client\\protos\\protobuf.proto||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{1A71DA4E-E1D0-4992-9E06-E04E1371D07A}|ShadowScan_Client\\ShadowScan_Client.csproj|c:\\users\\shadow\\documents\\github\\shadow_scan\\code\\client(student)\\shadowscan_client\\shadowscan_client\\services\\greeterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A71DA4E-E1D0-4992-9E06-E04E1371D07A}|ShadowScan_Client\\ShadowScan_Client.csproj|solutionrelative:shadowscan_client\\services\\greeterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A71DA4E-E1D0-4992-9E06-E04E1371D07A}|ShadowScan_Client\\ShadowScan_Client.csproj|c:\\users\\shadow\\documents\\github\\shadow_scan\\code\\client(student)\\shadowscan_client\\shadowscan_client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A71DA4E-E1D0-4992-9E06-E04E1371D07A}|ShadowScan_Client\\ShadowScan_Client.csproj|solutionrelative:shadowscan_client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A71DA4E-E1D0-4992-9E06-E04E1371D07A}|ShadowScan_Client\\ShadowScan_Client.csproj|c:\\users\\shadow\\documents\\github\\shadow_scan\\code\\client(student)\\shadowscan_client\\shadowscan_client\\protos\\greet.proto||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{1A71DA4E-E1D0-4992-9E06-E04E1371D07A}|ShadowScan_Client\\ShadowScan_Client.csproj|solutionrelative:shadowscan_client\\protos\\greet.proto||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A71DA4E-E1D0-4992-9E06-E04E1371D07A}|ShadowScan_Client\\ShadowScan_Client.csproj|c:\\users\\shadow\\documents\\github\\shadow_scan\\code\\client(student)\\shadowscan_client\\shadowscan_client\\protos\\customer.proto||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{1A71DA4E-E1D0-4992-9E06-E04E1371D07A}|ShadowScan_Client\\ShadowScan_Client.csproj|solutionrelative:shadowscan_client\\protos\\customer.proto||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,12 +31,51 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "protobuf.proto",
-              "DocumentMoniker": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\Client(student)\\ShadowScan_Client\\ShadowScan_Client\\Protos\\protobuf.proto",
-              "RelativeDocumentMoniker": "ShadowScan_Client\\Protos\\protobuf.proto",
-              "ToolTip": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\Client(student)\\ShadowScan_Client\\ShadowScan_Client\\Protos\\protobuf.proto",
-              "RelativeToolTip": "ShadowScan_Client\\Protos\\protobuf.proto",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "GreeterService.cs",
+              "DocumentMoniker": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\Client(student)\\ShadowScan_Client\\ShadowScan_Client\\Services\\GreeterService.cs",
+              "RelativeDocumentMoniker": "ShadowScan_Client\\Services\\GreeterService.cs",
+              "ToolTip": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\Client(student)\\ShadowScan_Client\\ShadowScan_Client\\Services\\GreeterService.cs",
+              "RelativeToolTip": "ShadowScan_Client\\Services\\GreeterService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T10:12:16.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\Client(student)\\ShadowScan_Client\\ShadowScan_Client\\Program.cs",
+              "RelativeDocumentMoniker": "ShadowScan_Client\\Program.cs",
+              "ToolTip": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\Client(student)\\ShadowScan_Client\\ShadowScan_Client\\Program.cs",
+              "RelativeToolTip": "ShadowScan_Client\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T09:56:13.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "greet.proto",
+              "DocumentMoniker": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\Client(student)\\ShadowScan_Client\\ShadowScan_Client\\Protos\\greet.proto",
+              "RelativeDocumentMoniker": "ShadowScan_Client\\Protos\\greet.proto",
+              "ToolTip": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\Client(student)\\ShadowScan_Client\\ShadowScan_Client\\Protos\\greet.proto",
+              "RelativeToolTip": "ShadowScan_Client\\Protos\\greet.proto",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003853|",
+              "WhenOpened": "2025-02-28T09:54:04.992Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "customer.proto",
+              "DocumentMoniker": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\Client(student)\\ShadowScan_Client\\ShadowScan_Client\\Protos\\customer.proto",
+              "RelativeDocumentMoniker": "ShadowScan_Client\\Protos\\customer.proto",
+              "ToolTip": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\Client(student)\\ShadowScan_Client\\ShadowScan_Client\\Protos\\customer.proto",
+              "RelativeToolTip": "ShadowScan_Client\\Protos\\customer.proto",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003853|",
               "WhenOpened": "2025-02-28T09:50:34.204Z",
               "EditorCaption": ""

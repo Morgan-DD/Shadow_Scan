@@ -5,13 +5,14 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using Grpc.Net.Client;
 using System.Net.Http;
 using ShadowScan_Server;
 using Grpc;
 using System.Net.NetworkInformation;
 using ShadowScan_Client;
 using System.Diagnostics;
+using Grpc.Core;
+using Grpc.Net.Client.Balancer;
 
 namespace ShadowScan_Server
 {
@@ -21,9 +22,31 @@ namespace ShadowScan_Server
 
         static async Task Main(string[] args)
         {
-            // thisProgram.connectToGRPCServer("INF-A23-P203");                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               );
+            // thisProgram.isGRPCServerReachabel("INF-A23-P203");                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               );
             Console.ReadLine();
         }
+
+        /*
+        public async bool isGRPCServerReachabel(string hostname)
+        {
+            var input = new HelloRequest { TeacherHostname = hostname };
+
+            var httpHandler = new HttpClientHandler();
+            var channel = GrpcChannel.ForAddress("http://" + hostname + ":55052", new GrpcChannelOptions
+            {
+                HttpHandler = httpHandler
+            });
+
+
+            var client = new Greeter.GreeterClient(channel);
+            var response = await client.SayHelloAsync(input);
+
+            Debug.WriteLine(response.Status);
+
+            return true;
+        }
+
+        */
 
         /// <summary>
         /// Ping a pc
@@ -58,13 +81,11 @@ namespace ShadowScan_Server
             return (0, "NONE");
         }
 
-        public async void connectToGRPCServer(string hostname)
+        public async Task<bool> isGRPCServerReachabel(string hostname)
         {
-            
-            var input = new HelloRequest { Name = "LeBoss" };
+            var input = new HelloRequest { TeacherHostname = hostname };
 
             var httpHandler = new HttpClientHandler();
-            // httpHandler.DefaultRequestVersion = HttpVersion.Version11;
             var channel = GrpcChannel.ForAddress("http://" + hostname + ":55052", new GrpcChannelOptions
             {
                 HttpHandler = httpHandler
@@ -72,9 +93,14 @@ namespace ShadowScan_Server
 
 
             var client = new Greeter.GreeterClient(channel);
-            var response = await client.SayHelloAsync(new HelloRequest { Name = ".AAAAAAAAAA" });
-            
-            Debug.WriteLine(response.Message);
+            bool response = false;
+            try
+            {
+                response = (await client.SayHelloAsync(input)).Status;
+            }
+            catch { }
+            Debug.WriteLine(response);
+            return response;
         }
     }
 }
