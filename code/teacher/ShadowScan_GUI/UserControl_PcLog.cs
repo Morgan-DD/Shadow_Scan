@@ -1,0 +1,40 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Diagnostics;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ShadowScan_GUI
+{
+    public partial class UserControl_PcLog : UserControl
+    {
+        // logs des action du pc
+        public List<string> _PcLogs { get; set; }
+
+        public UserControl_PcLog()
+        {
+            InitializeComponent();
+        }
+
+        public void updateInfos(List<string> PcLogs)
+        {
+            _PcLogs = PcLogs;
+            textBox_PcLogs.Text = String.Join("\r\n", _PcLogs.ToArray());
+        }
+
+        public void clearTextBox()
+        {
+            textBox_PcLogs.Text = String.Empty;
+        }
+
+        private void pictureBox_Close_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+        }
+    }
+}
