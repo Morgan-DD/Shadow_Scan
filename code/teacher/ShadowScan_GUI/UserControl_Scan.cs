@@ -116,6 +116,7 @@ namespace ShadowScan_GUI
 
         private void StartScan()
         {
+            // todo: la page de chargement ne s'affiche plus
             _mainForm.showLoadingScreen("Détection des pc en cours");
             List<string> pcHostnames = getPcToScan();
             if (pcHostnames.Count() > 0)
@@ -127,6 +128,8 @@ namespace ShadowScan_GUI
             {
                 MessageBox.Show("Vous devez au moins selectionner un pc");
             }
+            // show the list page
+            _mainForm.ShowPanelControl(1);
         }
 
         private void resetToZero()

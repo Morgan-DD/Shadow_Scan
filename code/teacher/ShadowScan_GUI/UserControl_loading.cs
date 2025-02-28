@@ -12,20 +12,30 @@ namespace ShadowScan_GUI
 {
     public partial class UserControl_loading : UserControl
     {
-        public UserControl_loading()
+        int _nbItemsForScrollBar;
+
+        public UserControl_loading(int nbItemsForScrollBar)
         {
             InitializeComponent();
+            _nbItemsForScrollBar = nbItemsForScrollBar;
         }
 
         public void displayMessage(string message)
         {
             textBox_Message.Text = message;
+            progressBar.Maximum = _nbItemsForScrollBar;
             showTextBoxMessage(true);
+        }
+
+        public void avanceProgressBar()
+        {
+            progressBar.Value += 1;
         }
 
         public void showTextBoxMessage(bool status)
         {
             textBox_Message.Visible=status;
+            progressBar.Value = 0;
         }
     }
 }

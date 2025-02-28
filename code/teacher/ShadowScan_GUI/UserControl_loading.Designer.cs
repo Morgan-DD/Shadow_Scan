@@ -31,6 +31,7 @@
             pictureBox_gif = new PictureBox();
             label_loadingTitle = new Label();
             textBox_Message = new TextBox();
+            progressBar = new ProgressBar();
             ((System.ComponentModel.ISupportInitialize)pictureBox_gif).BeginInit();
             SuspendLayout();
             // 
@@ -72,10 +73,19 @@
             textBox_Message.TextAlign = HorizontalAlignment.Center;
             textBox_Message.Visible = false;
             // 
+            // progressBar
+            // 
+            progressBar.Anchor = AnchorStyles.None;
+            progressBar.Location = new Point(103, 497);
+            progressBar.Name = "progressBar";
+            progressBar.Size = new Size(377, 23);
+            progressBar.TabIndex = 3;
+            // 
             // UserControl_loading
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(progressBar);
             Controls.Add(textBox_Message);
             Controls.Add(label_loadingTitle);
             Controls.Add(pictureBox_gif);
@@ -92,5 +102,6 @@
         private System.Windows.Forms.PictureBox pictureBox_gif;
         private System.Windows.Forms.Label label_loadingTitle;
         private System.Windows.Forms.TextBox textBox_Message;
+        private ProgressBar progressBar;
     }
 }

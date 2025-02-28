@@ -29,7 +29,7 @@ namespace ShadowScan_GUI
 
         // users control for the pages, they go into the main panel (panel_main)
         UserControl_main _userControlMain;
-        UserControl_loading _userControlLoading = new UserControl_loading();
+        UserControl_loading _userControlLoading;
         UserControl_Settings _userControlSettings = new UserControl_Settings();
         UserControl_List _userControlList;
         UserControl_RessourcesList _userControlRessourceList;
@@ -66,6 +66,7 @@ namespace ShadowScan_GUI
             // create user controls who need special info and need to be created after the init
             _userControlMain = new UserControl_main(Convert.ToByte(ConfigurationSettings.AppSettings["DefaultClassSize"]), this);
             _userControlList = new UserControl_List(this);
+            _userControlLoading = new UserControl_loading(Convert.ToInt32(ConfigurationSettings.AppSettings["DefaultClassSize"]));
 
             // retrive the info from the json file
             using (StreamReader r = new StreamReader(ConfigurationSettings.AppSettings["JsonFilePath"]))
@@ -277,22 +278,34 @@ namespace ShadowScan_GUI
         /// <param name="ressourcesListName">name of the ressource that will be given to the agents of these pcs</param>
         public async void startScan(List<string> pcHostnames, string ressourcesListName)
         {
+
+            // check all the pcs
+            List<Task> scanTasks = new List<Task>();
+            foreach (string pcHostname in pcHostnames)
+            {
+                scanTasks.Add(Task.Run(() => startScanSinglePC(pcHostname)));
+            }
+
+            await Task.WhenAll(scanTasks);
+            // unset the message on the loading page
+            _userControlLoading.showTextBoxMessage(false);
+
+        }
+
+        public async void startScanSinglePC(string pcHostname)
+        {
             // default message
             string NoInfoMessage = "None";
 
-            // check all the pcs
-            foreach (string pcHostname in pcHostnames)
+            // ping the pc
+            (byte status, string ip) = _shadowScanInstance.pingPc(pcHostname);
+            if (await isGrpcServerReachable(pcHostname))
             {
-                
-                // ping the pc
-                (byte status, string ip) = await Task.Run(() => _shadowScanInstance.pingPc(pcHostname));
-                if (await isGrpcServerReachable(pcHostname))
-                {
-                    status = 2;
-                }
+                status = 2;
+            }
 
-                // create an array that is used to transfert infos
-                var Pc = new Dictionary<string, string>
+            // create an array that is used to transfert infos
+            var Pc = new Dictionary<string, string>
                 {
                     { "hostname", pcHostname }, // hostname
                     { "ip", NoInfoMessage }, //NoInfoMessage value
@@ -300,20 +313,24 @@ namespace ShadowScan_GUI
                     { "status", status.ToString() },// Status
                 };
 
-                // if the pc is reachable, we set his ip
-                if (status > 0)
-                    Pc["ip"] = ip;
+            // if the pc is reachable, we set his ip
+            if (status > 0)
+                Pc["ip"] = ip;
 
-                // add a infraction manager
-                _infcationManagerList.Add(new InfractionManager(_userControlList.DisplayPc(Pc), ConfigurationSettings.AppSettings["NotifyTeacher"].ToLower() == "true"));
-                _infcationManagerList[_infcationManagerList.Count()-1].StartScan();
-                
-            }
-            // show the list page
-            ShowPanelControl(1);
-            // unset the message on the loading page
-            _userControlLoading.showTextBoxMessage(false);
+            // Ensure UI updates run on the main UI thread
+            _userControlList.Invoke(new Action(() =>
+            {
+                var infractionManager = new InfractionManager(_userControlList.DisplayPc(Pc),
+                    ConfigurationSettings.AppSettings["NotifyTeacher"].ToLower() == "true");
 
+                _infcationManagerList.Add(infractionManager);
+                infractionManager.StartScan();
+            }));
+
+            _userControlLoading.Invoke(new Action(() =>
+            {
+                _userControlLoading.avanceProgressBar();
+            }));
         }
 
         /// <summary>
