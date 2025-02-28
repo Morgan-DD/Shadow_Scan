@@ -73,7 +73,7 @@ namespace GUI_server
         ///     - status : satus of the pc [byte]
         ///     - user_name : name of the user of the pc [string]
         /// </param>
-        public void DisplayPc(Dictionary<string, string> Settings)
+        public UserControl_PC DisplayPc(Dictionary<string, string> Settings)
         {
             // create a new "PC"
             UserControl_PC NewPc = new UserControl_PC(Settings["hostname"], Settings["ip"], Convert.ToByte(Settings["status"]), Settings["user_name"], _NextId, this);
@@ -94,6 +94,8 @@ namespace GUI_server
             NewPc.ContextMenu = cm;
 
             _NextId += 1;
+
+            return NewPc;
         }
 
         /// <summary>

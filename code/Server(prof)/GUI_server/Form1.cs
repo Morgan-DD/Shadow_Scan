@@ -51,13 +51,16 @@ namespace GUI_server
         // used to manage the json data from the sublist of banned ressources
         List<JsonManager_SubList> _jsonManager_SubList;
 
-        InfractionManager _MessageManager = new InfractionManager();
+        List<InfractionManager> _infcationManagerList { get; set; }
 
         public Form_main()
         {
             InitializeComponent();
 
+            // create the infraction manager
+            _infcationManagerList = new List<InfractionManager>();
 
+            // create user controls who need special info and need to be created after the init
             _userControlMain = new UserControl_main(Convert.ToByte(ConfigurationSettings.AppSettings["DefaultClassSize"]), this);
             _userControlList = new UserControl_List(this);
 
@@ -75,7 +78,8 @@ namespace GUI_server
                 // Deserialize JSON directly into a list of Lists_SubList
                 _jsonManager_SubList = JsonConvert.DeserializeObject<List<JsonManager_SubList>>(json);
             }
-            
+
+            // create the user control list and add them into it, they are the page that will be display on the main panel panel_main
             _userControlRessourceList = new UserControl_RessourcesList(_JsonManager_MainList, _jsonManager_SubList);
             _userControlRessourceList.ImportJsonAndDisplay();
 
@@ -102,8 +106,6 @@ namespace GUI_server
             // add the pictures into picture array used for topbar icons
             _maximizePictures.Add(new Bitmap(Properties.Resources.expand_icon));
             _maximizePictures.Add(new Bitmap(Properties.Resources.minimize_icon));
-
-            Thread.Sleep(1000);
 
             try
             {
@@ -156,7 +158,10 @@ namespace GUI_server
             base.WndProc(ref m);
         }
 
-        // used to show the usercontrol that we want into the main panel
+        /// <summary>
+        /// used to show the usercontrol that we want into the main panel
+        /// </summary>
+        /// <param name="idToShow">id of the page that will be showed</param>
         public void ShowPanelControl(int idToShow)
         {
             byte id = 0;
@@ -178,19 +183,22 @@ namespace GUI_server
             }
         }
 
+
+        /// <summary>
+        /// show the loading screen
+        /// </summary>
+        /// <param name="message">message that will be displayed on the loading page</param>
         public void showLoadingScreen(string message)
         {
             _userControlLoading.displayMessage(message);
             ShowPanelControl(3);
         }
 
-        public void hideLoadingScreen()
-        {
-
-        }
-
-        // action of the buttons to change page (userpanels)
-
+        /// <summary>
+        /// action of the buttons to change page (userpanels)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_MenuClick(object sender, EventArgs e)
         {
             ShowPanelControl(Convert.ToByte((sender as Button).Tag.ToString()));
@@ -246,60 +254,90 @@ namespace GUI_server
             }
         }
 
-        // close the app (topbar button)
+        /// <summary>
+        /// close the app (topbar button)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void pictureBox_Close_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void Form_main_Resize(object sender, EventArgs e)
-        {
-            label_size.Text = this.Size.ToString();
-        }
-
+        /// <summary>
+        /// start a scan of the pc with their hostname to check they status:
+        /// Off
+        /// On + offline
+        /// On + online
+        /// </summary>
+        /// <param name="pcHostnames">List of all the pcs hostname</param>
+        /// <param name="ressourcesListName">name of the ressource that will be given to the agents of these pcs</param>
         public async void startScan(List<string> pcHostnames, string ressourcesListName)
         {
+            // default message
             string NoInfoMessage = "None";
+
+            // check all the pcs
             foreach (string pcHostname in pcHostnames)
             {
+                // ping the pc
                 (byte status, string ip) = await Task.Run(() => _shadowScanInstance.pingPc(pcHostname));
 
-                // byte status = 0;
+                // create an array that is used to transfert infos
                 var Pc = new Dictionary<string, string>
                 {
-                    { "hostname", pcHostname },
-                    { "ip", NoInfoMessage },
-                    { "user_name", NoInfoMessage },
-                    { "status", status.ToString() },
+                    { "hostname", pcHostname }, // hostname
+                    { "ip", NoInfoMessage }, //NoInfoMessage value
+                    { "user_name", NoInfoMessage },// NoInfoMessage value
+                    { "status", status.ToString() },// Status
                 };
+
+                // if the pc is reachable, we set his ip
                 if (status > 0)
-                {
                     Pc["ip"] = ip;
-                }
-                _userControlList.DisplayPc(Pc);
+
+                // add a infraction manager
+                _infcationManagerList.Add(new InfractionManager(_userControlList.DisplayPc(Pc), ConfigurationSettings.AppSettings["NotifyTeacher"].ToLower() == "true"));
+                _infcationManagerList[_infcationManagerList.Count()-1].StartScan();
             }
+            // show the list page
             ShowPanelControl(1);
+            // unset the message on the loading page
             _userControlLoading.showTextBoxMessage(false);
 
         }
 
+        /// <summary>
+        /// format the log, add the date
+        /// </summary>
+        /// <param name="logMessage">message to format</param>
+        /// <returns>formated entry message</returns>
         public string formatLog(string logMessage)
         {
             logMessage = "[" + DateTime.Now.ToString("MM/dd/yyyy HH:mm") + "] : " + logMessage;
             return logMessage;
         }
 
+        /// <summary>
+        /// change the value of a setting
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="newValue"></param>
         public void changeConfigVallue(string key, string newValue) 
         {
             ConfigurationSettings.AppSettings[key] = newValue;
         }
 
-
+        /// <summary>
+        /// get the id of the actual sublist used
+        /// </summary>
+        /// <returns>id of the sublist actualy used</returns>
         public List<string> getActualSubList()
         {
             return _userControlRessourceList.getActualSubList();
         }
 
+        // todo: suppress
         private void Button_Test_Click(object sender, EventArgs e)
         {
             Random rand = new Random();
@@ -307,7 +345,7 @@ namespace GUI_server
             temparay.Add("chatgpt.com");
             temparay.Add("google.gemini.com");
             temparay.Add("ia.com");
-            _MessageManager.ReportInfraction(1, temparay, Convert.ToByte(rand.Next(0, _userControlList._pcList.Count())), "pg66hua", _userControlList);
+            // _MessageManager.ReportInfraction(1, temparay, Convert.ToByte(rand.Next(0, _userControlList._pcList.Count())), "pg66hua", _userControlList);
             //_userControlList.ReportInfraction("TEST","INF-A11-M201","User1");
         }
 

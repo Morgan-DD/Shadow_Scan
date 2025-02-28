@@ -15,9 +15,9 @@ namespace GUI_server
     {
         // def of all info used
         public byte _ID { get; set; }
-
         public string _pcName { get; set; }
         public string _pcIp { get; set; }
+
         // 0 if turn of or unreachable
         // 1 if on but wihtout the client side started
         // 2 if everything is started

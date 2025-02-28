@@ -101,8 +101,8 @@ namespace ShadowScan_Server
 
 
             var client = new Greeter.GreeterClient(channel);
-            var response = await client.SayHelloAsync(new HelloRequest { Name = ".NET" });
-            Console.WriteLine(response);
+            // var response = await client.SayHelloAsync(new HelloRequest { Name = ".NET" });
+            // Console.WriteLine(response);
         }
     }
 }
