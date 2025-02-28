@@ -15,7 +15,7 @@ namespace ShadowScan_Client.Services
         {
             return Task.FromResult(new HelloReply
             {
-                Message = "Hello " + request.Name
+                Status = true
             });
         }
     }

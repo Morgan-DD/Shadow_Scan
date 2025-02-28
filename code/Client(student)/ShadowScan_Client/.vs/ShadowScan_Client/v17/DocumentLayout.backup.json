@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\Client(student)\\ShadowScan_Client\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1A71DA4E-E1D0-4992-9E06-E04E1371D07A}|ShadowScan_Client\\ShadowScan_Client.csproj|c:\\users\\shadow\\documents\\github\\shadow_scan\\code\\client(student)\\shadowscan_client\\shadowscan_client\\protos\\protobuf.proto||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{1A71DA4E-E1D0-4992-9E06-E04E1371D07A}|ShadowScan_Client\\ShadowScan_Client.csproj|solutionrelative:shadowscan_client\\protos\\protobuf.proto||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "protobuf.proto",
+              "DocumentMoniker": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\Client(student)\\ShadowScan_Client\\ShadowScan_Client\\Protos\\protobuf.proto",
+              "RelativeDocumentMoniker": "ShadowScan_Client\\Protos\\protobuf.proto",
+              "ToolTip": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\Client(student)\\ShadowScan_Client\\ShadowScan_Client\\Protos\\protobuf.proto",
+              "RelativeToolTip": "ShadowScan_Client\\Protos\\protobuf.proto",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003853|",
+              "WhenOpened": "2025-02-28T09:50:34.204Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
