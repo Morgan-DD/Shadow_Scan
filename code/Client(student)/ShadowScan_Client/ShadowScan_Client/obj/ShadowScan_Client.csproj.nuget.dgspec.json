@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\Client(student)\\ShadowScan_Client\\ShadowScan_Client\\ShadowScan_Client.csproj": {}
+    "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Client(student)\\ShadowScan_Client\\ShadowScan_Client\\ShadowScan_Client.csproj": {}
   },
   "projects": {
-    "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\Client(student)\\ShadowScan_Client\\ShadowScan_Client\\ShadowScan_Client.csproj": {
+    "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Client(student)\\ShadowScan_Client\\ShadowScan_Client\\ShadowScan_Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\Client(student)\\ShadowScan_Client\\ShadowScan_Client\\ShadowScan_Client.csproj",
+        "projectUniqueName": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Client(student)\\ShadowScan_Client\\ShadowScan_Client\\ShadowScan_Client.csproj",
         "projectName": "ShadowScan_Client",
-        "projectPath": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\Client(student)\\ShadowScan_Client\\ShadowScan_Client\\ShadowScan_Client.csproj",
-        "packagesPath": "C:\\Users\\shadow\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\Client(student)\\ShadowScan_Client\\ShadowScan_Client\\obj\\",
+        "projectPath": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Client(student)\\ShadowScan_Client\\ShadowScan_Client\\ShadowScan_Client.csproj",
+        "packagesPath": "C:\\Users\\pg66hua\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Client(student)\\ShadowScan_Client\\ShadowScan_Client\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\shadow\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\pg66hua\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,7 +45,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -74,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

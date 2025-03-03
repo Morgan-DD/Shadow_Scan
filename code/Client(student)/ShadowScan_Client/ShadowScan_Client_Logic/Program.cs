@@ -105,20 +105,50 @@ namespace ShadowScan_Client_Logic
                 Console.WriteLine("Listening on " + selectedDevice.Description + "...");
 
                 // start the capture
-                communicator.ReceivePackets(0, PacketHandler);
+                Task.Run(async () => communicator.ReceivePackets(0, PacketHandler));
             }
         }
 
         // Callback function invoked by Pcap.Net for every incoming packet
-        private static void PacketHandler(Packet packet)
+        private static async void PacketHandler(Packet packet)
         {
-            Console.WriteLine(packet.Ethernet.IpV4.Destination);
+            string toWrite = ReverseLookup(packet.Ethernet.IpV4.Destination.ToString());
+
+            //Console.WriteLine(packet.Ethernet.IpV4.Destination);
+
+            if(toWrite != "")
+            {
+                Console.WriteLine(toWrite);
+            }
             /*
             IPAddress hostIPAddress = IPAddress.Parse(packet.Ethernet.IpV4.Destination.ToString());
             IPHostEntry hostInfo = Dns.GetHostByAddress(hostIPAddress);
             Console.WriteLine(hostInfo.HostName + " | " + packet.Ethernet.IpV4.Destination);
             */
             //  Console.WriteLine(packet.Timestamp.ToString("yyyy-MM-dd hh:mm:ss.fff") + " length:" + packet.Length);
+        }
+
+        public static string DoGetHostEntry(string address)
+        {
+            try
+            {
+                IPHostEntry host = Dns.GetHostEntry(address);
+                return host.HostName;
+
+            }
+            catch (Exception ex) { }
+            return "";
+        }
+
+        public static string ReverseLookup(string address)
+        {
+            try
+            {
+                IPHostEntry ipHostEntry = Dns.GetHostByAddress(address);
+                return ipHostEntry.HostName;
+            }
+            catch (Exception ex) { }
+            return "";
         }
     }
 }

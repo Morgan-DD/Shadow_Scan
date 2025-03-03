@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "UecosMjcGeY=",
+  "dgSpecHash": "JyHh75Usw6U=",
   "success": true,
-  "projectFilePath": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\Client(student)\\ShadowScan_Client\\ShadowScan_Client_Logic\\ShadowScan_Client_Logic.csproj",
+  "projectFilePath": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Client(student)\\ShadowScan_Client\\ShadowScan_Client_Logic\\ShadowScan_Client_Logic.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\shadow\\.nuget\\packages\\pcap.net.x64\\1.0.4.1\\pcap.net.x64.1.0.4.1.nupkg.sha512"
+    "C:\\Users\\pg66hua\\.nuget\\packages\\pcap.net.x64\\1.0.4.1\\pcap.net.x64.1.0.4.1.nupkg.sha512"
   ],
   "logs": [
     {
