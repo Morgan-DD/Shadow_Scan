@@ -1,7 +1,5 @@
 syntax = "proto3";
 
-option csharp_namespace = "ShadowScan_Client";
-
 service ShadowService {
   rpc SubscribeToUpdates(SubscriptionRequest) returns (stream UpdateMessage);
 }

@@ -1,18 +1,8 @@
-﻿using Grpc.Net.Client;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
-using System.Net.Http;
-using ShadowScan_Server;
-using Grpc;
-using System.Net.NetworkInformation;
+﻿using Grpc.Core;
+using Grpc.Net.Client;
 using ShadowScan_Client;
 using System.Diagnostics;
-using Grpc.Core;
-using Grpc.Net.Client.Balancer;
+using System.Net.NetworkInformation;
 
 namespace ShadowScan_Server
 {
@@ -22,7 +12,12 @@ namespace ShadowScan_Server
 
         static async Task Main(string[] args)
         {
+            Console.WriteLine("aaaaaaa");
+            Program thisProgram = new Program();
             // thisProgram.isGRPCServerReachabel("INF-A23-P203");                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               );
+            await thisProgram.StartLongLiveStream("INF-A23-P203");
+
+            Console.WriteLine("FIN");
             Console.ReadLine();
         }
 
@@ -89,14 +84,30 @@ namespace ShadowScan_Server
 
         public async Task StartLongLiveStream(string hostname)
         {
-            using var channel = GrpcChannel.ForAddress(hostname);
-            var client = new ShadowService.ShadowServiceClient(channel);
+            Console.WriteLine("Start stream with : {0}", hostname);
+
+            // using var channel = GrpcChannel.ForAddress(hostname);
+            var client = new ShadowService.ShadowServiceClient(GetChannel(hostname));
 
             var request = new SubscriptionRequest { ClientId = "Client_1" };
 
             using var call = client.SubscribeToUpdates(request);
 
+            Console.WriteLine(call);
+
             try
+            {
+                await foreach (var update in call.ResponseStream.ReadAllAsync())
+                {
+                    Console.WriteLine("a");
+                }
+            }
+            catch
+            {
+
+            }
+
+            /*try
             {
                 await foreach (var update in call.ResponseStream.ReadAllAsync())
                 {
@@ -106,7 +117,7 @@ namespace ShadowScan_Server
             catch (RpcException ex) when (ex.StatusCode == Grpc.Core.StatusCode.Cancelled)
             {
                 Console.WriteLine("Stream cancelled.");
-            }
+            }*/
         }
     }
 }
