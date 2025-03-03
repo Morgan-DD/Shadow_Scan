@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "ShadowScan_Client\\Services\\LongLiveStream.cs",
               "ToolTip": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\Client(student)\\ShadowScan_Client\\ShadowScan_Client\\Services\\LongLiveStream.cs",
               "RelativeToolTip": "ShadowScan_Client\\Services\\LongLiveStream.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-03T07:27:54.647Z",
               "EditorCaption": ""
@@ -47,8 +47,7 @@
               "RelativeToolTip": "ShadowScan_Client\\Services\\GreeterService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-03T07:26:12.423Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-03T07:26:12.423Z"
             },
             {
               "$type": "Document",
@@ -60,8 +59,7 @@
               "RelativeToolTip": "ShadowScan_Client\\Protos\\LongLiveStream.proto",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003853|",
-              "WhenOpened": "2025-03-03T07:20:59.897Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-03T07:20:59.897Z"
             }
           ]
         }
