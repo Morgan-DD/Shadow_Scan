@@ -26,28 +26,6 @@ namespace ShadowScan_Server
             Console.ReadLine();
         }
 
-        /*
-        public async bool isGRPCServerReachabel(string hostname)
-        {
-            var input = new HelloRequest { TeacherHostname = hostname };
-
-            var httpHandler = new HttpClientHandler();
-            var channel = GrpcChannel.ForAddress("http://" + hostname + ":55052", new GrpcChannelOptions
-            {
-                HttpHandler = httpHandler
-            });
-
-
-            var client = new Greeter.GreeterClient(channel);
-            var response = await client.SayHelloAsync(input);
-
-            Debug.WriteLine(response.Status);
-
-            return true;
-        }
-
-        */
-
         /// <summary>
         /// Ping a pc
         /// </summary>
@@ -81,7 +59,7 @@ namespace ShadowScan_Server
             return (0, "NONE");
         }
 
-        public async Task<bool> isGRPCServerReachabel(string hostname)
+        private dynamic GetChannel(string hostname)
         {
             var input = new HelloRequest { TeacherHostname = hostname };
 
@@ -91,8 +69,14 @@ namespace ShadowScan_Server
                 HttpHandler = httpHandler
             });
 
+            return channel;
+        }
 
-            var client = new Greeter.GreeterClient(channel);
+        public async Task<bool> isGRPCServerReachabel(string hostname)
+        {
+            var input = new HelloRequest { TeacherHostname = hostname };
+
+            var client = new Greeter.GreeterClient(GetChannel(hostname));
             bool response = false;
             try
             {
@@ -101,6 +85,28 @@ namespace ShadowScan_Server
             catch { }
             Debug.WriteLine(response);
             return response;
+        }
+
+        public async Task StartLongLiveStream(string hostname)
+        {
+            using var channel = GrpcChannel.ForAddress(hostname);
+            var client = new ShadowService.ShadowServiceClient(channel);
+
+            var request = new SubscriptionRequest { ClientId = "Client_1" };
+
+            using var call = client.SubscribeToUpdates(request);
+
+            try
+            {
+                await foreach (var update in call.ResponseStream.ReadAllAsync())
+                {
+                    Console.WriteLine($"Received update: {update.Message} at {update.Timestamp}");
+                }
+            }
+            catch (RpcException ex) when (ex.StatusCode == Grpc.Core.StatusCode.Cancelled)
+            {
+                Console.WriteLine("Stream cancelled.");
+            }
         }
     }
 }

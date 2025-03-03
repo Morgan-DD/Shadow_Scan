@@ -1,0 +1,2 @@
+obj\Debug\net8.0\Protos/LongLiveStream.cs \
+obj\Debug\net8.0\Protos/LongLiveStreamGrpc.cs: Protos/LongLiveStream.proto
