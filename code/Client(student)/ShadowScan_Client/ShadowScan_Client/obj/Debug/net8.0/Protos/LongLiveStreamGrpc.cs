@@ -10,7 +10,7 @@ using grpc = global::Grpc.Core;
 namespace ShadowScan_Client {
   public static partial class ShadowService
   {
-    static readonly string __ServiceName = "ShadowService";
+    static readonly string __ServiceName = "ShadowService.ShadowService";
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
@@ -46,17 +46,17 @@ namespace ShadowScan_Client {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::ShadowScan_Client.SubscriptionRequest> __Marshaller_SubscriptionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ShadowScan_Client.SubscriptionRequest.Parser));
+    static readonly grpc::Marshaller<global::ShadowScan_Client.SubscriptionRequest> __Marshaller_ShadowService_SubscriptionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ShadowScan_Client.SubscriptionRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::ShadowScan_Client.UpdateMessage> __Marshaller_UpdateMessage = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ShadowScan_Client.UpdateMessage.Parser));
+    static readonly grpc::Marshaller<global::ShadowScan_Client.UpdateMessage> __Marshaller_ShadowService_UpdateMessage = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ShadowScan_Client.UpdateMessage.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::ShadowScan_Client.SubscriptionRequest, global::ShadowScan_Client.UpdateMessage> __Method_SubscribeToUpdates = new grpc::Method<global::ShadowScan_Client.SubscriptionRequest, global::ShadowScan_Client.UpdateMessage>(
         grpc::MethodType.ServerStreaming,
         __ServiceName,
         "SubscribeToUpdates",
-        __Marshaller_SubscriptionRequest,
-        __Marshaller_UpdateMessage);
+        __Marshaller_ShadowService_SubscriptionRequest,
+        __Marshaller_ShadowService_UpdateMessage);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor

@@ -24,12 +24,13 @@ namespace ShadowScan_Client {
     static LongLiveStreamReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtQcm90b3MvTG9uZ0xpdmVTdHJlYW0ucHJvdG8iJwoTU3Vic2NyaXB0aW9u",
-            "UmVxdWVzdBIQCghjbGllbnRJZBgBIAEoCSIzCg1VcGRhdGVNZXNzYWdlEg8K",
-            "B21lc3NhZ2UYASABKAkSEQoJdGltZXN0YW1wGAIgASgDMk0KDVNoYWRvd1Nl",
-            "cnZpY2USPAoSU3Vic2NyaWJlVG9VcGRhdGVzEhQuU3Vic2NyaXB0aW9uUmVx",
-            "dWVzdBoOLlVwZGF0ZU1lc3NhZ2UwAUIUqgIRU2hhZG93U2Nhbl9DbGllbnRi",
-            "BnByb3RvMw=="));
+            "ChtQcm90b3MvTG9uZ0xpdmVTdHJlYW0ucHJvdG8SDVNoYWRvd1NlcnZpY2Ui",
+            "JwoTU3Vic2NyaXB0aW9uUmVxdWVzdBIQCghjbGllbnRJZBgBIAEoCSIzCg1V",
+            "cGRhdGVNZXNzYWdlEg8KB21lc3NhZ2UYASABKAkSEQoJdGltZXN0YW1wGAIg",
+            "ASgDMmkKDVNoYWRvd1NlcnZpY2USWAoSU3Vic2NyaWJlVG9VcGRhdGVzEiIu",
+            "U2hhZG93U2VydmljZS5TdWJzY3JpcHRpb25SZXF1ZXN0GhwuU2hhZG93U2Vy",
+            "dmljZS5VcGRhdGVNZXNzYWdlMAFCFKoCEVNoYWRvd1NjYW5fQ2xpZW50YgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

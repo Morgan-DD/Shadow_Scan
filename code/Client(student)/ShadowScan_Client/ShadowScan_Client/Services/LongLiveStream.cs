@@ -2,26 +2,30 @@
 using ShadowScan_Client;
 using System;
 using System.Threading.Tasks;
+using ShadowScan_Client.Services;
 
-public class LongLiveStreamService : ShadowService.ShadowServiceBase // ✅ Inherit from gRPC base class
+namespace ShadowScan_Client
 {
-    public override async Task SubscribeToUpdates(SubscriptionRequest request,
-        IServerStreamWriter<UpdateMessage> responseStream, ServerCallContext context)
+    public class LongLiveStreamService : ShadowService.ShadowServiceBase // ✅ Inherit from gRPC base class
     {
-        Console.WriteLine($"Client {request.ClientId} subscribed.");
-
-        while (!context.CancellationToken.IsCancellationRequested)
+        public override async Task SubscribeToUpdates(SubscriptionRequest request,
+            IServerStreamWriter<UpdateMessage> responseStream, ServerCallContext context)
         {
-            var update = new UpdateMessage
+            Console.WriteLine($"Client {request.ClientId} subscribed.");
+
+            while (!context.CancellationToken.IsCancellationRequested)
             {
-                Message = "New update at " + DateTime.UtcNow,
-                Timestamp = DateTimeOffset.UtcNow.ToUnixTimeSeconds()
-            };
+                var update = new UpdateMessage
+                {
+                    Message = "New update at " + DateTime.UtcNow,
+                    Timestamp = DateTimeOffset.UtcNow.ToUnixTimeSeconds()
+                };
 
-            await responseStream.WriteAsync(update);
-            await Task.Delay(5000); // Simulate periodic updates every 5 seconds
+                await responseStream.WriteAsync(update);
+                await Task.Delay(5000); // Simulate periodic updates every 5 seconds
+            }
+
+            Console.WriteLine($"Client {request.ClientId} disconnected.");
         }
-
-        Console.WriteLine($"Client {request.ClientId} disconnected.");
     }
 }
