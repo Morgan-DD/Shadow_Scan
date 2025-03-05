@@ -6,13 +6,12 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v8.0": {
-      "ShadowScan_Client_Logic/1.0.0": {
+      "ShadowScan_Client/1.0.0": {
         "dependencies": {
-          "Pcap.Net.x64": "1.0.4.1",
-          "ShadowScan_Client": "1.0.0"
+          "Grpc.AspNetCore": "2.40.0"
         },
         "runtime": {
-          "ShadowScan_Client_Logic.dll": {}
+          "ShadowScan_Client.dll": {}
         }
       },
       "Google.Protobuf/3.18.0": {
@@ -144,42 +143,11 @@
         }
       },
       "Microsoft.Extensions.Primitives/3.0.3": {},
-      "Pcap.Net.x64/1.0.4.1": {
-        "runtime": {
-          "lib/net45/PcapDotNet.Base.dll": {
-            "assemblyVersion": "1.0.4.25027",
-            "fileVersion": "1.0.4.0"
-          },
-          "lib/net45/PcapDotNet.Core.Extensions.dll": {
-            "assemblyVersion": "1.0.4.25151",
-            "fileVersion": "1.0.4.0"
-          },
-          "lib/net45/PcapDotNet.Core.dll": {
-            "assemblyVersion": "1.0.4.25149",
-            "fileVersion": "0.0.0.0"
-          },
-          "lib/net45/PcapDotNet.Packets.dll": {
-            "assemblyVersion": "1.0.4.25028",
-            "fileVersion": "1.0.4.0"
-          }
-        }
-      },
-      "System.Memory/4.5.3": {},
-      "ShadowScan_Client/1.0.0": {
-        "dependencies": {
-          "Grpc.AspNetCore": "2.40.0"
-        },
-        "runtime": {
-          "ShadowScan_Client.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      }
+      "System.Memory/4.5.3": {}
     }
   },
   "libraries": {
-    "ShadowScan_Client_Logic/1.0.0": {
+    "ShadowScan_Client/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -317,24 +285,12 @@
       "path": "microsoft.extensions.primitives/3.0.3",
       "hashPath": "microsoft.extensions.primitives.3.0.3.nupkg.sha512"
     },
-    "Pcap.Net.x64/1.0.4.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-8kyqaySh23tikkLMZW/DgI3uf+om3QCvvg1dj2h7O6nKHoz9G2j0OfIqozI8FvkymbcHei0JjeBcPP3/t6kAtA==",
-      "path": "pcap.net.x64/1.0.4.1",
-      "hashPath": "pcap.net.x64.1.0.4.1.nupkg.sha512"
-    },
     "System.Memory/4.5.3": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
       "path": "system.memory/4.5.3",
       "hashPath": "system.memory.4.5.3.nupkg.sha512"
-    },
-    "ShadowScan_Client/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }

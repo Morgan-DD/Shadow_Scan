@@ -1,29 +1,42 @@
 ﻿using System;
 using System.Net;
+using System.Runtime.CompilerServices;
+using System.Text;
 using System.Threading.Tasks;
 using PcapDotNet;
 using PcapDotNet.Core;
 using PcapDotNet.Packets;
+using PcapDotNet.Packets.Dns;
+using PcapDotNet.Packets.Ethernet;
 using PcapDotNet.Packets.IpV4;
 using PcapDotNet.Packets.Transport;
+using ShadowScan_Client;
 
 namespace ShadowScan_Client_Logic
 {
     internal class ShadowScan_Logic
     {
+        public static Dictionary<string, string> _ipHostname = new Dictionary<string, string>();
+
+        static ShadowScan_Logic _this = new ShadowScan_Logic();
+
+        static List<string> _bannedSites = new List<string>();
+
+        LongLiveStreamService _longLiveStreamService = new LongLiveStreamService();
+
         static async Task Main(string[] args)
         {
             List<string> bannedSites = new List<string>();
 
-            bannedSites.Add("chatgpt.com");
+            _bannedSites.Add("chatgpt.com");
+            _bannedSites.Add("etml.ch");
 
-            Task.Run(async () => scanForInfractions_WebSite(bannedSites));
+            Task.Run(async () => scanForInfractions_WebSite());
 
-            ccc();
             Console.ReadKey();
         }
 
-        private static void scanForInfractions_WebSite(List<string> webSiteList)
+        private static void scanForInfractions_WebSite()
         {
             Thread.Sleep(1000);
             Console.WriteLine("SCAN INFRACTIONS");
@@ -34,121 +47,56 @@ namespace ShadowScan_Client_Logic
             {
                 networkInterfaces.Add(device);
                 Task.Run(async () => startScanOnInterFace(device));
-                
             }
+        }
 
-
+        private static void reportInfraction(string webSite)
+        {
+            Console.WriteLine("INFRACTION!!!  --> " + webSite);
         }
 
         private static void startScanOnInterFace(LivePacketDevice device)
         {
-            // Open the device
             using (PacketCommunicator communicator =
-                device.Open(65536,                                  // portion of the packet to capture
-                                                                    // 65536 guarantees that the whole packet will be captured on all the link layers
-                                    PacketDeviceOpenAttributes.Promiscuous, // promiscuous mode
-                                    1000))                                  // read timeout
+                   device.Open(65536,
+                               PacketDeviceOpenAttributes.Promiscuous,
+                               1000))
             {
-                Console.WriteLine("Listening on " + device.Description + "...");
-
-                // start the capture
-                communicator.ReceivePackets(0, PacketHandler);
-            }
-        }
-
-        private static void ccc()
-        {
-
-
-            // Retrieve the device list from the local machine
-            IList<LivePacketDevice> allDevices = LivePacketDevice.AllLocalMachine;
-
-            if (allDevices.Count == 0)
-            {
-                Console.WriteLine("No interfaces found! Make sure WinPcap is installed.");
-                return;
-            }
-
-            // Print the list
-            for (int i = 0; i != allDevices.Count; ++i)
-            {
-                LivePacketDevice device = allDevices[i];
-                Console.Write((i + 1) + ". " + device.Name);
-                if (device.Description != null)
-                    Console.WriteLine(" (" + device.Description + ")");
-                else
-                    Console.WriteLine(" (No description available)");
-            }
-
-            int deviceIndex = 0;
-            do
-            {
-                Console.WriteLine("Enter the interface number (1-" + allDevices.Count + "):");
-                string deviceIndexString = Console.ReadLine();
-                if (!int.TryParse(deviceIndexString, out deviceIndex) ||
-                    deviceIndex < 1 || deviceIndex > allDevices.Count)
+                communicator.ReceivePackets(0, packet =>
                 {
-                    deviceIndex = 0;
+                    var ethernet = packet.Ethernet;
+                    if (ethernet.EtherType == EthernetType.IpV4)
+                    {
+                        var ip = ethernet.IpV4;
+                        if (ip.Protocol == IpV4Protocol.Udp)
+                        {
+                            var udp = ip.Udp;
+                            if (udp.DestinationPort == 53 || udp.SourcePort == 53) // DNS Port
+                            {
+                                var dns = udp.Dns;
+                                if (dns != null && dns.IsQuery && dns.QueryCount > 0)
+                                {
+                                    foreach (DnsQueryResourceRecord query in dns.Queries)
+                                    {
+                                        CheckIfBanned(query.DomainName.ToString());
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        }
+
+        private static void CheckIfBanned(string webSite)
+        {
+            foreach (string bannedWebSite in _bannedSites) 
+            {
+                if (webSite.Contains(bannedWebSite))
+                {
+                    reportInfraction(webSite);
                 }
-            } while (deviceIndex == 0);
-
-            // Take the selected adapter
-            PacketDevice selectedDevice = allDevices[deviceIndex - 1];
-
-            // Open the device
-            using (PacketCommunicator communicator =
-                selectedDevice.Open(65536,                                  // portion of the packet to capture
-                                                                            // 65536 guarantees that the whole packet will be captured on all the link layers
-                                    PacketDeviceOpenAttributes.Promiscuous, // promiscuous mode
-                                    1000))                                  // read timeout
-            {
-                Console.WriteLine("Listening on " + selectedDevice.Description + "...");
-
-                // start the capture
-                Task.Run(async () => communicator.ReceivePackets(0, PacketHandler));
             }
-        }
-
-        // Callback function invoked by Pcap.Net for every incoming packet
-        private static async void PacketHandler(Packet packet)
-        {
-            string toWrite = ReverseLookup(packet.Ethernet.IpV4.Destination.ToString());
-
-            //Console.WriteLine(packet.Ethernet.IpV4.Destination);
-
-            if(toWrite != "")
-            {
-                Console.WriteLine(toWrite);
-            }
-            /*
-            IPAddress hostIPAddress = IPAddress.Parse(packet.Ethernet.IpV4.Destination.ToString());
-            IPHostEntry hostInfo = Dns.GetHostByAddress(hostIPAddress);
-            Console.WriteLine(hostInfo.HostName + " | " + packet.Ethernet.IpV4.Destination);
-            */
-            //  Console.WriteLine(packet.Timestamp.ToString("yyyy-MM-dd hh:mm:ss.fff") + " length:" + packet.Length);
-        }
-
-        public static string DoGetHostEntry(string address)
-        {
-            try
-            {
-                IPHostEntry host = Dns.GetHostEntry(address);
-                return host.HostName;
-
-            }
-            catch (Exception ex) { }
-            return "";
-        }
-
-        public static string ReverseLookup(string address)
-        {
-            try
-            {
-                IPHostEntry ipHostEntry = Dns.GetHostByAddress(address);
-                return ipHostEntry.HostName;
-            }
-            catch (Exception ex) { }
-            return "";
         }
     }
 }

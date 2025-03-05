@@ -11,4 +11,8 @@
     <PackageReference Include="Pcap.Net.x64" Version="1.0.4.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ShadowScan_Client\ShadowScan_Client.csproj" />
+  </ItemGroup>
+
 </Project>
