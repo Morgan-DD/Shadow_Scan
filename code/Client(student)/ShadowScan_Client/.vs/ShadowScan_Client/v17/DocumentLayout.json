@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\Client(student)\\ShadowScan_Client\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1A71DA4E-E1D0-4992-9E06-E04E1371D07A}|ShadowScan_Client\\ShadowScan_Client.csproj|c:\\users\\shadow\\documents\\github\\shadow_scan\\code\\client(student)\\shadowscan_client\\shadowscan_client\\services\\heartbeatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A71DA4E-E1D0-4992-9E06-E04E1371D07A}|ShadowScan_Client\\ShadowScan_Client.csproj|solutionrelative:shadowscan_client\\services\\heartbeatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1A71DA4E-E1D0-4992-9E06-E04E1371D07A}|ShadowScan_Client\\ShadowScan_Client.csproj|c:\\users\\shadow\\documents\\github\\shadow_scan\\code\\client(student)\\shadowscan_client\\shadowscan_client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1A71DA4E-E1D0-4992-9E06-E04E1371D07A}|ShadowScan_Client\\ShadowScan_Client.csproj|solutionrelative:shadowscan_client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A71DA4E-E1D0-4992-9E06-E04E1371D07A}|ShadowScan_Client\\ShadowScan_Client.csproj|c:\\users\\shadow\\documents\\github\\shadow_scan\\code\\client(student)\\shadowscan_client\\shadowscan_client\\services\\heartbeatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A71DA4E-E1D0-4992-9E06-E04E1371D07A}|ShadowScan_Client\\ShadowScan_Client.csproj|solutionrelative:shadowscan_client\\services\\heartbeatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,30 +18,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "HeartBeatService.cs",
               "DocumentMoniker": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\Client(student)\\ShadowScan_Client\\ShadowScan_Client\\Services\\HeartBeatService.cs",
               "RelativeDocumentMoniker": "ShadowScan_Client\\Services\\HeartBeatService.cs",
               "ToolTip": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\Client(student)\\ShadowScan_Client\\ShadowScan_Client\\Services\\HeartBeatService.cs",
               "RelativeToolTip": "ShadowScan_Client\\Services\\HeartBeatService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-06T14:46:30.314Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\Client(student)\\ShadowScan_Client\\ShadowScan_Client\\Program.cs",
               "RelativeDocumentMoniker": "ShadowScan_Client\\Program.cs",
               "ToolTip": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\Client(student)\\ShadowScan_Client\\ShadowScan_Client\\Program.cs",
               "RelativeToolTip": "ShadowScan_Client\\Program.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAABQAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-06T14:45:50.673Z",
               "EditorCaption": ""
