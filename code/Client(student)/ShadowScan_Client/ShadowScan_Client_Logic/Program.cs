@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Net;
+using System.Windows.Forms;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -14,7 +15,6 @@ using PcapDotNet.Packets.IpV4;
 using PcapDotNet.Packets.Transport;
 using ShadowScan_Client;
 using static System.Net.Mime.MediaTypeNames;
-using System.Windows.Forms;
 using System.Drawing;
 
 namespace ShadowScan_Client_Logic
@@ -26,6 +26,15 @@ namespace ShadowScan_Client_Logic
 
         // initialisation of the methode of the long steam
         LongLiveStreamService _longLiveStreamService = new LongLiveStreamService();
+
+        // if true, we show notification
+        static bool _showNotificaiton {  get; set; }
+
+        // notification manager
+        static InfractionManager _InfractionManager = new InfractionManager(false);
+
+        static NotifyIcon notifyIcon = new NotifyIcon();
+        static bool Visible = true;
 
         [DllImport("user32.dll")]
         public static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
@@ -82,37 +91,36 @@ namespace ShadowScan_Client_Logic
 
             Task.Run(async () => scanForInfractions_WebSite());
 
-            notifyIcon.DoubleClick += (s, e) =>
-            {
-                Visible = !Visible;
-                SetConsoleWindowVisibility(Visible);
-            };
-            notifyIcon.Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
+            changeNotificationStatus(true);
+            notifyIcon.Icon = Icon.ExtractAssociatedIcon(System.Windows.Forms.Application.ExecutablePath);
             notifyIcon.Visible = true;
-            notifyIcon.Text = Application.ProductName;
+            notifyIcon.Text = System.Windows.Forms.Application.ProductName;
 
             var contextMenu = new ContextMenuStrip();
-            contextMenu.Items.Add("Exit", null, (s, e) => { Application.Exit(); });
+            // contextMenu.Items.Add("Activer Les Notifications", null, (s, e) => { System.Windows.Forms.Application.Exit(); });
             notifyIcon.ContextMenuStrip = contextMenu;
 
             Console.WriteLine("Running!");
 
+
             // Standard message loop to catch click-events on notify icon
             // Code after this method will be running only after Application.Exit()
-            Application.Run();
+            System.Windows.Forms.Application.Run();
 
+            // Console.ReadKey();
             notifyIcon.Visible = false;
+        }
 
-            Console.ReadKey();
+        private static void changeNotificationStatus(bool NewStatus)
+        {
+            _showNotificaiton = NewStatus;
+            _InfractionManager._showNotification= NewStatus;
         }
 
 
 
         private static void scanForInfractions_WebSite()
         {
-            Thread.Sleep(1000);
-            Console.WriteLine("SCAN INFRACTIONS");
-
             // Take the selected adapter
             List<PacketDevice> networkInterfaces = new List<PacketDevice>();
             foreach (LivePacketDevice device in LivePacketDevice.AllLocalMachine)
@@ -124,7 +132,8 @@ namespace ShadowScan_Client_Logic
 
         private static void reportInfraction(string webSite)
         {
-            Console.WriteLine("INFRACTION!!!  --> " + webSite);
+            List<string> test = new List<string>();
+            _InfractionManager.ReportInfraction(1, webSite, "pg66hua");
         }
 
         private static void startScanOnInterFace(LivePacketDevice device)
@@ -166,7 +175,7 @@ namespace ShadowScan_Client_Logic
             {
                 if (webSite.Contains(bannedWebSite))
                 {
-                    reportInfraction(webSite);
+                    reportInfraction(bannedWebSite);
                 }
             }
         }

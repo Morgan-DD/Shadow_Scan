@@ -36,8 +36,8 @@ namespace ShadowScan_GUI
                 new ToastContentBuilder()
                 .AddText(title)
                 .AddText(message1)
-                .AddText(message2);
-                // .Show();
+                .AddText(message2)
+                .Show();
             }
         }
 

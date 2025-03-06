@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{55B39B0E-D920-4340-9209-CBF95CF2A34C}|ShadowScan_Client_Logic\\ShadowScan_Client_Logic.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\client(student)\\shadowscan_client\\shadowscan_client_logic\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55B39B0E-D920-4340-9209-CBF95CF2A34C}|ShadowScan_Client_Logic\\ShadowScan_Client_Logic.csproj|solutionrelative:shadowscan_client_logic\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55B39B0E-D920-4340-9209-CBF95CF2A34C}|ShadowScan_Client_Logic\\ShadowScan_Client_Logic.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\client(student)\\shadowscan_client\\shadowscan_client_logic\\infractionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55B39B0E-D920-4340-9209-CBF95CF2A34C}|ShadowScan_Client_Logic\\ShadowScan_Client_Logic.csproj|solutionrelative:shadowscan_client_logic\\infractionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,10 +28,22 @@
               "RelativeDocumentMoniker": "ShadowScan_Client_Logic\\Program.cs",
               "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Client(student)\\ShadowScan_Client\\ShadowScan_Client_Logic\\Program.cs",
               "RelativeToolTip": "ShadowScan_Client_Logic\\Program.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAADwv1AAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAGAAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-03T08:58:33.701Z",
-              "IsPinned": true,
+              "WhenOpened": "2025-03-06T12:42:20.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "InfractionManager.cs",
+              "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Client(student)\\ShadowScan_Client\\ShadowScan_Client_Logic\\InfractionManager.cs",
+              "RelativeDocumentMoniker": "ShadowScan_Client_Logic\\InfractionManager.cs",
+              "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\Client(student)\\ShadowScan_Client\\ShadowScan_Client_Logic\\InfractionManager.cs",
+              "RelativeToolTip": "ShadowScan_Client_Logic\\InfractionManager.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAwDQAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T12:39:17.18Z",
               "EditorCaption": ""
             }
           ]
