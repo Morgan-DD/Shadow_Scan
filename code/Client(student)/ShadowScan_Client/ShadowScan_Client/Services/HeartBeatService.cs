@@ -1,28 +1,18 @@
 ﻿using Grpc.Core;
+using System.Threading.Tasks;
 
 namespace ShadowScan_Client.Services
 {
     public class HeartBeatService : HeartBeat.HeartBeatBase
     {
-        public async Task SubscribeToUpdates(SubscriptionRequest request,
-            IServerStreamWriter<UpdateMessage> responseStream, ServerCallContext context)
+        public override async Task GetHeartBeatInfo(HeartBeatLookupModel request, IServerStreamWriter<HeartBeatModel> responseStream, ServerCallContext context)
         {
-            Console.WriteLine($"Client {request.ClientId} subscribed.");
-
             while (!context.CancellationToken.IsCancellationRequested)
             {
-                var update = new UpdateMessage
-                {
-                    Message = "New update at " + DateTime.UtcNow,
-                    Timestamp = DateTimeOffset.UtcNow.ToUnixTimeSeconds()
-                };
-
-                await responseStream.WriteAsync(update);
-                await Task.Delay(5000); // Simulate periodic updates every 5 seconds
+                var heartBeat = new HeartBeatModel { Answer = "Server is alive" };
+                await responseStream.WriteAsync(heartBeat);
+                await Task.Delay(5000); // Wait for 5 seconds before sending the next heartbeat
             }
-
-            Console.WriteLine($"Client {request.ClientId} disconnected.");
         }
-
     }
 }

@@ -13,6 +13,7 @@ namespace ShadowScan_Client.Services
 
         public override Task<HelloReply> SayHello(HelloRequest request, ServerCallContext context)
         {
+            Console.WriteLine("New Server: " + request.TeacherHostname);
             return Task.FromResult(new HelloReply
             {
                 Status = true
