@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option csharp_namespace = "ShadowScan_Client";
+
+package heartbeat;
+
+service HeartBeat {
+    // Server-side streaming RPC
+    rpc GetHeartBeatInfo (HeartBeatLookupModel) returns (stream HeartBeatModel);
+}
+
+message HeartBeatLookupModel {
+    string ServerName = 1;
+}
+
+message HeartBeatModel {
+    string answer = 1;
+}
