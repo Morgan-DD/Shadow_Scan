@@ -14,8 +14,10 @@ namespace ShadowScan_Server
         {
             Console.WriteLine("aaaaaaa");
             Program thisProgram = new Program();
-            // thisProgram.isGRPCServerReachabel("INF-A23-P203");                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               );
-            await thisProgram.StartLongLiveStream("INF-A23-P203");
+            thisProgram.isGRPCServerReachabel("INF-A23-P203");
+
+            var cts = new CancellationTokenSource();
+            await thisProgram.StartLongLiveStream("INF-A23-P203", cts.Token);
 
             Console.WriteLine("FIN");
             Console.ReadLine();
@@ -81,43 +83,27 @@ namespace ShadowScan_Server
             Debug.WriteLine(response);
             return response;
         }
-
-        public async Task StartLongLiveStream(string hostname)
+        
+        public async Task StartLongLiveStream(string hostname, CancellationToken cancellationToken)
         {
-            Console.WriteLine("Start stream with : {0}", hostname);
+            Console.WriteLine("Start stream with: {0}", hostname);
 
-            // using var channel = GrpcChannel.ForAddress(hostname);
-            var client = new ShadowService.ShadowServiceClient(GetChannel(hostname));
+            var client = new HeartBeat.HeartBeatClient(GetChannel(hostname));
+            var request = new HeartBeatLookupModel { ServerName = "Client_1" };
 
-            var request = new SubscriptionRequest { ClientId = "Client_1" };
-
-            using var call = client.SubscribeToUpdates(request);
-
-            Console.WriteLine(call);
+            using var call = client.GetHeartBeatInfo(request);
 
             try
             {
-                await foreach (var update in call.ResponseStream.ReadAllAsync())
+                await foreach (var update in call.ResponseStream.ReadAllAsync(cancellationToken))
                 {
-                    Console.WriteLine("a");
+                    Console.WriteLine("Received heartbeat: " + update.Answer);
                 }
             }
-            catch
+            catch (RpcException ex)
             {
-
+                Console.WriteLine($"Stream error: {ex.Status}");
             }
-
-            /*try
-            {
-                await foreach (var update in call.ResponseStream.ReadAllAsync())
-                {
-                    Console.WriteLine($"Received update: {update.Message} at {update.Timestamp}");
-                }
-            }
-            catch (RpcException ex) when (ex.StatusCode == Grpc.Core.StatusCode.Cancelled)
-            {
-                Console.WriteLine("Stream cancelled.");
-            }*/
         }
     }
 }
