@@ -1,0 +1,2 @@
+obj\Debug\net8.0\Protos/HeartBeat.cs \
+obj\Debug\net8.0\Protos/HeartBeatGrpc.cs: Protos/HeartBeat.proto

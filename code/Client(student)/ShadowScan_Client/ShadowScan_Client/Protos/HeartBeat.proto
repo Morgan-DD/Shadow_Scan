@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option csharp_namespace = "ShadowScan_Client";
+
+service HeartBeat {
+	rpc GetHeartBeatInfo (HeartBeatLookupModel) returns (HeartBeatModel);
+}
+
+message HeartBeatLookupModel {
+	string ServerName = 1;
+	int32 heartBeatFrenquency = 2;
+}
+
+message HeartBeatModel {
+	string answer = 1;
+}
+

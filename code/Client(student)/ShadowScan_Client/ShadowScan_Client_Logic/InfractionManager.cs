@@ -53,7 +53,6 @@ namespace ShadowScan_Client_Logic
             if (NotifyOrNot(website))
             {
 
-
                 // set the values for the notification
                 string title = "";
                 string message1 = "";
