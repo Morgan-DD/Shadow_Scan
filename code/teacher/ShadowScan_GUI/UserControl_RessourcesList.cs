@@ -198,7 +198,6 @@ namespace ShadowScan_GUI
             _PcCheckBoxList.Add(tempItem);
         }
 
-
         private void button_moveRight_Click(object sender, EventArgs e)
         {
             // add the marked ressources into the sublist
@@ -398,7 +397,6 @@ namespace ShadowScan_GUI
             //File.WriteAllText(json, savePath);
             File.WriteAllText(path, json);
         }
-        
 
         private void saveMainList(string path)
         {
@@ -575,6 +573,24 @@ namespace ShadowScan_GUI
         private void button1_Click_1(object sender, EventArgs e)
         {
             removeFromMainList();
+        }
+
+        public List<string> getSubListContent(string searchSublistname)
+        {
+            List<string> returnValue = new List<string>();
+            int id = 0;
+            foreach (string subListName in comboBox_SubList.Items)
+            {
+                if(subListName == searchSublistname)
+                {
+                    foreach (UserControl_PcCheckBox BannedRessource in _PcCheckBoxSubLists[id])
+                    {
+                        returnValue.Add(BannedRessource._pcName);
+                    }
+                }
+                id++;
+            }
+            return returnValue;
         }
     }
 }

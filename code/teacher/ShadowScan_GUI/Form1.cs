@@ -281,9 +281,10 @@ namespace ShadowScan_GUI
 
             // check all the pcs
             List<Task> scanTasks = new List<Task>();
+            List<string> bannedRessources = _userControlRessourceList.getSubListContent(ressourcesListName);
             foreach (string pcHostname in pcHostnames)
             {
-                scanTasks.Add(Task.Run(() => startScanSinglePC(pcHostname)));
+                scanTasks.Add(Task.Run(() => startScanSinglePC(pcHostname, bannedRessources)));
             }
 
             await Task.WhenAll(scanTasks);
@@ -292,14 +293,17 @@ namespace ShadowScan_GUI
 
         }
 
-        public async void startScanSinglePC(string pcHostname)
+        public async void startScanSinglePC(string pcHostname, List<string> bannedRessources)
         {
             // default message
             string NoInfoMessage = "None";
 
             // ping the pc
             (byte status, string ip) = _shadowScanInstance.pingPc(pcHostname);
-            if (await isGrpcServerReachable(pcHostname))
+            bool grpcStatus = false;
+            string hostname = "";
+            (grpcStatus, hostname) = await isGrpcServerReachable(pcHostname, bannedRessources);
+            if (grpcStatus)
             {
                 status = 2;
             }
@@ -309,7 +313,7 @@ namespace ShadowScan_GUI
                 {
                     { "hostname", pcHostname }, // hostname
                     { "ip", NoInfoMessage }, //NoInfoMessage value
-                    { "user_name", NoInfoMessage },// NoInfoMessage value
+                    { "user_name", hostname },// NoInfoMessage value
                     { "status", status.ToString() },// Status
                 };
 
@@ -379,9 +383,9 @@ namespace ShadowScan_GUI
             */
         }
 
-        public async Task<bool> isGrpcServerReachable(string hostname)
+        public async Task<(bool, string)> isGrpcServerReachable(string hostname, List<string> bannedRessources)
         {
-            return await _shadowScanInstance.isGRPCServerReachabel(hostname); ;
+            return await _shadowScanInstance.isGRPCServerReachabel(hostname, bannedRessources); ;
         }
 
 

@@ -24,16 +24,17 @@ namespace ShadowScan_Client {
     static GreetReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJQcm90b3MvZ3JlZXQucHJvdG8SBWdyZWV0IicKDEhlbGxvUmVxdWVzdBIX",
-            "Cg9UZWFjaGVySG9zdG5hbWUYASABKAkiHAoKSGVsbG9SZXBseRIOCgZzdGF0",
-            "dXMYASABKAgyPQoHR3JlZXRlchIyCghTYXlIZWxsbxITLmdyZWV0LkhlbGxv",
-            "UmVxdWVzdBoRLmdyZWV0LkhlbGxvUmVwbHlCFKoCEVNoYWRvd1NjYW5fQ2xp",
-            "ZW50YgZwcm90bzM="));
+            "ChJQcm90b3MvZ3JlZXQucHJvdG8SBWdyZWV0IkEKDEhlbGxvUmVxdWVzdBIX",
+            "Cg9UZWFjaGVySG9zdG5hbWUYASABKAkSGAoQYmFubmVkUmVzc291cmNlcxgC",
+            "IAEoCSIuCgpIZWxsb1JlcGx5Eg4KBnN0YXR1cxgBIAEoCBIQCgh1c2VyTmFt",
+            "ZRgCIAEoCTI9CgdHcmVldGVyEjIKCFNheUhlbGxvEhMuZ3JlZXQuSGVsbG9S",
+            "ZXF1ZXN0GhEuZ3JlZXQuSGVsbG9SZXBseUIUqgIRU2hhZG93U2Nhbl9DbGll",
+            "bnRiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::ShadowScan_Client.HelloRequest), global::ShadowScan_Client.HelloRequest.Parser, new[]{ "TeacherHostname" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::ShadowScan_Client.HelloReply), global::ShadowScan_Client.HelloReply.Parser, new[]{ "Status" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::ShadowScan_Client.HelloRequest), global::ShadowScan_Client.HelloRequest.Parser, new[]{ "TeacherHostname", "BannedRessources" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::ShadowScan_Client.HelloReply), global::ShadowScan_Client.HelloReply.Parser, new[]{ "Status", "UserName" }, null, null, null, null)
           }));
     }
     #endregion
@@ -79,6 +80,7 @@ namespace ShadowScan_Client {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HelloRequest(HelloRequest other) : this() {
       teacherHostname_ = other.teacherHostname_;
+      bannedRessources_ = other.bannedRessources_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -100,6 +102,18 @@ namespace ShadowScan_Client {
       }
     }
 
+    /// <summary>Field number for the "bannedRessources" field.</summary>
+    public const int BannedRessourcesFieldNumber = 2;
+    private string bannedRessources_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string BannedRessources {
+      get { return bannedRessources_; }
+      set {
+        bannedRessources_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -116,6 +130,7 @@ namespace ShadowScan_Client {
         return true;
       }
       if (TeacherHostname != other.TeacherHostname) return false;
+      if (BannedRessources != other.BannedRessources) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -124,6 +139,7 @@ namespace ShadowScan_Client {
     public override int GetHashCode() {
       int hash = 1;
       if (TeacherHostname.Length != 0) hash ^= TeacherHostname.GetHashCode();
+      if (BannedRessources.Length != 0) hash ^= BannedRessources.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -146,6 +162,10 @@ namespace ShadowScan_Client {
         output.WriteRawTag(10);
         output.WriteString(TeacherHostname);
       }
+      if (BannedRessources.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(BannedRessources);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -160,6 +180,10 @@ namespace ShadowScan_Client {
         output.WriteRawTag(10);
         output.WriteString(TeacherHostname);
       }
+      if (BannedRessources.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(BannedRessources);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -172,6 +196,9 @@ namespace ShadowScan_Client {
       int size = 0;
       if (TeacherHostname.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TeacherHostname);
+      }
+      if (BannedRessources.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(BannedRessources);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -187,6 +214,9 @@ namespace ShadowScan_Client {
       }
       if (other.TeacherHostname.Length != 0) {
         TeacherHostname = other.TeacherHostname;
+      }
+      if (other.BannedRessources.Length != 0) {
+        BannedRessources = other.BannedRessources;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -211,6 +241,10 @@ namespace ShadowScan_Client {
             TeacherHostname = input.ReadString();
             break;
           }
+          case 18: {
+            BannedRessources = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -232,6 +266,10 @@ namespace ShadowScan_Client {
             break;
           case 10: {
             TeacherHostname = input.ReadString();
+            break;
+          }
+          case 18: {
+            BannedRessources = input.ReadString();
             break;
           }
         }
@@ -280,6 +318,7 @@ namespace ShadowScan_Client {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HelloReply(HelloReply other) : this() {
       status_ = other.status_;
+      userName_ = other.userName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -301,6 +340,18 @@ namespace ShadowScan_Client {
       }
     }
 
+    /// <summary>Field number for the "userName" field.</summary>
+    public const int UserNameFieldNumber = 2;
+    private string userName_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string UserName {
+      get { return userName_; }
+      set {
+        userName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -317,6 +368,7 @@ namespace ShadowScan_Client {
         return true;
       }
       if (Status != other.Status) return false;
+      if (UserName != other.UserName) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -325,6 +377,7 @@ namespace ShadowScan_Client {
     public override int GetHashCode() {
       int hash = 1;
       if (Status != false) hash ^= Status.GetHashCode();
+      if (UserName.Length != 0) hash ^= UserName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -347,6 +400,10 @@ namespace ShadowScan_Client {
         output.WriteRawTag(8);
         output.WriteBool(Status);
       }
+      if (UserName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(UserName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -361,6 +418,10 @@ namespace ShadowScan_Client {
         output.WriteRawTag(8);
         output.WriteBool(Status);
       }
+      if (UserName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(UserName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -373,6 +434,9 @@ namespace ShadowScan_Client {
       int size = 0;
       if (Status != false) {
         size += 1 + 1;
+      }
+      if (UserName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserName);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -388,6 +452,9 @@ namespace ShadowScan_Client {
       }
       if (other.Status != false) {
         Status = other.Status;
+      }
+      if (other.UserName.Length != 0) {
+        UserName = other.UserName;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -412,6 +479,10 @@ namespace ShadowScan_Client {
             Status = input.ReadBool();
             break;
           }
+          case 18: {
+            UserName = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -433,6 +504,10 @@ namespace ShadowScan_Client {
             break;
           case 8: {
             Status = input.ReadBool();
+            break;
+          }
+          case 18: {
+            UserName = input.ReadString();
             break;
           }
         }

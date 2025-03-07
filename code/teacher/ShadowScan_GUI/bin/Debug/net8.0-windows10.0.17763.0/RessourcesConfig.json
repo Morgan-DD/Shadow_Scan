@@ -1,0 +1,96 @@
+{
+  "Ressources": [
+    {
+      "type": "0",
+      "pathUrl": "https://chatgpt.com/"
+    },
+    {
+      "type": "0",
+      "pathUrl": "https://gemini.google.com/"
+    },
+    {
+      "type": "0",
+      "pathUrl": "https://ia.net/"
+    },
+    {
+      "type": "0",
+      "pathUrl": "https://openai.com/"
+    },
+    {
+      "type": "0",
+      "pathUrl": "https://developer.mozilla.org/"
+    },
+    {
+      "type": "0",
+      "pathUrl": "https://stackoverflow.com/"
+    },
+    {
+      "type": "0",
+      "pathUrl": "https://www.w3schools.com/"
+    },
+    {
+      "type": "0",
+      "pathUrl": "https://www.kaggle.com/"
+    },
+    {
+      "type": "0",
+      "pathUrl": "https://www.github.com/"
+    },
+    {
+      "type": "1",
+      "pathUrl": "ms-teams.exe"
+    },
+    {
+      "type": "1",
+      "pathUrl": "notepad++.exe"
+    },
+    {
+      "type": "1",
+      "pathUrl": "slack.exe"
+    },
+    {
+      "type": "1",
+      "pathUrl": "zoom.exe"
+    },
+    {
+      "type": "1",
+      "pathUrl": "vscode.exe"
+    },
+    {
+      "type": "1",
+      "pathUrl": "pycharm.exe"
+    },
+    {
+      "type": "1",
+      "pathUrl": "chrome.exe"
+    },
+    {
+      "type": "1",
+      "pathUrl": "firefox.exe"
+    },
+    {
+      "type": "2",
+      "pathUrl": "M152-reponses"
+    },
+    {
+      "type": "2",
+      "pathUrl": "Project-Plan.docx"
+    },
+    {
+      "type": "2",
+      "pathUrl": "Budget-Report.xlsx"
+    },
+    {
+      "type": "2",
+      "pathUrl": "Meeting-Notes.pdf"
+    },
+    {
+      "type": "2",
+      "pathUrl": "User-Manual.pdf"
+    },
+    {
+      "type": "2",
+      "pathUrl": "Code-Review-Guidelines.pdf"
+    }
+  ]
+}
