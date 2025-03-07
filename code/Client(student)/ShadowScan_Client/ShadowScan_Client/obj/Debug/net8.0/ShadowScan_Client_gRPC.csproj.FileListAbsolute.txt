@@ -1,0 +1,7 @@
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Client\obj\Debug\net8.0\ShadowScan_Client_gRPC.csproj.AssemblyReference.cache
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Client\obj\Debug\net8.0\ShadowScan_Client_gRPC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Client\obj\Debug\net8.0\ShadowScan_Client_gRPC.AssemblyInfoInputs.cache
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Client\obj\Debug\net8.0\ShadowScan_Client_gRPC.AssemblyInfo.cs
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Client\obj\Debug\net8.0\ShadowScan_Client_gRPC.csproj.CoreCompileInputs.cache
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Client\obj\Debug\net8.0\ShadowScan_Client_gRPC.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Client\obj\Debug\net8.0\ShadowScan_Client_gRPC.sourcelink.json

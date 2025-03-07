@@ -1,0 +1,12 @@
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Common\bin\Debug\net8.0-windows\ShadowScan_Common.deps.json
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Common\bin\Debug\net8.0-windows\ShadowScan_Common.dll
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Common\bin\Debug\net8.0-windows\ShadowScan_Common.pdb
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Common\obj\Debug\net8.0-windows\ShadowScan_Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Common\obj\Debug\net8.0-windows\ShadowScan_Common.AssemblyInfoInputs.cache
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Common\obj\Debug\net8.0-windows\ShadowScan_Common.AssemblyInfo.cs
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Common\obj\Debug\net8.0-windows\ShadowScan_Common.csproj.CoreCompileInputs.cache
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Common\obj\Debug\net8.0-windows\ShadowScan_Common.sourcelink.json
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Common\obj\Debug\net8.0-windows\ShadowScan_Common.dll
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Common\obj\Debug\net8.0-windows\refint\ShadowScan_Common.dll
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Common\obj\Debug\net8.0-windows\ShadowScan_Common.pdb
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Common\obj\Debug\net8.0-windows\ref\ShadowScan_Common.dll

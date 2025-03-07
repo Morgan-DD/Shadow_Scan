@@ -13,24 +13,18 @@ using PcapDotNet.Packets.Dns;
 using PcapDotNet.Packets.Ethernet;
 using PcapDotNet.Packets.IpV4;
 using PcapDotNet.Packets.Transport;
-using ShadowScan_Client;
 using static System.Net.Mime.MediaTypeNames;
 using System.Drawing;
-using Microsoft.AspNetCore.Builder;
-using ShadowScan_Client.Services;
-using Microsoft.Extensions.Hosting;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.DependencyInjection;
+using WinRT;
 
 namespace ShadowScan_Client_Logic
 {
-    internal class ShadowScan_Logic
+    public class ShadowScan_Logic
     {
         // list of banned websites
-        static List<string> _bannedSites = new List<string>();
+        public List<string> _bannedSites { get; set; }
 
-        // initialisation of the methode of the long steam
-        LongLiveStreamService _longLiveStreamService = new LongLiveStreamService();
+
 
         // if true, we show notification
         static bool _showNotificaiton {  get; set; }
@@ -40,8 +34,6 @@ namespace ShadowScan_Client_Logic
 
         static NotifyIcon notifyIcon = new NotifyIcon();
         static bool Visible = true;
-
-        private IHost _host;
 
         [DllImport("user32.dll")]
         public static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
@@ -55,6 +47,11 @@ namespace ShadowScan_Client_Logic
                 if (visible) ShowWindow(hWnd, 1); //1 = SW_SHOWNORMAL           
                 else ShowWindow(hWnd, 0); //0 = SW_HIDE               
             }
+        }
+
+        public ShadowScan_Logic()
+        {
+
         }
 
         static async Task Main(string[] args)
@@ -99,10 +96,11 @@ namespace ShadowScan_Client_Logic
             _bannedSites.Add("riverside.fm");
             _bannedSites.Add("podcastle.ai");
             */
-
-            Task.Run(async () => thisForm.StartGrpcServerAsync());
+            
 
             
+
+            //Task.Run(async () => scanForInfractions_WebSite());
 
             changeNotificationStatus(true);
             notifyIcon.Icon = Icon.ExtractAssociatedIcon(System.Windows.Forms.Application.ExecutablePath);
@@ -124,36 +122,7 @@ namespace ShadowScan_Client_Logic
             notifyIcon.Visible = false;
         }
 
-        public async Task StartGrpcServerAsync()
-        {
-            var builder = WebApplication.CreateBuilder();
-
-            builder.Services.AddGrpc();
-
-            builder.WebHost.ConfigureKestrel(options =>
-            {
-                options.ListenAnyIP(55052); // Bind to all network interfaces
-            });
-
-            var app = builder.Build();
-
-            app.MapGrpcService<GreeterService>();
-            app.MapGrpcService<HeartBeatService>();
-            app.MapGet("/", () => "Communication with gRPC endpoints must be made through a gRPC client.");
-
-            _host = app;
-
-            await _host.StartAsync();
-        }
-
-        public async Task StopGrpcServerAsync()
-        {
-            if (_host != null)
-            {
-                await _host.StopAsync();
-                _host.Dispose();
-            }
-        }
+       
 
         private static void changeNotificationStatus(bool NewStatus)
         {
@@ -161,13 +130,12 @@ namespace ShadowScan_Client_Logic
             _InfractionManager._showNotification= NewStatus;
         }
 
-        public void StartScan()
-        {
-            Task.Run(async () => scanForInfractions_WebSite());
-        }
+       
 
-        private static void scanForInfractions_WebSite()
+        public static void scanForInfractions_WebSite()
         {
+            MessageBox.Show("startScan");
+            MessageBox.Show(String.Join("|", _bannedSites));
             // Take the selected adapter
             List<PacketDevice> networkInterfaces = new List<PacketDevice>();
             foreach (LivePacketDevice device in LivePacketDevice.AllLocalMachine)

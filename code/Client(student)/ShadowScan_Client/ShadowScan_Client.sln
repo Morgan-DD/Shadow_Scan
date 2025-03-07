@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShadowScan_Client", "ShadowScan_Client\ShadowScan_Client.csproj", "{1A71DA4E-E1D0-4992-9E06-E04E1371D07A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShadowScan_Client_gRPC", "ShadowScan_Client\ShadowScan_Client_gRPC.csproj", "{1A71DA4E-E1D0-4992-9E06-E04E1371D07A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShadowScan_Client_Logic", "ShadowScan_Client_Logic\ShadowScan_Client_Logic.csproj", "{55B39B0E-D920-4340-9209-CBF95CF2A34C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShadowScan_Client_Common", "ShadowScan_Client_Common\ShadowScan_Client_Common.csproj", "{1848A31A-94C1-4366-9052-8B81DC5CD175}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{55B39B0E-D920-4340-9209-CBF95CF2A34C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55B39B0E-D920-4340-9209-CBF95CF2A34C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55B39B0E-D920-4340-9209-CBF95CF2A34C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1848A31A-94C1-4366-9052-8B81DC5CD175}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1848A31A-94C1-4366-9052-8B81DC5CD175}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1848A31A-94C1-4366-9052-8B81DC5CD175}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1848A31A-94C1-4366-9052-8B81DC5CD175}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

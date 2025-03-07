@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ShadowScan_Client_gRPC.props" />
+</Project>

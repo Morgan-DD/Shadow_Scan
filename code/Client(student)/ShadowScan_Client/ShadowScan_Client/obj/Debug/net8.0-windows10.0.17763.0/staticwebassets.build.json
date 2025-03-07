@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "I6hpJCsD2MGKeMs37CJmDN3QfGQTap7tR67cUv+Xm8U=",
+  "Source": "ShadowScan_Client_gRPC",
+  "BasePath": "_content/ShadowScan_Client_gRPC",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

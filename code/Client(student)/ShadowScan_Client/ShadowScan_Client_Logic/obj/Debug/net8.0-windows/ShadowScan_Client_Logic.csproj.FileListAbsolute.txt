@@ -35,3 +35,12 @@ C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Client(student)\ShadowScan_C
 C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Client(student)\ShadowScan_Client\ShadowScan_Client_Logic\obj\Debug\net8.0-windows\ShadowScan_Client_Logic.genruntimeconfig.cache
 C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Client(student)\ShadowScan_Client\ShadowScan_Client_Logic\obj\Debug\net8.0-windows\ref\ShadowScan_Client_Logic.dll
 C:\Users\pg66hua\Documents\GitHub\Mostly_Human\code\Client(student)\ShadowScan_Client\ShadowScan_Client_Logic\bin\Debug\net8.0-windows\Microsoft.Toolkit.Uwp.Notifications.dll
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Client_Logic\obj\Debug\net8.0-windows\ShadowScan_Client_Logic.csproj.AssemblyReference.cache
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Client_Logic\obj\Debug\net8.0-windows\ShadowScan_Client_Logic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Client_Logic\obj\Debug\net8.0-windows\ShadowScan_Client_Logic.AssemblyInfoInputs.cache
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Client_Logic\obj\Debug\net8.0-windows\ShadowScan_Client_Logic.AssemblyInfo.cs
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Client_Logic\obj\Debug\net8.0-windows\ShadowScan_Client_Logic.csproj.CoreCompileInputs.cache
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Client_Logic\obj\Debug\net8.0-windows\ShadowScan_Client_Logic.sourcelink.json
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Client_Logic\obj\Debug\net8.0-windows\ShadowScan_Client_Logic.dll
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Client_Logic\obj\Debug\net8.0-windows\refint\ShadowScan_Client_Logic.dll
+C:\Users\shadow\Documents\GitHub\Shadow_Scan\code\Client(student)\ShadowScan_Client\ShadowScan_Client_Logic\obj\Debug\net8.0-windows\ShadowScan_Client_Logic.pdb
