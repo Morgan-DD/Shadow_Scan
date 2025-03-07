@@ -2,6 +2,7 @@
 using Grpc.Net.Client;
 using ShadowScan_Client;
 using System.Diagnostics;
+using System.Linq;
 using System.Net.NetworkInformation;
 
 namespace ShadowScan_Server
@@ -14,7 +15,7 @@ namespace ShadowScan_Server
         {
             Console.WriteLine("aaaaaaa");
             Program thisProgram = new Program();
-            thisProgram.isGRPCServerReachabel("INF-A23-P203");
+            // thisProgram.isGRPCServerReachabel("INF-A23-P203");
 
             var cts = new CancellationTokenSource();
             await thisProgram.StartLongLiveStream("INF-A23-P203", cts.Token);
@@ -69,22 +70,31 @@ namespace ShadowScan_Server
             return channel;
         }
 
-        public async Task<bool> isGRPCServerReachabel(string hostname)
+        public async Task<(bool, string)> isGRPCServerReachabel(string hostname, List<string> bannedRessources)
         {
-            var input = new HelloRequest { TeacherHostname = hostname };
+            string username = "";
+            var input = new HelloRequest
+            {
+                TeacherHostname = hostname,
+                BannedRessources = String.Join("&", bannedRessources)
+            };
 
             var client = new Greeter.GreeterClient(GetChannel(hostname));
             bool response = false;
             try
             {
-                response = (await client.SayHelloAsync(input)).Status;
+                var returnValue = (await client.SayHelloAsync(input));
+                response = returnValue.Status;
+                string fullhostname = returnValue.UserName;
+                username = fullhostname.Split("\\")[fullhostname.Split("\\").Count()-1];
+
             }
             catch { }
             Debug.WriteLine(response);
-            return response;
+            return (response, username);
         }
         
-        public async Task StartLongLiveStream(string hostname, CancellationToken cancellationToken)
+        public async Task StartLongLiveStream(string hostname, CancellationToken cancellationToken) // , InfractionManager parent
         {
             Console.WriteLine("Start stream with: {0}", hostname);
 

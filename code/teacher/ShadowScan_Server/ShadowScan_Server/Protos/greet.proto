@@ -13,9 +13,11 @@ service Greeter {
 // The request message containing the user's name.
 message HelloRequest {
   string TeacherHostname = 1;
+  string bannedRessources = 2;
 }
 
 // The response message containing the greetings.
 message HelloReply {
   bool status = 1;
+  string userName = 2;
 }
