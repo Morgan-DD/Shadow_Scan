@@ -14,9 +14,13 @@ namespace ShadowScan_Client.Services
         public override Task<HelloReply> SayHello(HelloRequest request, ServerCallContext context)
         {
             Console.WriteLine("New Server: " + request.TeacherHostname);
+            Console.WriteLine(request.BannedRessouces);
+            string username = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
             return Task.FromResult(new HelloReply
             {
-                Status = true
+                Status = true,
+                UserName = username
+                
             });
         }
     }

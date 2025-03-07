@@ -16,6 +16,11 @@ using PcapDotNet.Packets.Transport;
 using ShadowScan_Client;
 using static System.Net.Mime.MediaTypeNames;
 using System.Drawing;
+using Microsoft.AspNetCore.Builder;
+using ShadowScan_Client.Services;
+using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace ShadowScan_Client_Logic
 {
@@ -36,6 +41,8 @@ namespace ShadowScan_Client_Logic
         static NotifyIcon notifyIcon = new NotifyIcon();
         static bool Visible = true;
 
+        private IHost _host;
+
         [DllImport("user32.dll")]
         public static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
         [DllImport("user32.dll")]
@@ -52,6 +59,9 @@ namespace ShadowScan_Client_Logic
 
         static async Task Main(string[] args)
         {
+            ShadowScan_Logic thisForm = new ShadowScan_Logic();
+
+            /*
             _bannedSites.Add("openai.com");
             _bannedSites.Add("chatgpt.com");
             _bannedSites.Add("anthropic.com");
@@ -88,8 +98,11 @@ namespace ShadowScan_Client_Logic
             _bannedSites.Add("soundraw.io");
             _bannedSites.Add("riverside.fm");
             _bannedSites.Add("podcastle.ai");
+            */
 
-            Task.Run(async () => scanForInfractions_WebSite());
+            Task.Run(async () => thisForm.StartGrpcServerAsync());
+
+            
 
             changeNotificationStatus(true);
             notifyIcon.Icon = Icon.ExtractAssociatedIcon(System.Windows.Forms.Application.ExecutablePath);
@@ -111,13 +124,47 @@ namespace ShadowScan_Client_Logic
             notifyIcon.Visible = false;
         }
 
+        public async Task StartGrpcServerAsync()
+        {
+            var builder = WebApplication.CreateBuilder();
+
+            builder.Services.AddGrpc();
+
+            builder.WebHost.ConfigureKestrel(options =>
+            {
+                options.ListenAnyIP(55052); // Bind to all network interfaces
+            });
+
+            var app = builder.Build();
+
+            app.MapGrpcService<GreeterService>();
+            app.MapGrpcService<HeartBeatService>();
+            app.MapGet("/", () => "Communication with gRPC endpoints must be made through a gRPC client.");
+
+            _host = app;
+
+            await _host.StartAsync();
+        }
+
+        public async Task StopGrpcServerAsync()
+        {
+            if (_host != null)
+            {
+                await _host.StopAsync();
+                _host.Dispose();
+            }
+        }
+
         private static void changeNotificationStatus(bool NewStatus)
         {
             _showNotificaiton = NewStatus;
             _InfractionManager._showNotification= NewStatus;
         }
 
-
+        public void StartScan()
+        {
+            Task.Run(async () => scanForInfractions_WebSite());
+        }
 
         private static void scanForInfractions_WebSite()
         {
