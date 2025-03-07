@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ShadowScan_GUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a03c72b0054c7a726dca7476376e7a5ea57671a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+42449a835b2c24321d66ad5444193b562ec2bef2")]
 [assembly: System.Reflection.AssemblyProductAttribute("ShadowScan_GUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ShadowScan_GUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -90,18 +90,6 @@
     },
     {
       "type": "2",
-      "pathUrl": "API-Documentation.docx"
-    },
-    {
-      "type": "2",
-      "pathUrl": "Software-Requirements-Specifications.pdf"
-    },
-    {
-      "type": "2",
-      "pathUrl": "Database-Design.xlsx"
-    },
-    {
-      "type": "2",
       "pathUrl": "Code-Review-Guidelines.pdf"
     }
   ]
