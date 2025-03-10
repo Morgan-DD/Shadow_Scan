@@ -173,5 +173,62 @@
         "pathUrl": "Code-Review-Guidelines.pdf"
       }
     ]
+  },
+  {
+    "Category": "Sans titre 4",
+    "Items": [
+      {
+        "type": "0",
+        "pathUrl": "https://chatgpt.com/"
+      },
+      {
+        "type": "0",
+        "pathUrl": "https://gemini.google.com/"
+      },
+      {
+        "type": "0",
+        "pathUrl": "https://ia.net/"
+      },
+      {
+        "type": "0",
+        "pathUrl": "https://openai.com/"
+      },
+      {
+        "type": "0",
+        "pathUrl": "https://developer.mozilla.org/"
+      },
+      {
+        "type": "0",
+        "pathUrl": "https://stackoverflow.com/"
+      },
+      {
+        "type": "0",
+        "pathUrl": "https://www.w3schools.com/"
+      },
+      {
+        "type": "0",
+        "pathUrl": "https://www.kaggle.com/"
+      },
+      {
+        "type": "0",
+        "pathUrl": "https://www.github.com/"
+      },
+      {
+        "type": "1",
+        "pathUrl": "firefox.exe"
+      },
+      {
+        "type": "2",
+        "pathUrl": "M152-reponses"
+      },
+      {
+        "type": "2",
+        "pathUrl": "Project-Plan.docx"
+      },
+      {
+        "type": "2",
+        "pathUrl": "Budget-Report.xlsx"
+      }
+    ]
   }
 ]

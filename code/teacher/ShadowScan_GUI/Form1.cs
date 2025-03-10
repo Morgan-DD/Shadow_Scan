@@ -9,6 +9,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
@@ -299,13 +300,19 @@ namespace ShadowScan_GUI
             string NoInfoMessage = "None";
 
             // ping the pc
-            (byte status, string ip) = _shadowScanInstance.pingPc(pcHostname);
+            byte status = 0;
+            string ip = "";
             bool grpcStatus = false;
             string hostname = "";
             (grpcStatus, hostname) = await isGrpcServerReachable(pcHostname, bannedRessources);
             if (grpcStatus)
             {
                 status = 2;
+                ip = Dns.GetHostEntry(pcHostname).AddressList[0].ToString();
+            }
+            else
+            {
+                (status, ip) = _shadowScanInstance.pingPc(pcHostname);
             }
 
             // create an array that is used to transfert infos
