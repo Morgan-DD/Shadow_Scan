@@ -1,0 +1,11 @@
+ - gestion des différentes pages
+ - Détéction des postes d'une salle
+ - gestion des listes de ressources
+ - architecture gRPC
+ - transmission de la liste des ressources bannies
+ - détéction d'infractions liées à l'acces à un site web interdit
+ - heart beat
+ retenues:
+ - architecture gRPC
+ - détéction d'infractions liées à l'acces à un site web interdit
+ - Détéction des postes d'une salle
