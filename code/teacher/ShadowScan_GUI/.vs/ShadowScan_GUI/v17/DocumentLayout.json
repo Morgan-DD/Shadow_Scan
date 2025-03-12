@@ -3,15 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\usercontrol_ressourceslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|solutionrelative:usercontrol_ressourceslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\teacher\\shadowscan_gui\\usercontrol_ressourceslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|solutionrelative:usercontrol_ressourceslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\teacher\\shadowscan_gui\\usercontrol_list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\teacher\\shadowscan_gui\\usercontrol_ressourceslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|solutionrelative:usercontrol_ressourceslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\usercontrol_list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|solutionrelative:usercontrol_list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -40,7 +40,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
@@ -65,8 +65,7 @@
               "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\UserControl_List.cs [Design]",
               "RelativeToolTip": "UserControl_List.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T08:53:56.972Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-03-10T08:53:56.972Z"
             },
             {
               "$type": "Document",
@@ -77,25 +76,24 @@
               "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\Form1.cs [Design]",
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T07:13:20.868Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-03-10T07:13:20.868Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "UserControl_RessourcesList.cs",
               "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\UserControl_RessourcesList.cs",
               "RelativeDocumentMoniker": "UserControl_RessourcesList.cs",
               "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\UserControl_RessourcesList.cs",
               "RelativeToolTip": "UserControl_RessourcesList.cs",
-              "ViewState": "AgIAAC0BAAAAAAAAAAAiwEEBAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAABMCAAAAAAAAAADgvxkCAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-07T07:35:06.319Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "UserControl_RessourcesList.cs [Design]",
               "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\UserControl_RessourcesList.cs",
               "RelativeDocumentMoniker": "UserControl_RessourcesList.cs",
