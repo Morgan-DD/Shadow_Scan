@@ -13,7 +13,6 @@ namespace ShadowScan_Server
 
         static async Task Main(string[] args)
         {
-            Console.WriteLine("aaaaaaa");
             Program thisProgram = new Program();
             // thisProgram.isGRPCServerReachabel("INF-A23-P203");
 

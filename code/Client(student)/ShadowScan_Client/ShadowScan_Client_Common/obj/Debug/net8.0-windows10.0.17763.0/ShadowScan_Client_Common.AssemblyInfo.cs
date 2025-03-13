@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ShadowScan_Client_Common")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4fcb7f56611fe45f45c362f55ae5ef8e87450a4f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+962b6a10a37d472293652acb7912673c774cec94")]
 [assembly: System.Reflection.AssemblyProductAttribute("ShadowScan_Client_Common")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ShadowScan_Client_Common")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
