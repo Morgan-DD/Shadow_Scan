@@ -3,37 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{328A56E4-07A2-43A1-BDD0-4FB7D8189B9A}|..\\ShadowScan_Server\\ShadowScan_Server\\ShadowScan_Server.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\teacher\\shadowscan_server\\shadowscan_server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\teacher\\shadowscan_gui\\usercontrol_ressourceslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|solutionrelative:usercontrol_ressourceslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\usercontrol_ressourceslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|solutionrelative:usercontrol_ressourceslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\usercontrol_list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|solutionrelative:usercontrol_list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\teacher\\shadowscan_gui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\teacher\\shadowscan_gui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\usercontrol_scan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\teacher\\shadowscan_gui\\usercontrol_singlesetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|solutionrelative:usercontrol_singlesetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\teacher\\shadowscan_gui\\usercontrol_settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|solutionrelative:usercontrol_settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\teacher\\shadowscan_gui\\usercontrol_scan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|solutionrelative:usercontrol_scan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\teacher\\ShadowScan_Server\\ShadowScan_Server\\Protos\\greet.proto||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\teacher\\shadowscan_gui\\usercontrol_ressourceslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|solutionrelative:usercontrol_ressourceslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\teacher\\ShadowScan_Server\\ShadowScan_Server\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\teacher\\shadowscan_gui\\usercontrol_pcname_checkbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|solutionrelative:usercontrol_pcname_checkbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\teacher\\shadowscan_gui\\usercontrol_pclog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|solutionrelative:usercontrol_pclog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\teacher\\shadowscan_gui\\usercontrol_pcinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|solutionrelative:usercontrol_pcinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\teacher\\shadowscan_gui\\usercontrol_pccheckbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|solutionrelative:usercontrol_pccheckbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\teacher\\shadowscan_gui\\usercontrol_pc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|solutionrelative:usercontrol_pc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\teacher\\shadowscan_gui\\usercontrol_loading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|solutionrelative:usercontrol_loading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|c:\\users\\pg66hua\\documents\\github\\mostly_human\\code\\teacher\\shadowscan_gui\\usercontrol_list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2FC94729-F45D-4118-9D82-1625B49C76D1}|ShadowScan_GUI.csproj|solutionrelative:usercontrol_list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,115 +58,151 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\Form1.cs",
-              "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAB0BAAAAAAAAAIAwwDoBAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T07:33:08.234Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_Server\\ShadowScan_Server\\Program.cs",
-              "RelativeDocumentMoniker": "..\\ShadowScan_Server\\ShadowScan_Server\\Program.cs",
-              "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_Server\\ShadowScan_Server\\Program.cs",
-              "RelativeToolTip": "..\\ShadowScan_Server\\ShadowScan_Server\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T14:25:03.743Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserControl_List.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\UserControl_List.cs",
-              "RelativeDocumentMoniker": "UserControl_List.cs",
-              "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\UserControl_List.cs [Design]",
-              "RelativeToolTip": "UserControl_List.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T08:53:56.972Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
+              "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\Form1.cs [Design]*",
+              "RelativeToolTip": "Form1.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T07:13:20.868Z"
+              "WhenOpened": "2025-03-14T07:25:27.263Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UserControl_RessourcesList.cs",
-              "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\UserControl_RessourcesList.cs",
-              "RelativeDocumentMoniker": "UserControl_RessourcesList.cs",
-              "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\UserControl_RessourcesList.cs",
-              "RelativeToolTip": "UserControl_RessourcesList.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAASAAAAAAAAAA==",
+              "Title": "UserControl_SingleSetting.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\UserControl_SingleSetting.cs",
+              "RelativeDocumentMoniker": "UserControl_SingleSetting.cs",
+              "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\UserControl_SingleSetting.cs [Design]",
+              "RelativeToolTip": "UserControl_SingleSetting.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T07:35:06.319Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-14T07:25:20.579Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "UserControl_Settings.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\UserControl_Settings.cs",
+              "RelativeDocumentMoniker": "UserControl_Settings.cs",
+              "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\UserControl_Settings.cs [Design]",
+              "RelativeToolTip": "UserControl_Settings.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T07:25:19.679Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserControl_Scan.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\UserControl_Scan.cs",
+              "RelativeDocumentMoniker": "UserControl_Scan.cs",
+              "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\UserControl_Scan.cs [Design]",
+              "RelativeToolTip": "UserControl_Scan.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T07:25:16.779Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "UserControl_RessourcesList.cs [Design]",
               "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\UserControl_RessourcesList.cs",
               "RelativeDocumentMoniker": "UserControl_RessourcesList.cs",
               "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\UserControl_RessourcesList.cs [Design]",
               "RelativeToolTip": "UserControl_RessourcesList.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T07:35:04.195Z"
+              "WhenOpened": "2025-03-14T07:25:03.495Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserControl_PcName_CheckBox.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\UserControl_PcName_CheckBox.cs",
+              "RelativeDocumentMoniker": "UserControl_PcName_CheckBox.cs",
+              "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\UserControl_PcName_CheckBox.cs [Design]",
+              "RelativeToolTip": "UserControl_PcName_CheckBox.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T07:24:58.045Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "UserControl_Scan.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\UserControl_Scan.cs",
-              "RelativeDocumentMoniker": "UserControl_Scan.cs",
-              "ToolTip": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\teacher\\ShadowScan_GUI\\UserControl_Scan.cs [Design]",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\teacher\\ShadowScan_GUI\\UserControl_Scan.cs [Design]",
+              "Title": "UserControl_PcLog.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\UserControl_PcLog.cs",
+              "RelativeDocumentMoniker": "UserControl_PcLog.cs",
+              "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\UserControl_PcLog.cs [Design]",
+              "RelativeToolTip": "UserControl_PcLog.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T07:34:35.037Z"
+              "WhenOpened": "2025-03-14T07:24:56.762Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "greet.proto",
-              "DocumentMoniker": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\teacher\\ShadowScan_Server\\ShadowScan_Server\\Protos\\greet.proto",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\teacher\\ShadowScan_Server\\ShadowScan_Server\\Protos\\greet.proto",
-              "ToolTip": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\teacher\\ShadowScan_Server\\ShadowScan_Server\\Protos\\greet.proto",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\teacher\\ShadowScan_Server\\ShadowScan_Server\\Protos\\greet.proto",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003853|",
-              "WhenOpened": "2025-03-07T07:29:05.42Z"
+              "Title": "UserControl_PcInfo.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\UserControl_PcInfo.cs",
+              "RelativeDocumentMoniker": "UserControl_PcInfo.cs",
+              "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\UserControl_PcInfo.cs [Design]",
+              "RelativeToolTip": "UserControl_PcInfo.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T07:24:54.748Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\teacher\\ShadowScan_Server\\ShadowScan_Server\\Program.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\teacher\\ShadowScan_Server\\ShadowScan_Server\\Program.cs",
-              "ToolTip": "C:\\Users\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\teacher\\ShadowScan_Server\\ShadowScan_Server\\Program.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\shadow\\Documents\\GitHub\\Shadow_Scan\\code\\teacher\\ShadowScan_Server\\ShadowScan_Server\\Program.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAMwBEAAAAPAAAAAAAAAA==",
+              "Title": "UserControl_PcCheckBox.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\UserControl_PcCheckBox.cs",
+              "RelativeDocumentMoniker": "UserControl_PcCheckBox.cs",
+              "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\UserControl_PcCheckBox.cs [Design]",
+              "RelativeToolTip": "UserControl_PcCheckBox.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T07:28:45.904Z"
+              "WhenOpened": "2025-03-14T07:24:53.862Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserControl_PC.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\UserControl_PC.cs",
+              "RelativeDocumentMoniker": "UserControl_PC.cs",
+              "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\UserControl_PC.cs [Design]",
+              "RelativeToolTip": "UserControl_PC.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T07:24:53.112Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UserControl_loading.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\UserControl_loading.cs",
+              "RelativeDocumentMoniker": "UserControl_loading.cs",
+              "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\UserControl_loading.cs [Design]",
+              "RelativeToolTip": "UserControl_loading.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T07:24:51.378Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserControl_List.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\UserControl_List.cs",
+              "RelativeDocumentMoniker": "UserControl_List.cs",
+              "ToolTip": "C:\\Users\\pg66hua\\Documents\\GitHub\\Mostly_Human\\code\\teacher\\ShadowScan_GUI\\UserControl_List.cs [Design]",
+              "RelativeToolTip": "UserControl_List.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T07:24:48.762Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

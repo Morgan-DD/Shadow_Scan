@@ -217,6 +217,7 @@
             button_ExportMain.Tag = "0";
             button_ExportMain.Text = "Liste principale";
             button_ExportMain.UseVisualStyleBackColor = true;
+            button_ExportMain.Visible = false;
             button_ExportMain.Click += exportButtonAction;
             // 
             // button_ExportSubList_All
@@ -230,6 +231,7 @@
             button_ExportSubList_All.Tag = "1";
             button_ExportSubList_All.Text = "Liste Secondaire Complete";
             button_ExportSubList_All.UseVisualStyleBackColor = true;
+            button_ExportSubList_All.Visible = false;
             button_ExportSubList_All.Click += exportButtonAction;
             // 
             // label_Export
@@ -243,6 +245,7 @@
             label_Export.Size = new Size(121, 25);
             label_Export.TabIndex = 24;
             label_Export.Text = "Exportation";
+            label_Export.Visible = false;
             // 
             // button_ExportSubList_Single
             // 
@@ -255,6 +258,7 @@
             button_ExportSubList_Single.Tag = "1";
             button_ExportSubList_Single.Text = "Liste Secondaire actuelle";
             button_ExportSubList_Single.UseVisualStyleBackColor = true;
+            button_ExportSubList_Single.Visible = false;
             button_ExportSubList_Single.Click += exportButtonAction;
             // 
             // button_DeletFromMainList

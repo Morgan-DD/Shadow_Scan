@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\ShadowScan_Client.props" />
-</Project>

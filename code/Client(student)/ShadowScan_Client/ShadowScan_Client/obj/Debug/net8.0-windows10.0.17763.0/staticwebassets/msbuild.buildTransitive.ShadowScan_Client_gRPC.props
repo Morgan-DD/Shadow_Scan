@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\ShadowScan_Client_gRPC.props" />
-</Project>

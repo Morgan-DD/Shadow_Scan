@@ -177,6 +177,7 @@
             Button_Test.TabIndex = 7;
             Button_Test.Text = "Test";
             Button_Test.UseVisualStyleBackColor = true;
+            Button_Test.Visible = false;
             Button_Test.Click += Button_Test_Click;
             // 
             // button_RessourceList
